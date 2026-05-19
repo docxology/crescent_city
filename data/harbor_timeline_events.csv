@@ -1,0 +1,13 @@
+event_id,year,label,category,color_key,source_keys,notes
+battery_point_lighthouse_lit,1856,Battery Point Lighthouse first lit,navigation,purple,ccharbor_history;nps_redwood_history,Navigation aid anchoring the early harbor entrance.
+hobbs_wall_wharf_track,1903,Hobbs Wall narrow-gauge wharf track,rail/wharf,orange,ccharbor_history;nps_redwood_history,Wharf and timber-shipping infrastructure associated with Hobbs Wall operations.
+first_harbor_jetty,1911,First harbor jetty completed,breakwater,gray,ccharbor_history;harbor_recon,Early harbor-improvement milestone before the modern district era.
+harbor_district_established,1931,Crescent City Harbor District established,governance,blue,ccharbor_history,Special-district governance frame for the working waterfront.
+alaska_tsunami_1964_harbor,1964,1964 Alaska tsunami destroys harbor,disaster,red,lipton1965;dengler2005retro;harbor_recon,Disaster marker for the Good Friday tsunami.
+post_1964_rebuilding_begins,1965,Seawall and breakwater rebuilding begins,breakwater,gray,harbor_recon;ccharbor_history,Early reconstruction phase after the 1964 disaster.
+citizens_dock_rebuilt,1974,Citizens Dock rebuilt ($3M),dock,green,harbor_recon;ccharbor_history,Major post-1964 waterfront reconstruction project.
+dolos_units_installed,1980,38-metric-ton dolos units installed,breakwater,gray,harbor_recon;merrifield1966dolos,Concrete armor-unit phase of the modern breakwater.
+tohoku_tsunami_2011_harbor,2011,Tohoku tsunami destroys Inner Boat Basin,disaster,red,blake2011tsunami;harbor_recon;ccharbor_about2026,Distant-source tsunami currents destroyed much of the inner harbor.
+tsunami_resistant_basin_2014,2014,Tsunami-resistant Inner Boat Basin ($34M),dock,green,ccharbor_about2026;harbor_recon,Rebuilt inner basin with tsunami-resistant pile and dock design.
+pidp_seawall_grant_2022,2022,PIDP grant ($7.8M) for seawall upgrades,breakwater,gray,ccharbor_2026;ccharbor_about2026,Federal port-infrastructure funding for seawall and dock work.
+klamath_dam_removal_2024,2024,Klamath dam removal - fishery recovery,ecological,cyan,noaa2024klamath_finalstep;krrc2024completion,Klamath Basin restoration event affecting regional fishery expectations.

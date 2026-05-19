@@ -1,0 +1,11 @@
+sector,1990_employment,2000_employment,2010_employment,2020_employment,sector_gdp_2020_millions
+Government (County + Tribal + City),450,500,550,580,85
+Healthcare,200,180,220,250,65
+Retail & Hospitality,350,300,320,280,55
+Tourism & Recreation,150,200,350,400,90
+Fishing,200,120,80,60,15
+Lumber & Wood Products,800,200,50,20,8
+Construction,150,100,80,70,18
+Agriculture,80,60,40,35,8
+Education,180,200,220,240,55
+Other Services,150,130,140,150,30

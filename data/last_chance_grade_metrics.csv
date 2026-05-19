@@ -1,0 +1,7 @@
+metric_id,label,value,unit,display_value,evidence_class,source_keys,notes
+active_landslide_segment,Active Last Chance Grade segment,3,miles,about 3 mi,agency_project_description,caltrans_lcg2024_selection,Approximate length of landslide-prone U.S. 101 segment south of Crescent City.
+repair_cost_since_1997,Landslide repairs since 1997,100,million_usd,>$100M,agency_project_description,caltrans_lcg2024_selection,Caltrans describes more than 100 million dollars in repair costs since 1997.
+tunnel_length,Preferred Alternative F tunnel,6000,feet,"~6,000 ft",agency_project_description,caltrans2026lcgtunnel,Caltrans Alternative F tunnel length used in project portal and manuscript prose.
+construction_duration,Estimated construction duration,7,years,6-8 yr,planning_estimate,caltrans2026lcgtunnel,Midpoint displayed from Caltrans six-to-eight-year construction-period estimate.
+construction_cost_2026,Estimated construction cost,2700,million_usd,$2.7B,planning_estimate,caltrans2026lcgtunnel,Caltrans 2026-dollar planning estimate for Alternative F construction cost.
+preferred_alternative_year,Alternative F selected,2024,year,June 2024,official_decision,caltrans_lcg2024_selection,Preferred long-term solution selection date used as decision milestone.

@@ -1,0 +1,6 @@
+feature_id,label,value,unit,category,evidence_class,source_keys,notes
+wild_miles,Wild river corridor,78,miles,wild,legal_designation,pl97_79_smithriver;riversgov_smith_river;usfs_smith_river_nra,Federally designated wild miles within Smith River Wild and Scenic River corridor.
+scenic_miles,Scenic river corridor,31,miles,scenic,legal_designation,pl97_79_smithriver;riversgov_smith_river;usfs_smith_river_nra,Federally designated scenic miles within Smith River Wild and Scenic River corridor.
+recreational_miles,Recreational river corridor,216,miles,recreational,legal_designation,pl97_79_smithriver;riversgov_smith_river;usfs_smith_river_nra,Federally designated recreational miles within Smith River Wild and Scenic River corridor.
+watershed_area,Smith River watershed,719,square_miles,context,cited_estimate,marine,Watershed area cited in manuscript for hydrologic context; not part of river-mile stack.
+nra_area,Smith River National Recreation Area,300000,acres,context,cited_estimate,usfs_smith_river_nra;marine,Approximate National Recreation Area scale used as protected-land context.

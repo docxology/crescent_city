@@ -1,0 +1,5 @@
+event_id,label,tick_label,time_position,amplitude_m,color_key,label_y_offset,source_keys,notes
+wave_1,Wave 1|~11:50 PM PST|4.4 m (14.5 ft)|over MLLW,11:50 PM|27 Mar 1964,15,4.4,cyan,3.2,lipton1965;dengler2005retro;bernardi2005,Published and reconstructed elevation series for the first recorded surge.
+wave_2,Wave 2|~12:20 AM|smaller ~3.0 m,12:20 AM|28 Mar 1964,35,3.0,blue,3.0,lipton1965;dengler2005retro;bernardi2005,Published and reconstructed elevation series for the second smaller wave.
+wave_3,Wave 3|~12:50 AM|Drawdown - water|recedes ~3/4 mile,12:50 AM|28 Mar 1964,55,-5.5,orange,2.2,lipton1965;dengler2005retro;bernardi2005,Drawdown phase reconstructed from tide-gauge records and eyewitness accounts.
+wave_4,Wave 4 - 'Killer Wave'|~1:30 AM|6.4 m (21 ft)|11 fatalities,1:30 AM|28 Mar 1964,80,6.4,red,3.4,lipton1965;dengler2005retro;bernardi2005,Highest destructive wave in the local sequence and source of all Crescent City fatalities.

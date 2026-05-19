@@ -1,0 +1,48 @@
+# Currents-timeline category lanes for `_figures/currents.py`.
+#
+# Each entry binds a category key (matched against
+# `data/historical_events.json` `category` field) to its visual lane:
+#   palette_key — which name in `_figures/_style.PALETTE` provides the color
+#   marker      — matplotlib marker shape
+#   y_lane      — vertical position in the [0, 1] timeline canvas
+#   label       — printable lane label rendered to the right edge
+#
+# Adding a new domain to the manuscript is a YAML edit only. Every
+# category intended for the currents figure should be declared here so
+# the figure remains explicit and reproducible.
+lanes:
+  - key: Environment
+    palette_key: green
+    marker: o
+    y_lane: 1.00
+    label: "Environment / Climate"
+  - key: Infrastructure
+    palette_key: blue
+    marker: s
+    y_lane: 0.78
+    label: "Infrastructure"
+  - key: Governance
+    palette_key: purple
+    marker: D
+    y_lane: 0.56
+    label: "Governance / Civic"
+  - key: Culture
+    palette_key: orange
+    marker: "^"
+    y_lane: 0.34
+    label: "Culture / Press / Recognition"
+  - key: Geological
+    palette_key: red
+    marker: v
+    y_lane: 0.12
+    label: "Seismic / Geological"
+  - key: Conflict
+    palette_key: dark
+    marker: X
+    y_lane: 0.00
+    label: "Conflict / Custody"
+  - key: Conservation
+    palette_key: forest
+    marker: P
+    y_lane: 0.45
+    label: "Conservation / Tribal"

@@ -1,0 +1,7 @@
+layer_id,label,year_start,year_end,evidence_class,public_detail_level,source_keys,notes
+tribal_memory,Tolowa Dee-ni' cultural memory and oral history,-1000,2026,tribal_cultural_record,generalized_public,tolowa_culture;bommelyn1997;gould1978,Public-facing cultural continuity frame; no protected site coordinates or sensitive locations.
+smith_estuary_middens,Smith River estuary shell middens and village deposits,-1000,1775,archaeological_material,generalized_public,nortoni1971;gould1966pointstgeorge,Published archaeological evidence summarized by class and region only.
+point_st_george_fieldwork,Point St. George excavation and PSG I/II sequence,1964,1966,published_archaeology,published_site,gould1966pointstgeorge,Foundational public archaeological study; the figure avoids adding new site detail beyond published source.
+direct_historical_method,Direct-historical linkage to ethnographic Tolowa record,1966,2026,interpretive_method,generalized_public,gould1966pointstgeorge;sapir_golla_2001,Methodological bridge between material culture language and named contact-era communities.
+nagpra_repatriation,NAGPRA repatriation and consultation regime,1990,2026,legal_protection,public_law,pl101_601_nagpra;nahc_california,Legal process layer; no ancestral-remains locations or sensitive consultation details.
+thpo_co_management,Tribal Historic Preservation Office co-management,1983,2026,tribal_governance,generalized_public,ftc_tolowa_loi1983;native_survival,Modern tribal cultural-resource governance summarized institutionally.

@@ -1,0 +1,1980 @@
+[
+  {
+    "id": "c1000bce-tolowa-dee-ni-establish-seasonal-villages-at-smith-river-estuary",
+    "year": "c.1000BCE",
+    "date_iso": null,
+    "date_precision": "circa",
+    "event": "Tolowa Dee-ni' establish seasonal villages at Smith River estuary",
+    "category": "Indigenous",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "habitation",
+      "settlement"
+    ],
+    "deaths": null,
+    "damage_note": "unknown",
+    "source_keys": [
+      "tolowa_culture",
+      "bommelyn1997",
+      "gould1978"
+    ],
+    "evidence_type": "tribal and ethnographic record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1700-cascadia-subduction-zone-earthquake-m-9-0-tsunami-strikes-coast",
+    "year": "1700",
+    "date_iso": "1700-01-26",
+    "date_precision": "exact",
+    "event": "Cascadia subduction zone earthquake (M~9.0); tsunami strikes coast",
+    "category": "Geological",
+    "lat": 46.5,
+    "lon": -124.0,
+    "tags": [
+      "earthquake",
+      "tsunami"
+    ],
+    "deaths": null,
+    "damage_note": "unknown",
+    "source_keys": [
+      "atwater2005orphan",
+      "goldfinger2012"
+    ],
+    "evidence_type": "paleoseismic reconstruction",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1775-spanish-expedition-of-heceta-and-quadra-sails-past-coast",
+    "year": "1775",
+    "date_iso": "1775-06-09",
+    "date_precision": "exact",
+    "event": "Spanish expedition of Heceta and Quadra sails past coast",
+    "category": "Exploration",
+    "lat": 41.7353,
+    "lon": -124.2166,
+    "tags": [
+      "spanish",
+      "maritime"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "del_norte_history"
+    ],
+    "evidence_type": "local history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1828-smith-party-attacked-at-umpqua-river-by-chetco-tututni",
+    "year": "1828",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith party attacked at Umpqua River by Chetco/Tututni",
+    "category": "Conflict",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "violence",
+      "indigenous"
+    ],
+    "deaths": "several",
+    "damage_note": "unknown",
+    "source_keys": [
+      "smith_expedition"
+    ],
+    "evidence_type": "exploration history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1828-jedediah-smith-reaches-pacific-coast-at-smith-river-mouth-via-overland-route",
+    "year": "1828",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Jedediah Smith reaches Pacific coast at Smith River mouth via overland route",
+    "category": "Exploration",
+    "lat": 41.9367,
+    "lon": -124.1567,
+    "tags": [
+      "american",
+      "fur_trade"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "smith_expedition"
+    ],
+    "evidence_type": "exploration history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1853-crescent-city-townsite-laid-out",
+    "year": "1853",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Crescent City townsite laid out",
+    "category": "Settlement",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "founding",
+      "american"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "del_norte_history",
+      "crescentcityherald_loc"
+    ],
+    "evidence_type": "local history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1853-yontocket-massacre-tolowa-nee-dash-gathering-attacked-hundreds-killed",
+    "year": "1853",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Yontocket Massacre: Tolowa Nee-dash gathering attacked; source traditions record hundreds killed",
+    "category": "Conflict",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "massacre",
+      "tolowa"
+    ],
+    "deaths": null,
+    "damage_note": "village destroyed",
+    "source_keys": [
+      "madley2016genocide",
+      "cook1976",
+      "tolowa_culture"
+    ],
+    "evidence_type": "ethnohistorical genocide record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1853-howonquet-massacre-70-tolowa-killed-village-burned",
+    "year": "1853",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Howonquet Massacre: 70+ Tolowa killed; village burned",
+    "category": "Conflict",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "massacre",
+      "tolowa"
+    ],
+    "deaths": 70,
+    "damage_note": "village destroyed",
+    "source_keys": [
+      "madley2016genocide",
+      "cook1976",
+      "tolowa_culture"
+    ],
+    "evidence_type": "ethnohistorical genocide record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1854-crescent-city-incorporated-united-methodist-church-built",
+    "year": "1854",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Crescent City incorporated; United Methodist Church built",
+    "category": "Governance",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "incorporation",
+      "county"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "del_norte_history"
+    ],
+    "evidence_type": "local governance history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1854-achulet-massacre-near-lake-earl-est-65-150-tolowa-killed",
+    "year": "1854",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Achulet Massacre near Lake Earl; est. 65-150 Tolowa killed",
+    "category": "Conflict",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "massacre",
+      "tolowa"
+    ],
+    "deaths": 100,
+    "damage_note": "village destroyed",
+    "source_keys": [
+      "madley2016genocide",
+      "cook1976",
+      "tolowa_culture"
+    ],
+    "evidence_type": "ethnohistorical genocide record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1855-battery-point-massacre-at-crescent-city",
+    "year": "1855",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Battery Point Massacre at Crescent City",
+    "category": "Conflict",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "massacre",
+      "tolowa"
+    ],
+    "deaths": 30,
+    "damage_note": "village destroyed",
+    "source_keys": [
+      "madley2016genocide",
+      "cook1976"
+    ],
+    "evidence_type": "ethnohistorical genocide record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1857-del-norte-county-formally-carved-from-klamath-county",
+    "year": "1857",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Del Norte County formally carved from Klamath County",
+    "category": "Governance",
+    "lat": 41.8,
+    "lon": -124.1,
+    "tags": [
+      "county_formation",
+      "governance"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "del_norte_history"
+    ],
+    "evidence_type": "local governance history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1860-federal-census-records-approximately-2-500-residents",
+    "year": "1860",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Federal census records approximately 2,500 residents",
+    "category": "Demographics",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "census",
+      "growth"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "uscb2020census",
+      "economic_history"
+    ],
+    "evidence_type": "census/history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1862-camp-lincoln-established-13-june-1862-800-tolowa-held-captive",
+    "year": "1862",
+    "date_iso": "1862-06-13",
+    "date_precision": "exact",
+    "event": "Camp Lincoln established 13 June 1862; 800 Tolowa held captive",
+    "category": "Military",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "camp",
+      "forced_removal"
+    ],
+    "deaths": 0,
+    "damage_note": "detention",
+    "source_keys": [
+      "cook1976",
+      "madley2016genocide"
+    ],
+    "evidence_type": "federal removal history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1862-smith-river-reservation-established-for-tolowa-dee-ni",
+    "year": "1862",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River Reservation established for Tolowa Dee-ni'",
+    "category": "Governance",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "reservation",
+      "tolowa",
+      "federal_policy"
+    ],
+    "deaths": 0,
+    "damage_note": "",
+    "source_keys": [
+      "cook1976",
+      "madley2016genocide"
+    ],
+    "evidence_type": "federal removal history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1863-first-large-scale-steam-sawmill-begins",
+    "year": "1863",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "First large-scale steam sawmill begins",
+    "category": "Industry",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "lumber",
+      "mill"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "economic_history",
+      "del_norte_history"
+    ],
+    "evidence_type": "local economic history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1872-smith-river-reservation-reduced-in-size",
+    "year": "1872",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River Reservation reduced in size",
+    "category": "Governance",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "reservation",
+      "land_loss"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "cook1976",
+      "madley2016genocide"
+    ],
+    "evidence_type": "federal removal history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1880-northwestern-pacific-railroad-grading-begins",
+    "year": "1880",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Northwestern Pacific Railroad grading begins",
+    "category": "Infrastructure",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "railroad",
+      "transport"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "del_norte_history",
+      "economic_history"
+    ],
+    "evidence_type": "local transportation history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1882-dolbeer-steam-donkey-patented-u-s-patent-256-553",
+    "year": "1882",
+    "date_iso": "1882-08-01",
+    "date_precision": "year",
+    "event": "Dolbeer steam donkey patented (U.S. Patent 256,553)",
+    "category": "Industry",
+    "lat": 41.7558,
+    "lon": -124.2,
+    "tags": [
+      "lumber",
+      "technology"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "dolbeer1882patent",
+      "carranco1975logging"
+    ],
+    "evidence_type": "patent and logging history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1900-county-produces-30m-board-feet-annually",
+    "year": "1900",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "County produces 30M+ board feet annually",
+    "category": "Economy",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "lumber",
+      "production"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "economic_history",
+      "carranco1975logging"
+    ],
+    "evidence_type": "local economic history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1908-smith-river-rancheria-established-160-acres",
+    "year": "1908",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River Rancheria established (160 acres)",
+    "category": "Indigenous",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "rancheria",
+      "tolowa"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "smith_river_rancheria_history",
+      "ftc_tolowa_loi1983"
+    ],
+    "evidence_type": "tribal/federal recognition record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1911-first-harbor-jetty-completed",
+    "year": "1911",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "First harbor jetty completed",
+    "category": "Infrastructure",
+    "lat": 41.75,
+    "lon": -124.2,
+    "tags": [
+      "harbor",
+      "port"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "crescent_city",
+      "harbor_recon"
+    ],
+    "evidence_type": "local harbor history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1918-save-the-redwoods-league-founded-merriam-grant-osborn",
+    "year": "1918",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Save the Redwoods League founded (Merriam, Grant, Osborn)",
+    "category": "Conservation",
+    "lat": 41.79,
+    "lon": -124.09,
+    "tags": [
+      "redwood",
+      "conservation"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nps_redwood_history",
+      "redwood_parks"
+    ],
+    "evidence_type": "park history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1924-highway-access-improves-as-trunk-rail-connection-remains-unbuilt",
+    "year": "1924",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Highway access improves as trunk-rail connection remains unbuilt",
+    "category": "Infrastructure",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "highway",
+      "railroad",
+      "transport"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "infrastructure",
+      "economic_history"
+    ],
+    "evidence_type": "transportation history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1929-prairie-creek-and-del-norte-coast-redwoods-state-parks-established",
+    "year": "1929",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Prairie Creek and Del Norte Coast Redwoods State Parks established",
+    "category": "Conservation",
+    "lat": 41.4,
+    "lon": -124.0,
+    "tags": [
+      "parks",
+      "redwood"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nps_redwood_history"
+    ],
+    "evidence_type": "conservation history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1930-edward-sapir-records-tolowa-language-and-oral-tradition",
+    "year": "1930",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Edward Sapir records Tolowa language and oral tradition",
+    "category": "Culture",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "indigenous",
+      "language"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "sapir1930",
+      "sapir_golla_2001"
+    ],
+    "evidence_type": "linguistic field record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1939-hobbs-wall-company-mill-closes-after-cio-unionization",
+    "year": "1939",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Hobbs, Wall & Company mill closes after CIO unionization",
+    "category": "Economy",
+    "lat": 41.74,
+    "lon": -124.19,
+    "tags": [
+      "lumber",
+      "closure"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "economic_history",
+      "del_norte_history"
+    ],
+    "evidence_type": "local economic history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1941-pearl-harbor-attack-wwii-coastal-defense",
+    "year": "1941",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Pearl Harbor attack; WWII coastal defense",
+    "category": "Military",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "war",
+      "defense"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "usni2001_cynthia_olson"
+    ],
+    "evidence_type": "wartime history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1941-state-of-jefferson-inaugurated-4-dec-pearl-harbor-7-dec-ends-movement",
+    "year": "1941",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "State of Jefferson inaugurated 4 Dec; Pearl Harbor 7 Dec ends movement",
+    "category": "Governance",
+    "lat": 41.7355,
+    "lon": -122.6356,
+    "tags": [
+      "jefferson",
+      "secession"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "usni2001_cynthia_olson"
+    ],
+    "evidence_type": "wartime history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1944-jedediah-smith-redwoods-state-park-established",
+    "year": "1944",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Jedediah Smith Redwoods State Park established",
+    "category": "Conservation",
+    "lat": 41.79,
+    "lon": -124.09,
+    "tags": [
+      "parks",
+      "redwood"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nps_redwood_history"
+    ],
+    "evidence_type": "park history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1950-county-seat-trading-area-population-series-crests-near-5-600-5-700-during-peak-l",
+    "year": "1950",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "County-seat trading-area population series crests near 5,600-5,700 during peak lumber",
+    "category": "Demographics",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "census",
+      "growth"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "economic_history"
+    ],
+    "evidence_type": "historical estimate",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1958-california-rancheria-termination-act-p-l-85-671-signed-18-august",
+    "year": "1958",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "California Rancheria Termination Act (P.L. 85-671) signed 18 August",
+    "category": "Policy",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "termination",
+      "tolowa"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "smith_river_rancheria_history",
+      "ftc_tolowa_loi1983"
+    ],
+    "evidence_type": "tribal/federal recognition record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1958-jerry-crew-finds-16-inch-footprints-at-bluff-creek-genzoli-coins-bigfoot",
+    "year": "1958",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Jerry Crew finds 16-inch footprints at Bluff Creek; Genzoli coins Bigfoot",
+    "category": "Culture",
+    "lat": 41.35,
+    "lon": -123.65,
+    "tags": [
+      "bigfoot",
+      "folklore"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "genzoli1958bigfoot",
+      "napier1973bigfoot"
+    ],
+    "evidence_type": "cultural history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1960-smith-river-rancheria-termination-effective-under-1958-act",
+    "year": "1960",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River Rancheria termination effective under 1958 Act",
+    "category": "Policy",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "termination",
+      "tolowa"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "smith_river_rancheria_history",
+      "ftc_tolowa_loi1983"
+    ],
+    "evidence_type": "tribal/federal recognition record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1964-alaska-earthquake-tsunami-devastates-crescent-city-11-killed",
+    "year": "1964",
+    "date_iso": "1964-03-27",
+    "date_precision": "exact",
+    "event": "Alaska earthquake tsunami devastates Crescent City; 11 killed",
+    "category": "Disaster",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "tsunami",
+      "earthquake"
+    ],
+    "deaths": 11,
+    "damage_note": "$23M 1964 USD",
+    "source_keys": [
+      "noaa_runup_1964",
+      "dengler2005retro"
+    ],
+    "evidence_type": "disaster record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1967-patterson-gimlin-bigfoot-film-shot-at-bluff-creek-20-october",
+    "year": "1967",
+    "date_iso": "1967-10-20",
+    "date_precision": "exact",
+    "event": "Patterson-Gimlin Bigfoot film shot at Bluff Creek 20 October",
+    "category": "Culture",
+    "lat": 41.3633,
+    "lon": -123.6383,
+    "tags": [
+      "bigfoot",
+      "film"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "genzoli1958bigfoot",
+      "napier1973bigfoot"
+    ],
+    "evidence_type": "cultural history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1968-redwood-national-park-established",
+    "year": "1968",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Redwood National Park established",
+    "category": "Environment",
+    "lat": 41.2,
+    "lon": -124.0,
+    "tags": [
+      "park",
+      "conservation"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nps_redwood_history",
+      "california2018"
+    ],
+    "evidence_type": "federal statute and park history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1972-smith-river-reservation-expanded-under-federal-trust",
+    "year": "1972",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River Reservation expanded under federal trust",
+    "category": "Governance",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "reservation",
+      "tribal"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "cook1976",
+      "madley2016genocide"
+    ],
+    "evidence_type": "federal removal history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1975-indian-self-determination-act-empowers-tribal-governance",
+    "year": "1975",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Indian Self-Determination Act empowers tribal governance",
+    "category": "Policy",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "federal",
+      "indigenous"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "isda1975"
+    ],
+    "evidence_type": "federal statute",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1978-redwood-national-park-expanded-to-110-000-acres",
+    "year": "1978",
+    "date_iso": "1978-03-27",
+    "date_precision": "exact",
+    "event": "Redwood National Park expanded to 110,000 acres",
+    "category": "Environment",
+    "lat": 41.2,
+    "lon": -124.0,
+    "tags": [
+      "park",
+      "expansion"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "pl95250",
+      "nps_redwood_history"
+    ],
+    "evidence_type": "federal statute and park history",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1980-redwood-parks-designated-unesco-world-heritage-site",
+    "year": "1980",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Redwood parks designated UNESCO World Heritage Site",
+    "category": "Environment",
+    "lat": 41.2,
+    "lon": -124.0,
+    "tags": [
+      "heritage",
+      "unesco"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "unesco_redwood_world_heritage"
+    ],
+    "evidence_type": "official heritage listing",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1981-smith-river-designated-wild-scenic-only-major-undammed-ca-river",
+    "year": "1981",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River designated Wild & Scenic; only major undammed CA river",
+    "category": "Conservation",
+    "lat": 41.9367,
+    "lon": -124.1567,
+    "tags": [
+      "smith_river",
+      "wild_scenic"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "pl97_79_smithriver",
+      "riversgov_smith_river"
+    ],
+    "evidence_type": "federal river designation",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1983-tillie-hardwick-v-united-states-restores-17-california-rancherias-19-july",
+    "year": "1983",
+    "date_iso": "1983-07-19",
+    "date_precision": "exact",
+    "event": "Tillie Hardwick v. United States restores 17 California rancherias 19 July",
+    "category": "Policy",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "restoration",
+      "tolowa"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "hardwick1983",
+      "ftc_tolowa_loi1983"
+    ],
+    "evidence_type": "federal court restoration record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1986-simpson-timber-company-closes-regional-operations",
+    "year": "1986",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Simpson Timber Company closes regional operations",
+    "category": "Economy",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "lumber",
+      "decline"
+    ],
+    "deaths": 0,
+    "damage_note": "~500 jobs lost",
+    "source_keys": [
+      "economic_history",
+      "yaffee1994wisdom"
+    ],
+    "evidence_type": "economic history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1989-pelican-bay-state-prison-opens-december-275-acres-1300-1600-jobs",
+    "year": "1989",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Pelican Bay State Prison opens December (275 acres; 1300-1600 jobs)",
+    "category": "Infrastructure",
+    "lat": 41.8617,
+    "lon": -124.0817,
+    "tags": [
+      "prison",
+      "employment"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "cdcr_pbsp",
+      "kqed_pelican_bay"
+    ],
+    "evidence_type": "official facility and journalism",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1990-smith-river-national-recreation-area-act-305-337-acres-signed-16-november",
+    "year": "1990",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River National Recreation Area Act (305,337 acres) signed 16 November",
+    "category": "Conservation",
+    "lat": 41.9367,
+    "lon": -124.09,
+    "tags": [
+      "smith_river",
+      "nra"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "usfs_smith_river_nra"
+    ],
+    "evidence_type": "federal land designation",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1994-pacific-lumber-company-regional-closure",
+    "year": "1994",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Pacific Lumber Company regional closure",
+    "category": "Economy",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "lumber",
+      "decline"
+    ],
+    "deaths": 0,
+    "damage_note": "~400 jobs lost",
+    "source_keys": [
+      "economic_history",
+      "yaffee1994wisdom"
+    ],
+    "evidence_type": "economic history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1994-last-del-norte-sawmill-closes-redwood-nsp-joint-management-formalized",
+    "year": "1994",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Last Del Norte sawmill closes; Redwood NSP joint management formalized",
+    "category": "Economy",
+    "lat": 41.74,
+    "lon": -124.19,
+    "tags": [
+      "lumber",
+      "closure"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "economic_history",
+      "yaffee1994wisdom"
+    ],
+    "evidence_type": "economic history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "1999-m-v-stuyvesant-spills-2-100-gal-ifo-180-fuel-oil-one-mile-offshore-6-sept",
+    "year": "1999",
+    "date_iso": "1999-09-06",
+    "date_precision": "exact",
+    "event": "M/V Stuyvesant spills 2,100 gal IFO-180 fuel oil one mile offshore 6 Sept",
+    "category": "Environment",
+    "lat": 41.76,
+    "lon": -124.24,
+    "tags": [
+      "oil_spill"
+    ],
+    "deaths": 0,
+    "damage_note": "minor coastal impact",
+    "source_keys": [
+      "stuyvesant_oilspill_1999"
+    ],
+    "evidence_type": "official spill record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2002-klamath-river-fish-kill-33-78k-salmon-die-below-iron-gate-dam",
+    "year": "2002",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Klamath River fish kill: 33-78k salmon die below Iron Gate Dam",
+    "category": "Environment",
+    "lat": 41.5333,
+    "lon": -123.9833,
+    "tags": [
+      "klamath",
+      "fish_kill"
+    ],
+    "deaths": 0,
+    "damage_note": "ecological catastrophe",
+    "source_keys": [
+      "cdfg2004fishkill"
+    ],
+    "evidence_type": "government fish-kill analysis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2003-cascadia-subduction-zone-paleoseismology-confirms-1700-event",
+    "year": "2003",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Cascadia subduction zone paleoseismology confirms 1700 event",
+    "category": "Science",
+    "lat": 46.5,
+    "lon": -124.0,
+    "tags": [
+      "geology",
+      "earthquake"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "goldfinger2012",
+      "atwater2005orphan"
+    ],
+    "evidence_type": "peer-reviewed/government synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2003-crescent-city-designated-first-california-tsunamiready-community",
+    "year": "2003",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Crescent City designated first California TsunamiReady community",
+    "category": "Policy",
+    "lat": 41.7558,
+    "lon": -124.2017,
+    "tags": [
+      "tsunami",
+      "preparedness"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nthmp_crescent_tsunamiready"
+    ],
+    "evidence_type": "official certification",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2006-tolowa-dee-ni-cultural-landscapes-study-published",
+    "year": "2006",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Tolowa Dee-ni' cultural landscapes study published",
+    "category": "Culture",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "indigenous",
+      "research"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "tolowa_culture",
+      "bommelyn1997",
+      "gould1978"
+    ],
+    "evidence_type": "tribal and ethnographic record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2006-november-kuril-islands-tsunami-damages-crescent-city-harbor-16-boats-sunk",
+    "year": "2006",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "November Kuril Islands tsunami damages Crescent City harbor (16 boats sunk)",
+    "category": "Disaster",
+    "lat": 41.7464,
+    "lon": -124.1869,
+    "tags": [
+      "tsunami",
+      "kuril"
+    ],
+    "deaths": 0,
+    "damage_note": "M harbor damage",
+    "source_keys": [
+      "horrillo2008kuril",
+      "dengler2008kuril"
+    ],
+    "evidence_type": "technical tsunami study",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2008-fema-tsunami-retrofit-guide-published",
+    "year": "2008",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "FEMA tsunami retrofit guide published",
+    "category": "Policy",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "disaster",
+      "retrofit"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nthmp_strategic2024"
+    ],
+    "evidence_type": "government guidance",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2011-t-hoku-earthquake-sends-tsunami-currents-into-crescent-city-harbor-one-death-occ",
+    "year": "2011",
+    "date_iso": "2011-03-11",
+    "date_precision": "exact",
+    "event": "Tōhoku earthquake sends tsunami currents into Crescent City harbor; one death occurs at Klamath River mouth",
+    "category": "Disaster",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "tsunami",
+      "distant_source"
+    ],
+    "deaths": 1,
+    "damage_note": "~$30M harbor damage",
+    "source_keys": [
+      "cgs_tohoku_2011",
+      "wilson2013pacific"
+    ],
+    "evidence_type": "technical post-event report",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2012-noaa-updates-tsunami-hazard-maps-for-crescent-city",
+    "year": "2012",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "NOAA updates tsunami hazard maps for Crescent City",
+    "category": "Policy",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "disaster",
+      "planning"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "california2018"
+    ],
+    "evidence_type": "policy history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2015-usgs-completes-tsunami-hazard-model-for-harbor",
+    "year": "2015",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "USGS completes tsunami hazard model for harbor",
+    "category": "Science",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "modeling",
+      "tsunami"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "usgs2015tsunami"
+    ],
+    "evidence_type": "government hazard model",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2016-yurok-tribe-begins-dam-removal-advocacy-on-klamath",
+    "year": "2016",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Yurok Tribe begins dam removal advocacy on Klamath",
+    "category": "Environment",
+    "lat": 41.9,
+    "lon": -124.0,
+    "tags": [
+      "conservation",
+      "tribal"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nps_redwood_history"
+    ],
+    "evidence_type": "environmental history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2018-city-general-plan-update-incorporates-sea-level-rise-projections",
+    "year": "2018",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "City General Plan update incorporates sea-level rise projections",
+    "category": "Policy",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "planning",
+      "climate"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "zoning"
+    ],
+    "evidence_type": "official planning document",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2019-smith-river-salmonid-habitat-restoration-progress-report",
+    "year": "2019",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River salmonid habitat restoration progress report",
+    "category": "Environment",
+    "lat": 41.8,
+    "lon": -124.15,
+    "tags": [
+      "restoration",
+      "salmon"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nps_redwood_history"
+    ],
+    "evidence_type": "environmental history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2020-census-records-6-673-residents-including-pelican-bay-group-quarters",
+    "year": "2020",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Census records 6,673 residents including Pelican Bay group quarters",
+    "category": "Demographics",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "census",
+      "decline"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "uscb2020census",
+      "census_group_quarters_2020"
+    ],
+    "evidence_type": "official census count",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2020-covid-19-pandemic-community-mutual-aid-activates",
+    "year": "2020",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "COVID-19 pandemic; community mutual aid activates",
+    "category": "Social",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "pandemic",
+      "resilience"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "sutter2021covid_surge",
+      "northcoastjournal2021delnorte_covid"
+    ],
+    "evidence_type": "public-health event record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2020-slater-fire-burns-157-270-acres-across-del-norte-curry-siskiyou",
+    "year": "2020",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Slater Fire burns 157,270 acres across Del Norte/Curry/Siskiyou",
+    "category": "Environment",
+    "lat": 41.9417,
+    "lon": -123.6433,
+    "tags": [
+      "wildfire"
+    ],
+    "deaths": 2,
+    "damage_note": "200+ structures destroyed",
+    "source_keys": [
+      "inciweb_slater_devil_2020",
+      "slater_fire"
+    ],
+    "evidence_type": "official incident record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2021-del-norte-county-long-range-transportation-plan-published",
+    "year": "2021",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Del Norte County Long-Range Transportation Plan published",
+    "category": "Infrastructure",
+    "lat": 41.75,
+    "lon": -124.17,
+    "tags": [
+      "transport",
+      "planning"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "infrastructure"
+    ],
+    "evidence_type": "official planning document",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2022-tolowa-dee-ni-language-revitalization-program-expands",
+    "year": "2022",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Tolowa Dee-ni' language revitalization program expands",
+    "category": "Culture",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "indigenous",
+      "language"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "tolowa_culture",
+      "bommelyn1997",
+      "gould1978"
+    ],
+    "evidence_type": "tribal and ethnographic record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2023-redwood-n-sp-resource-management-assessment-completed",
+    "year": "2023",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Redwood N&SP resource management assessment completed",
+    "category": "Environment",
+    "lat": 41.2,
+    "lon": -124.0,
+    "tags": [
+      "park",
+      "management"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "nps_redwood_history"
+    ],
+    "evidence_type": "environmental history synthesis",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2023-smith-river-complex-wildfire-burns-95-107-acres",
+    "year": "2023",
+    "date_iso": null,
+    "date_precision": "year",
+    "event": "Smith River Complex wildfire burns 95,107 acres",
+    "category": "Environment",
+    "lat": 41.85,
+    "lon": -123.8,
+    "tags": [
+      "wildfire"
+    ],
+    "deaths": 0,
+    "damage_note": "forest impact",
+    "source_keys": [
+      "inciweb_smith_river_complex_2023"
+    ],
+    "evidence_type": "official incident record",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2023-yurok-tolowa-dee-ni-cher-ae-heights-imsa-designated-22-september",
+    "year": "2023",
+    "date_iso": "2023-09-22",
+    "date_precision": "exact",
+    "event": "Yurok-Tolowa Dee-ni-Cher-Ae Heights IMSA designated 22 September",
+    "category": "Governance",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "imsa",
+      "tribal_sovereignty"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "imsa2023designation",
+      "tolowa_imsa2024"
+    ],
+    "evidence_type": "tribal co-management declaration",
+    "verification_status": "anchored_to_cited_source",
+    "checked_as_of": null
+  },
+  {
+    "id": "2024-caltrans-selects-alternative-f-an-approximately-one-mile-tunnel-bypass-for-last-",
+    "year": "2024",
+    "date_iso": "2024-06-13",
+    "date_precision": "exact",
+    "event": "Caltrans selects Alternative F, an approximately one-mile tunnel bypass, for Last Chance Grade",
+    "category": "Infrastructure",
+    "lat": 41.5667,
+    "lon": -124.09,
+    "tags": [
+      "last_chance_grade",
+      "tunnel"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "caltrans_lcg2024_selection",
+      "caltrans2026lcgtunnel"
+    ],
+    "evidence_type": "official agency decision",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit if Caltrans changes the selected alternative, cost estimate, construction window, or preferred-alternative page.",
+    "label": "Last Chance Grade tunnel selected"
+  },
+  {
+    "id": "2024-iron-gate-dam-removal-completed-28-august-klamath-river-reopens-to-anadromous-fi",
+    "year": "2024",
+    "date_iso": "2024-08-28",
+    "date_precision": "exact",
+    "event": "Iron Gate cofferdam breached 28 August; Klamath River reopens to anadromous fish before final project completion",
+    "category": "Environment",
+    "lat": 41.93,
+    "lon": -122.45,
+    "tags": [
+      "klamath",
+      "dam_removal"
+    ],
+    "deaths": 0,
+    "damage_note": "river restored",
+    "source_keys": [
+      "krrc2024completion",
+      "noaa2024klamath_finalstep"
+    ],
+    "evidence_type": "official restoration milestone",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit if KRRC, NOAA, or state agencies publish a correction to the August 28 free-flowing milestone, October 2 completion record, habitat-mile update, or post-removal status change.",
+    "label": "Iron Gate cofferdam breached"
+  },
+  {
+    "id": "2024-klamath-free-flowing-river-ceremony-2-october-krrc-definite-plan-completion",
+    "year": "2024",
+    "date_iso": "2024-10-02",
+    "date_precision": "exact",
+    "event": "Klamath Free-flowing River Ceremony, 2 October; KRRC Definite Plan completion",
+    "category": "Culture",
+    "lat": 41.5333,
+    "lon": -123.9833,
+    "tags": [
+      "klamath",
+      "ceremony"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "krrc2024completion"
+    ],
+    "evidence_type": "official project completion",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit if KRRC updates the completion record, ceremony status, or lower Klamath restoration milestone.",
+    "label": "Klamath free-flowing ceremony"
+  },
+  {
+    "id": "2025-cdfw-sets-limited-california-ocean-salmon-recreational-season-after-2023-2024-closures",
+    "year": "2025",
+    "date_iso": "2025-05-27",
+    "date_precision": "official notice",
+    "event": "CDFW sets limited California ocean salmon recreational season after 2023-2024 closures",
+    "category": "Environment",
+    "lat": 41.7558,
+    "lon": -124.2017,
+    "tags": [
+      "salmon",
+      "fishery",
+      "regulation"
+    ],
+    "deaths": 0,
+    "damage_note": "fishery constrained",
+    "source_keys": [
+      "cdfw2025_ocean_salmon_regulations"
+    ],
+    "evidence_type": "official fishery regulation notice",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit if CDFW or federal managers revise the 2025 ocean salmon season, harvest guideline, or closure record.",
+    "label": "Limited salmon opener"
+  },
+  {
+    "id": "2025-cdfw-reports-widespread-klamath-salmon-reoccupation-one-year-after-dam-removal",
+    "year": "2025",
+    "date_iso": "2025-11-18",
+    "date_precision": "official notice",
+    "event": "CDFW reports widespread Klamath salmon reoccupation one year after dam removal, while final adult-return estimates remain pending",
+    "category": "Environment",
+    "lat": 41.95,
+    "lon": -122.45,
+    "tags": [
+      "klamath",
+      "salmon",
+      "dam_removal",
+      "monitoring"
+    ],
+    "deaths": 0,
+    "damage_note": "recovery monitoring signal",
+    "source_keys": [
+      "cdfw2025_salmon_everywhere"
+    ],
+    "evidence_type": "official ecological monitoring summary",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit when CDFW, KRRC, NOAA, USGS, or tribal monitoring partners publish final adult-return estimates, revised tributary counts, or post-removal recovery updates.",
+    "label": "Klamath salmon monitoring signal"
+  },
+  {
+    "id": "2026-cdfw-announces-commercial-ocean-salmon-return-after-three-year-closure",
+    "year": "2026",
+    "date_iso": "2026-04-12",
+    "date_precision": "official notice",
+    "event": "CDFW announces commercial ocean salmon return after a three-year closure, with in-season management",
+    "category": "Environment",
+    "lat": 41.7558,
+    "lon": -124.2017,
+    "tags": [
+      "salmon",
+      "fishery",
+      "regulation"
+    ],
+    "deaths": 0,
+    "damage_note": "commercial fishery partially reopens",
+    "source_keys": [
+      "cdfw2026_ocean_salmon_comeback",
+      "cdfw2026_ocean_salmon_regulations"
+    ],
+    "evidence_type": "official fishery regulation notice",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit if CDFW, PFMC, or federal managers revise the 2026 commercial or recreational ocean salmon season.",
+    "label": "Salmon commercial return"
+  },
+  {
+    "id": "2025-del-norte-triplicate-briefly-closes-after-146-years-under-country-media-then-is-",
+    "year": "2025",
+    "date_iso": "2025-09",
+    "date_precision": "month",
+    "event": "Del Norte Triplicate briefly closes after 146 years under Country Media, then is purchased for a local relaunch; civic press also shifts toward Redwood Voice and Wild Coast Compass",
+    "category": "Culture",
+    "lat": 41.7558,
+    "lon": -124.2017,
+    "tags": [
+      "newspaper",
+      "press_transition"
+    ],
+    "deaths": 0,
+    "damage_note": "media-landscape transition",
+    "source_keys": [
+      "triplicate2025closure",
+      "redwoodvoice_triplicate_relaunch2025"
+    ],
+    "evidence_type": "local civic journalism",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "local_journalism_current_status",
+    "refresh_trigger": "Re-audit if the Triplicate ownership, relaunch status, publication schedule, or local-media landscape changes.",
+    "label": "Triplicate closure + relaunch"
+  },
+  {
+    "id": "2026-pelican-bay-state-prison-homicide-investigation-opens-gabriel-otero-10-march",
+    "year": "2026",
+    "date_iso": "2026-03-10",
+    "date_precision": "exact",
+    "event": "Pelican Bay State Prison homicide investigation opens (Gabriel Otero, 10 March)",
+    "category": "Conflict",
+    "lat": 41.8617,
+    "lon": -124.0817,
+    "tags": [
+      "pelican_bay",
+      "homicide"
+    ],
+    "deaths": 1,
+    "damage_note": "one death",
+    "source_keys": [
+      "cdcr2026otero"
+    ],
+    "evidence_type": "official correctional press release",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit if CDCR, the district attorney, or court records update the homicide investigation or charging status.",
+    "label": "Pelican Bay homicide investigation"
+  },
+  {
+    "id": "2026-battery-point-apartments-100m-affordable-housing-project-resumes-construction-af",
+    "year": "2026",
+    "date_iso": "2026-05-07",
+    "date_precision": "reported action",
+    "event": "Battery Point Apartments $100M affordable-housing project resumes construction after $9.7M HOME-funds award",
+    "category": "Infrastructure",
+    "lat": 41.7445,
+    "lon": -124.2017,
+    "tags": [
+      "housing",
+      "battery_point"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "batterypoint2026resume",
+      "redwoodvoice2026batterypoint_update"
+    ],
+    "evidence_type": "local civic reporting",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_plus_local_journalism",
+    "refresh_trigger": "Re-audit if the city, developer, funder, or local reporting changes construction, financing, or unit-count status.",
+    "label": "Battery Point Apartments resumes"
+  },
+  {
+    "id": "2026-crescent-city-council-opens-prop-218-protest-process-for-proposed-water-and-sewe",
+    "year": "2026",
+    "date_iso": "2026-04-06",
+    "date_precision": "agenda action",
+    "event": "Crescent City Council opens Prop 218 protest process for proposed water and sewer rate increases; June 1 public hearing set",
+    "category": "Governance",
+    "lat": 41.7558,
+    "lon": -124.2017,
+    "tags": [
+      "water_rates",
+      "prop_218"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "crescentcity_2026_rate_agenda",
+      "redwoodvoice2026water"
+    ],
+    "evidence_type": "official agenda and local civic reporting",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_plus_local_journalism",
+    "refresh_trigger": "Re-audit after the June 1, 2026 hearing, protest count, ordinance vote, or any changed rate effective date.",
+    "label": "Water/sewer Prop 218 process"
+  },
+  {
+    "id": "2026-maiden-lane-homicide-three-charged-after-fatal-altercation-killing-41-year-old-m",
+    "year": "2026",
+    "date_iso": "2026-03-16",
+    "date_precision": "exact",
+    "event": "Maiden Lane fatal altercation on 16 March; three men later accused in killing of 41-year-old Robert Allen Cole",
+    "category": "Conflict",
+    "lat": 41.753,
+    "lon": -124.201,
+    "tags": [
+      "homicide"
+    ],
+    "deaths": 1,
+    "damage_note": "one death",
+    "source_keys": [
+      "maiden_lane_2026"
+    ],
+    "evidence_type": "local civic reporting",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "local_journalism_pending_official_record",
+    "refresh_trigger": "Re-audit when sheriff, district attorney, or court records update charges, hearings, disposition, or victim details.",
+    "label": "Maiden Lane homicide charges"
+  },
+  {
+    "id": "2026-crescent-city-named-americas-favorite-small-towns-finalist-by-parade-magazine-an",
+    "year": "2026",
+    "date_iso": "2026-03",
+    "date_precision": "month",
+    "event": "Crescent City named America's Favorite Small Towns finalist by Parade Magazine and Steller (March)",
+    "category": "Culture",
+    "lat": 41.7558,
+    "lon": -124.2017,
+    "tags": [
+      "recognition",
+      "tourism"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "parade2026smalltowns"
+    ],
+    "evidence_type": "public recognition listing",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "commercial_publication",
+    "refresh_trigger": "Re-audit if Parade or Steller changes finalist status, contest results, ranking, or eligibility language.",
+    "label": "Small-town finalist"
+  },
+  {
+    "id": "2026-tolowa-dee-ni-nation-awarded-200-000-for-elk-habitat-restoration",
+    "year": "2026",
+    "date_iso": "2026-04-20",
+    "date_precision": "reported action",
+    "event": "Tolowa Dee-ni' Nation awarded $200,000 for elk-habitat restoration",
+    "category": "Conservation",
+    "lat": null,
+    "lon": null,
+    "tags": [
+      "tolowa",
+      "elk",
+      "habitat"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "tolowa2026elk"
+    ],
+    "evidence_type": "local civic reporting",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "tribal_press_release_republished",
+    "refresh_trigger": "Re-audit if Tolowa Dee-ni' Nation, USFWS, CDFW, or grant records update funding, acreage, or project scope.",
+    "label": "Tolowa elk-habitat grant"
+  },
+  {
+    "id": "2026-mw-4-8-offshore-gorda-plate-earthquake-89-km-wsw-of-crescent-city-9-may-no-tsuna",
+    "year": "2026",
+    "date_iso": "2026-05-09",
+    "date_precision": "exact",
+    "event": "Mw 4.8 offshore Gorda-plate earthquake 89 km WSW of Crescent City, 9 May; no tsunami flag",
+    "category": "Geological",
+    "lat": 41.5027,
+    "lon": -125.218,
+    "tags": [
+      "earthquake"
+    ],
+    "deaths": 0,
+    "damage_note": "no damage",
+    "source_keys": [
+      "usgs2026may_quake"
+    ],
+    "evidence_type": "official instrument record",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit if USGS revises magnitude, location, event ID, tsunami flag, or authoritative event-page metadata.",
+    "label": "Mw 4.8 offshore quake"
+  },
+  {
+    "id": "2026-crescent-city-fire-rescue-opens-fire-chief-recruitment-5-may-applications-close-",
+    "year": "2026",
+    "date_iso": "2026-05-05",
+    "date_precision": "exact",
+    "event": "Crescent City Fire & Rescue opens fire chief recruitment (5 May); applications close 5 June",
+    "category": "Governance",
+    "lat": 41.7558,
+    "lon": -124.2017,
+    "tags": [
+      "fire",
+      "recruitment"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "wfca2026firechief"
+    ],
+    "evidence_type": "official recruitment notice",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_primary",
+    "refresh_trigger": "Re-audit after the June 5, 2026 application deadline or if the recruitment notice, schedule, or appointment changes.",
+    "label": "Fire chief recruitment"
+  },
+  {
+    "id": "2026-del-norte-county-primary-election-2-june-contested-board-of-supervisors-state-as",
+    "year": "2026",
+    "date_iso": "2026-06-02",
+    "date_precision": "scheduled",
+    "event": "Del Norte County primary election (2 June): contested Board of Supervisors, State Assembly, and Senate District 2 seats",
+    "category": "Governance",
+    "lat": 41.7558,
+    "lon": -124.2017,
+    "tags": [
+      "election"
+    ],
+    "deaths": 0,
+    "damage_note": "none",
+    "source_keys": [
+      "delnorte_elections_2026_primary",
+      "california_sos_2026_primary",
+      "ballotpedia_2026",
+      "redwoodvoice2026election"
+    ],
+    "evidence_type": "scheduled election record and local reporting",
+    "verification_status": "checked_current_source",
+    "checked_as_of": "2026-05-19",
+    "source_tier": "official_plus_reference",
+    "refresh_trigger": "Re-audit after June 2, 2026 or if county or state election offices change ballot, candidate, or result status.",
+    "label": "Scheduled June primary"
+  }
+]

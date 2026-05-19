@@ -1,0 +1,14 @@
+point_id,year,acres,evidence_type,source_keys,notes
+redwood_acres_1850,1850,2200000,cited_estimate,savetheredwoods2018state;noss2000redwood;fisher2010redwood,Approximate reconstructed pre-American-settlement old-growth coast redwood extent.
+redwood_acres_1880,1880,1700000,cited_estimate,savetheredwoods2018state;nps_redwood_history;vaden_logging,Rounded synthesis point for the early industrial logging period.
+redwood_acres_1900,1900,1300000,cited_estimate,savetheredwoods2018state;nps_redwood_history;vaden_logging,Rounded synthesis point during expanding rail and mill access.
+redwood_acres_1920,1920,850000,cited_estimate,savetheredwoods2018state;nps_redwood_history;vaden_logging,Rounded synthesis point near early conservation-era park campaigns.
+redwood_acres_1940,1940,480000,cited_estimate,savetheredwoods2018state;nps_redwood_history;vaden_logging,Rounded synthesis point before postwar harvest acceleration.
+redwood_acres_1960,1960,250000,cited_estimate,savetheredwoods2018state;nps_redwood_history;vaden_logging,Rounded synthesis point before Redwood National Park creation.
+redwood_acres_1968,1968,200000,cited_estimate,savetheredwoods2018state;nps_redwood_chronology;redwood_parks,Rounded synthesis point at Redwood National Park establishment.
+redwood_acres_1978,1978,175000,cited_estimate,savetheredwoods2018state;nps_redwood_chronology;redwood_parks,Rounded synthesis point at Redwood National Park expansion.
+redwood_acres_1990,1990,145000,cited_estimate,savetheredwoods2018state;nps_redwood_history;noss2000redwood,Rounded synthesis point after federal-state protection stabilized much remaining old growth.
+redwood_acres_2000,2000,130000,cited_estimate,savetheredwoods2018state;nps2023redwood;noss2000redwood,Rounded synthesis point for late twentieth-century conservation baseline.
+redwood_acres_2010,2010,125000,cited_estimate,savetheredwoods2018state;nps2023redwood,Rounded synthesis point for contemporary park-and-reserve era.
+redwood_acres_2020,2020,115000,cited_estimate,savetheredwoods_state;savetheredwoods2018state;nps2023redwood,Rounded contemporary conservation estimate.
+redwood_acres_2025,2025,110000,cited_estimate,savetheredwoods_state;savetheredwoods2018state;nps2023redwood,Rounded current estimate used in manuscript captions and prose.

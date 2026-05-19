@@ -1,0 +1,22 @@
+event_id,label,age_yr_bp,segment,source_keys,notes
+t1,T1,320,full,goldfinger2012;atwater2005orphan,AD 1700 full-margin event correlated with the orphan tsunami record.
+t2,T2,810,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t3,T3,1080,south,goldfinger2012;goldfinger2012turbidite,Approximate southern-segment event age rounded to nearest decade for display.
+t4,T4,1320,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t5,T5,1610,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t5b,T5b,1820,south,goldfinger2012;goldfinger2012turbidite,Approximate southern-segment event age rounded to nearest decade for display.
+t6,T6,2010,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t7,T7,2510,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t8,T8,2730,south,goldfinger2012;goldfinger2012turbidite,Approximate southern-segment event age rounded to nearest decade for display.
+t9,T9,3060,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t9b,T9b,3320,south,goldfinger2012;goldfinger2012turbidite,Approximate southern-segment event age rounded to nearest decade for display.
+t10,T10,3580,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t11,T11,4060,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t12,T12,4490,south,goldfinger2012;goldfinger2012turbidite,Approximate southern-segment event age rounded to nearest decade for display.
+t13,T13,4990,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t14,T14,5340,south,goldfinger2012;goldfinger2012turbidite,Approximate southern-segment event age rounded to nearest decade for display.
+t15,T15,5780,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t16,T16,6510,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t17,T17,7170,south,goldfinger2012;goldfinger2012turbidite,Approximate southern-segment event age rounded to nearest decade for display.
+t18,T18,8010,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.
+t19,T19,9100,full,goldfinger2012;goldfinger2012turbidite,Approximate median event age rounded to nearest decade for display.

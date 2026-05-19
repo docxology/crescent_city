@@ -1,0 +1,14 @@
+year,population_context_estimate,lumber_jobs_estimate,fishing_jobs_estimate,tourism_visitors_nearby_estimate,park_visitors_estimate,median_household_income_estimate,estimate_type,source_keys,notes
+1860,2500,,,,,,decennial census / local synthesis,economic_history,Approximate county-seat trading-area baseline; not a municipal census series.
+1880,3200,800,350,,,,historical estimate,economic_history,Early lumber and fishing workforce estimate.
+1900,3800,1200,520,,,,historical estimate,economic_history,High lumber output with fishing support economy.
+1920,5000,2100,680,,,,historical estimate,economic_history,"County-seat trading-area estimate, not official city enumeration."
+1940,5500,1800,400,,,,historical estimate,economic_history,Prewar/post-Depression lumber workforce context.
+1950,5600,1900,600,,,,historical estimate,economic_history,Postwar lumber peak context.
+1960,5700,1600,500,,,,historical estimate,economic_history,Pre-tsunami regional economy context.
+1970,5100,800,350,,,,historical estimate,economic_history,Post-tsunami reconstruction and early park transition.
+1980,4800,200,200,,,,historical estimate,economic_history,Post-Redwood expansion timber contraction context.
+1990,4500,50,150,150000,,,compiled estimate,economic_history,"Tourism visitors are nearby visitor-flow estimates, not official city counts."
+2000,4300,10,100,200000,,,compiled estimate,economic_history,Approximate transition-economy indicators.
+2010,3900,5,80,300000,,,compiled estimate,economic_history,Approximate transition-economy indicators.
+2020,6700,2,60,500000,520000,56000,compiled estimate / census context,economic_history;uscb2020census,Median household income is rounded contextual estimate; figure inputs use economic_sectors.csv instead.

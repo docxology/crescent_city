@@ -1,0 +1,7 @@
+stat_id,sort_order,label,value,source_keys,notes
+full_margin_events,1,Full-margin events,19 over ~10000 yr,goldfinger2012;goldfinger2012turbidite,Goldfinger et al. event-count summary as plotted in the manuscript figure.
+full_margin_recurrence,2,Mean recurrence (full),~530 yr,goldfinger2012;goldfinger2012turbidite,Mean recurrence is a model summary rather than a clocklike prediction.
+south_segment_recurrence,3,Mean recurrence (S. segment),~240 yr,goldfinger2012;goldfinger2012turbidite,Southern-segment recurrence estimate used for comparative hazard framing.
+time_since_1700,4,Time since 1700 event,~326 yr,atwater2005orphan;goldfinger2012,Computed from the AD 1700 orphan-tsunami event to the 2026 manuscript audit date.
+south_segment_probability,5,50-yr probability (S. segment M >= 8.0),~37 %,goldfinger2012,Time-dependent probability model output; not a deterministic forecast.
+full_margin_probability,6,50-yr probability (full-margin M >= 9),~10-15 %,goldfinger2012,Time-dependent probability model output; not a deterministic forecast.

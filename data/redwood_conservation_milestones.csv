@@ -1,0 +1,8 @@
+event_id,year,label,label_x,label_y,source_keys,notes
+dolbeer_steam_donkey,1881,Dolbeer steam donkey|1881,1874,2180000,vaden_logging;nps_redwood_history,Steam-donkey logging accelerated access to steep old-growth redwood terrain.
+save_redwoods_league_founded,1918,Save the Redwoods|League founded|1918,1910,1610000,savetheredwoods_state;speece2017,Conservation institution founded after early automobile-era redwood tours.
+first_state_redwood_parks,1929,First state|redwood parks|1929,1935,430000,nps_redwood_chronology;savetheredwoods_state,Early California state redwood-park acquisitions.
+redwood_national_park_1968,1968,Redwood National|Park established|1968,1951,910000,nps_redwood_chronology;redwood_parks,Federal park establishment under Public Law 90-545.
+redwood_national_park_expansion_1978,1978,RNP expansion|1978,1964,640000,nps_redwood_chronology;redwood_parks,Federal park expansion under Public Law 95-250.
+unesco_world_heritage_1980,1980,UNESCO World|Heritage|1980,1989,1040000,unesco_redwood_world_heritage;nps_redwood_chronology,World Heritage inscription for Redwood National and State Parks.
+joint_nps_state_parks_1994,1994,Joint NPS / CA|State Parks|1994,2003,520000,nps2023redwood;nps_redwood_chronology,Joint federal-state management frame for Redwood National and State Parks.
