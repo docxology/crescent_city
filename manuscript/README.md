@@ -13,7 +13,7 @@ licensing is described under `metadata.data_license` in `config.yaml`.
 
 ## Structure and roster
 
-There are **62** `*.md` files here. **58** are renderable scholarly sections
+There are **63** `*.md` files here. **59** are renderable scholarly sections
 (combined into the PDF): abstract through reproducibility, references, and two
 appendices. **Four** are authoring meta only (this file, `AGENTS.md`,
 `SYNTAX.md`, and LaTeX-only [`preamble.md`](preamble.md) — not prose chapters).
