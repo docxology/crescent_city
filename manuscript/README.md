@@ -27,7 +27,7 @@ Countable layout:
 | Part II — Time | `20_time` + `21`–`35` | Part opener + 15 chapters |
 | Part III — People | `40_people` + `41`–`52` | Part opener + 12 chapters |
 | Part IV — Ideas | `60_ideas` + `61`–`73` | Part opener + 13 chapters |
-| Back matter | `99_references`, `A1_figure_catalogue`, `A2_glossary` | Bibliography anchor, figure catalog, glossary |
+| Back matter | `99_references`, `A1_figure_catalogue`, `A2_glossary`, `A3_quadruplicate` | Bibliography anchor, figure catalog, glossary, quadruplicate companion |
 
 The manuscript describes **46 topical chapters** (Part chapter files `03`–`11`,
 `21`–`35`, `41`–`52`, `61`–`69`, plus `70_conclusion`), distinct from the
