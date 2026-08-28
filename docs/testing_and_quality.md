@@ -83,7 +83,7 @@ important fields are:
 | `figures_ok` | Whether batched figure generation completed |
 | `checks` | Per-gate boolean results |
 
-Current expected shape: 5/5 checks, 24 figures, and true
+Current expected shape: 5/5 checks, 25 figures, and true
 `bibliography_consistency`.
 
 ## Renderer Validation

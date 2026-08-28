@@ -8,6 +8,36 @@ The format follows [Keep a Changelog](https://keepachangelog.com/);
 the manuscript itself is versioned by the `paper.version` field in
 `manuscript/config.yaml`.
 
+## [Unreleased] — 2026-08-28
+
+### Changed
+
+- Monorepo-root resolution is now dynamic (`src/repo_paths.py`,
+  `TEMPLATE_REPO_ROOT` env override, ancestor search, sibling
+  `template/` fallback), so tests, the pipeline, and variable
+  generation work in both the in-monorepo and relocated sidecar
+  checkouts.
+- Prose gates tightened honestly: `citation_density_min_per_1000`
+  raised 3.0 → 5.0 (manuscript sustains 6.1+), and
+  `fail_on_unused` flipped to true now that every non-cited
+  bibliography entry is covered by the explicit `reserve_keys`
+  allowlist.
+
+### Added
+
+- New figure `extraction_decline` (`plot_extraction_decline`) plots
+  lumber and fishing employment estimates 1880–2020 from
+  `data/economic_history.csv` — the file was previously an orphan
+  data asset referenced only through its BibTeX key. Registry,
+  provenance row, Figure Catalog entry, and README table updated;
+  figure count 24 → 25.
+- `24_gold_rush.md` deepened: the 1853–1855 massacre sequence
+  (Yontocket, Howonquet, Achulet) is now narrated with citations to
+  the existing `madley2016genocide` / `cook1976` / `tolowa_culture`
+  sources already recorded in `data/historical_events.json`, and the
+  1860 population claim now cites its census/economic-history data
+  basis explicitly.
+
 ## [1.0] — 2026-05-10
 
 ### Initial canonical release

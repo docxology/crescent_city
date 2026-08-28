@@ -40,7 +40,7 @@ PYTHONPATH=. uv run python \
 PYTHONPATH=. uv run python \
     projects/crescent_city/scripts/run_history_pipeline.py --strict
 
-# Regenerate all 24 figures
+# Regenerate all 25 figures
 PYTHONPATH=. uv run python \
     projects/crescent_city/scripts/y_generate_history_figures.py
 
@@ -69,7 +69,7 @@ outward to the other Parts where the systems interact.
 
 Plus appendices: **A1 Figure Catalog**, **A2 Glossary**.
 
-## Figures (24)
+## Figures (25)
 
 Every figure is generated deterministically by a Python plotter
 registered in `src/figures.py`. The complete catalog lives in the
@@ -84,24 +84,25 @@ following table is the operational reference:
 | 4 | `plot_nested_systems_map` | Space–Time–People–Ideas systems architecture |
 | 5 | `plot_population_trend` | Population 1850–2026 |
 | 6 | `plot_economic_sectors` | Employment by sector 1990–2020 |
-| 7 | `plot_tsunami_timeline` | Recorded tsunamis 1700–2022 |
-| 8 | `plot_disaster_impact` | Tsunami death-toll comparison |
-| 9 | `plot_tsunami_inundation_diagram` | 1964 four-wave sequence |
-| 10 | `plot_historical_timeline` | Two-century event chronology |
-| 11 | `plot_regional_map` | Del Norte County reference map |
-| 12 | `plot_tolowa_villages_map` | Non-coordinate Tolowa public place relationships |
-| 13 | `plot_redwood_decline_chart` | Old-growth coast redwood 1850–2025 |
-| 14 | `plot_cascadia_paleoseismology` | 10,000-year Cascadia turbidite record |
-| 15 | `plot_jefferson_map` | State of Jefferson territory |
-| 16 | `plot_climograph` | Monthly temperature, precipitation, wet days |
-| 17 | `plot_harbor_timeline` | Harbor engineering and disaster events |
-| 18 | `plot_currents_timeline` | Domain-stratified 2024–2026 civic events |
-| 19 | `plot_sea_level_scenarios` | Sea-level evidence classes and planning ranges |
-| 20 | `plot_smith_river_protection` | Smith River Wild and Scenic protection miles |
-| 21 | `plot_housing_pipeline` | 2024–2026 affordable-housing pipeline |
-| 22 | `plot_last_chance_grade_profile` | Last Chance Grade tunnel and repair metrics |
-| 23 | `plot_archaeology_evidence_ladder` | Archaeological evidence classes without site disclosure |
-| 24 | `plot_rural_health_access_network` | Rural health and transfer-service network |
+| 7 | `plot_extraction_decline` | Lumber and fishing employment 1880–2020 |
+| 8 | `plot_tsunami_timeline` | Recorded tsunamis 1700–2022 |
+| 9 | `plot_disaster_impact` | Tsunami death-toll comparison |
+| 10 | `plot_tsunami_inundation_diagram` | 1964 four-wave sequence |
+| 11 | `plot_historical_timeline` | Two-century event chronology |
+| 12 | `plot_regional_map` | Del Norte County reference map |
+| 13 | `plot_tolowa_villages_map` | Non-coordinate Tolowa public place relationships |
+| 14 | `plot_redwood_decline_chart` | Old-growth coast redwood 1850–2025 |
+| 15 | `plot_cascadia_paleoseismology` | 10,000-year Cascadia turbidite record |
+| 16 | `plot_jefferson_map` | State of Jefferson territory |
+| 17 | `plot_climograph` | Monthly temperature, precipitation, wet days |
+| 18 | `plot_harbor_timeline` | Harbor engineering and disaster events |
+| 19 | `plot_currents_timeline` | Domain-stratified 2024–2026 civic events |
+| 20 | `plot_sea_level_scenarios` | Sea-level evidence classes and planning ranges |
+| 21 | `plot_smith_river_protection` | Smith River Wild and Scenic protection miles |
+| 22 | `plot_housing_pipeline` | 2024–2026 affordable-housing pipeline |
+| 23 | `plot_last_chance_grade_profile` | Last Chance Grade tunnel and repair metrics |
+| 24 | `plot_archaeology_evidence_ladder` | Archaeological evidence classes without site disclosure |
+| 25 | `plot_rural_health_access_network` | Rural health and transfer-service network |
 
 ## Architecture
 
@@ -209,7 +210,7 @@ The pipeline is governed by three commitments:
 
 The test suite validates:
 
-- 24 figures are produced; each has a matching SVG sibling and
+- 25 figures are produced; each has a matching SVG sibling and
   exceeds 5 KB
 - The figure manifest records all 24 registry entries, declared data
   inputs, evidence classes, provenance fields, long descriptions, and

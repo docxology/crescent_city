@@ -267,6 +267,27 @@ read as single-instrument time series.
 > *Interpretive claim*: the structural transition from a resource-
 > extraction economy to a public-sector- and tourism-anchored economy.
 
+> Figure entry — `extraction_decline.png` (`plot_extraction_decline`)
+>
+> *Module*: `src/_figures/demographics.py`.
+> *Data source*: `data/economic_history.csv` (local historical
+> employment estimates; `source_keys: economic_history`).
+> *Evidence class*: historical estimates, not an official payroll
+> series.
+> *Source freshness*: periodic; refresh when local historical
+> employment estimates are revised. *Reader risk*: medium.
+> *Long description*: Two lines trace estimated lumber and fishing
+> employment from 1880 to 2020, with annotations marking the
+> early-twentieth-century lumber peak and the near-zero 2020
+> extraction baseline.
+> *Encoding*: two colored line series over survey years; annotation
+> arrows flag the peak (~2,100 lumber jobs, 1920) and the 2020
+> post-extraction floor (~2 lumber, ~60 fishing jobs).
+> *Interpretive claim*: extraction employment did not merely shrink
+> after the postwar peak; it effectively ended, which is why the
+> replacement economy in [@sec:economic_history] is described as a
+> maintenance economy.
+
 ### Tsunami and disaster (tsunami)
 
 Data limitations: post-1946 tsunami heights and damage figures draw on

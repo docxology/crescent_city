@@ -183,3 +183,72 @@ def plot_economic_sectors(output_dir: Path, econ_csv: Path | None = None) -> Pat
 
     fig.tight_layout(rect=(0, 0.045, 1, 0.96))
     return save_figure(fig, "economic_sectors", output_dir)
+
+
+def plot_extraction_decline(output_dir: Path, econ_history_csv: Path | None = None) -> Path:
+    """Line chart of lumber and fishing employment estimates, 1880-2020.
+
+    Reads ``data/economic_history.csv`` so the long extraction-cycle
+    narrative in ``29_economic_history.md`` has a visible series instead of
+    prose-only estimates. Values are historical estimates (source keys on
+    each row), not official payroll series — the caption must say so.
+    """
+    csv = econ_history_csv or _DATA_DIR / "economic_history.csv"
+    df = pd.read_csv(csv)
+    df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    df = df.dropna(subset=["year"])
+    df["year"] = df["year"].astype(int)
+
+    fig, ax = plt.subplots(figsize=(12.5, 6.8))
+    for col, label, color in (
+        ("lumber_jobs_estimate", "Lumber jobs (estimate)", PALETTE["green"]),
+        ("fishing_jobs_estimate", "Fishing jobs (estimate)", PALETTE["blue"]),
+    ):
+        series = df.dropna(subset=[col])
+        ax.plot(
+            series["year"],
+            series[col],
+            marker="o",
+            linewidth=2.4,
+            markersize=7,
+            color=color,
+            label=label,
+            zorder=3,
+        )
+
+    peak = df.loc[df["lumber_jobs_estimate"].idxmax()]
+    ax.annotate(
+        f"Peak lumber employment\n~{int(peak['lumber_jobs_estimate']):,} ({int(peak['year'])})",
+        xy=(peak["year"], peak["lumber_jobs_estimate"]),
+        xytext=(peak["year"] + 14, peak["lumber_jobs_estimate"] + 120),
+        arrowprops=dict(arrowstyle="->", color=PALETTE["red"], lw=1.5),
+        fontsize=12,
+        color="#333333",
+    )
+    ax.annotate(
+        "2020: ~2 lumber jobs, ~60 fishing jobs\n(post-extraction maintenance economy)",
+        xy=(2020, 2),
+        xytext=(1952, 900),
+        arrowprops=dict(arrowstyle="->", color=PALETTE["red"], lw=1.5),
+        fontsize=12,
+        color="#333333",
+    )
+
+    ax.set_xlabel("Year", fontsize=14, fontweight="bold")
+    ax.set_ylabel("Estimated jobs", fontsize=14, fontweight="bold")
+    ax.set_title("The Extraction Decline: Lumber and Fishing Employment, 1880-2020", fontsize=18, fontweight="bold")
+    ax.tick_params(labelsize=12)
+    ax.grid(True, alpha=0.25)
+    ax.legend(fontsize=12, loc="upper right")
+    ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda v, _: f"{int(v):,}"))
+    ax.set_ylim(0, 2600)
+    add_wrapped_footer(
+        fig,
+        "Sources: local historical estimates synthesized in data/economic_history.csv (source_keys: economic_history); not an official payroll series.",
+        y=0.015,
+        width=128,
+        fontsize=11.5,
+    )
+
+    fig.tight_layout(rect=(0, 0.045, 1, 0.96))
+    return save_figure(fig, "extraction_decline", output_dir)

@@ -60,14 +60,11 @@ prose:
 bibliography:
   references_path: "manuscript/references.bib"
   fail_on_missing: true
-  # ``fail_on_unused`` is false because ``references.bib`` is curated as a
-  # working reference library that exceeds what any single section cites;
-  # orphans are tolerated to encourage cross-section citation reuse. The
-  # ``reserve_keys`` allowlist below makes that tolerance *explicit*: any
-  # key listed here is excluded from the orphan count, so flipping
-  # ``fail_on_unused`` to true becomes a single-config-toggle action once
-  # the orphan list has been audited.
-  fail_on_unused: false
+  # Tightened to true on 2026-08-28 after the orphan list was audited:
+  # every non-cited entry is now covered by the explicit ``reserve_keys``
+  # allowlist below, so any NEW orphaned bibliography entry fails the
+  # build instead of silently accumulating.
+  fail_on_unused: true
   # Audited reserve/background sources intentionally kept in the working
   # library even when not cited in the current manuscript text.
   reserve_keys:

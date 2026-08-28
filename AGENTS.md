@@ -75,7 +75,7 @@ flowchart TB
 |---|---|
 | `python scripts/run_history_pipeline.py` | Default config; reads `manuscript/`, writes everything. |
 | `… --strict` | Exit non-zero if any check fails. |
-| `… --figures-only` | Generate the 24 PNG/SVG figure pairs only. |
+| `… --figures-only` | Generate the 25 PNG/SVG figure pairs only. |
 | `… --config other.yaml` | Use an alternative config file. |
 | `… --project-root path` | Run against an isolated project root. |
 

@@ -42,6 +42,7 @@ class TestFigures:
         "nested_systems_map.png",
         "population_trend.png",
         "economic_sectors.png",
+        "extraction_decline.png",
         "tsunami_timeline.png",
         "disaster_impact.png",
         "tsunami_inundation_diagram.png",
@@ -83,15 +84,15 @@ class TestFigures:
     def test_png_svg_contract_count(self, pipeline_artifacts, figures_dir: Path) -> None:
         pngs = sorted(figures_dir.glob("*.png"))
         svgs = sorted(figures_dir.glob("*.svg"))
-        assert len(pngs) == 24
-        assert len(svgs) == 24
+        assert len(pngs) == 25
+        assert len(svgs) == 25
         assert {p.stem for p in pngs} == {p.stem for p in svgs}
 
     def test_figure_manifest_records_sources_and_hashes(self, pipeline_artifacts, figures_dir: Path) -> None:
         manifest_path = figures_dir / "figure_manifest.json"
         assert manifest_path.exists()
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        assert manifest["figure_count"] == 24
+        assert manifest["figure_count"] == 25
         records = manifest["figures"]
         assert [record["name"] for record in records] == [name.removesuffix(".png") for name in self.EXPECTED]
         by_name = {record["name"]: record for record in records}
@@ -383,6 +384,7 @@ class TestSupportingModulesUnderCoverage:
             "section_word_counts.png",
             "readability_metrics.png",
             "economic_sectors.png",
+        "extraction_decline.png",
             "tsunami_timeline.png",
             "regional_map.png",
             "tolowa_villages_map.png",

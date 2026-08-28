@@ -12,7 +12,7 @@ details, see [environment_reproducibility.md](environment_reproducibility.md).
 uv sync
 
 # Project quality pipeline: prose checks, bibliography consistency,
-# 24 PNG/SVG figure pairs, review report, and publication metadata.
+# 25 PNG/SVG figure pairs, review report, and publication metadata.
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
 
 # Project tests only.
@@ -25,7 +25,7 @@ PYTHONPATH=. uv run pytest projects/crescent_city/tests/ -q
 # Inspect project pipeline stages.
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --list
 
-# Figure-only path. This writes 24 PNG files and 24 SVG siblings.
+# Figure-only path. This writes 25 PNG files and 25 SVG siblings.
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --figures-only
 
 # Hydrate manuscript variables into projects/crescent_city/output/manuscript/.
@@ -82,7 +82,7 @@ Primary outputs land under `projects/crescent_city/output/`.
 | `pipeline_report.json` | Machine-readable quality-gate summary |
 | `manuscript_report.json` | Prose metrics snapshot |
 | `review_report.md` | Human-readable editorial review |
-| `figures/*.png` and `figures/*.svg` | 24 deterministic figure pairs |
+| `figures/*.png` and `figures/*.svg` | 25 deterministic figure pairs |
 | `data/manuscript_variables.json` | Renderer-facing manuscript variables |
 | `pdf/crescent_city_combined.pdf` | Project-local combined PDF |
 | `web/index.html` | Combined HTML manuscript |

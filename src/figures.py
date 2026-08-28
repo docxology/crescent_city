@@ -51,7 +51,11 @@ from src._figures.community_systems import (  # noqa: E402
 )
 from src._figures.conservation import plot_redwood_decline_chart  # noqa: E402
 from src._figures.currents import plot_currents_timeline  # noqa: E402
-from src._figures.demographics import plot_economic_sectors, plot_population_trend  # noqa: E402
+from src._figures.demographics import (  # noqa: E402
+    plot_economic_sectors,
+    plot_extraction_decline,
+    plot_population_trend,
+)
 from src._figures.ecology import plot_smith_river_protection  # noqa: E402
 from src._figures.geophysics import plot_cascadia_paleoseismology  # noqa: E402
 from src._figures.harbor_history import plot_harbor_timeline  # noqa: E402
@@ -215,6 +219,15 @@ FIGURE_REGISTRY: tuple[FigureSpec, ...] = (
         (("econ_csv", "economic_sectors.csv"),),
         primary_section="sec:economic_history",
         evidence_classes=("employment_estimate", "sector_gdp_estimate"),
+    ),
+    FigureSpec(
+        "extraction_decline",
+        plot_extraction_decline,
+        False,
+        "Lumber and fishing employment estimates, 1880-2020.",
+        (("econ_history_csv", "economic_history.csv"),),
+        primary_section="sec:economic_history",
+        evidence_classes=("historical_estimate", "compiled_estimate"),
     ),
     FigureSpec(
         "tsunami_timeline",
@@ -622,6 +635,7 @@ __all__ = [
     "plot_archaeology_evidence_ladder",
     "plot_disaster_impact",
     "plot_economic_sectors",
+    "plot_extraction_decline",
     "plot_harbor_timeline",
     "plot_historical_timeline",
     "plot_housing_pipeline",

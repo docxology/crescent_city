@@ -87,7 +87,7 @@ class TestPipelineUnit:
             timeout=30,
         )
         assert result.returncode == 0, result.stderr
-        assert "24 figures" in result.stdout
+        assert "25 figures" in result.stdout
         assert "Figure generation (8 figures" not in result.stdout
 
     def test_figures_only_skips_full_pipeline(self, project_root: Path, repo_root: Path) -> None:

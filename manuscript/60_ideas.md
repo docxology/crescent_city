@@ -40,7 +40,7 @@ figure catalog, glossary, and references [@tuan1977space_place;
   phase of Klamath River dam removal
 - 2024-2026 current-events arc: housing, water rates, Last Chance Grade,
   press transition, and offshore seismicity
-- Evidence system: 24 figures, local data files, validated citations, and
+- Evidence system: 25 figures, local data files, validated citations, and
   reproducible rendering
 
 **Linked sections elsewhere in the manuscript**

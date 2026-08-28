@@ -155,7 +155,7 @@ class TestSectionAnchors:
             for caption, fig_id in caption_pattern.findall(f.read_text(encoding="utf-8")):
                 captions[fig_id] = " ".join(caption.lower().split())
 
-        assert len(captions) == 24
+        assert len(captions) == 25
         checks = {
             "source basis": ("source basis", "source:", "plotted from", "computed from", "drawn from", "generated from", "data/"),
             "evidence class": ("evidence class", "evidence classes"),
@@ -177,7 +177,7 @@ class TestSectionAnchors:
             text,
             flags=re.S,
         )
-        assert len(blocks) == 24
+        assert len(blocks) == 25
         missing = []
         for basename, block in blocks:
             for label in (
