@@ -103,7 +103,7 @@ who had authority to convert shock into policy, memory, care, or
 exclusion. Ideas shows why the same landscape can be homeland,
 commodity, sacred grove, secessionary borderland, tourism destination,
 warning system, and reproducible object of study. That multiplicity is
-the point.
+the point [@tuan1977space_place; @massey2005for_space].
 
 ### Four Operational Implications for the Present City
 

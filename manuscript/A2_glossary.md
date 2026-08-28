@@ -125,7 +125,7 @@ community health center serving medically underserved populations.
 *Open Door Community Health Centers* operates the Del Norte FQHC.
 See [@sec:healthcare].
 
-**HUD-IHBG (Indian Housing Block Grant)** — The principal federal
+**IHBG (Indian Housing Block Grant)** — The principal federal
 funding mechanism for tribal housing programs, administered under
 the Native American Housing Assistance and Self-Determination Act of
 1996 (NAHASDA). See [@sec:housing; @sec:social_services].
@@ -272,7 +272,7 @@ Del Norte / Humboldt / Mendocino coastal strip, separated from
 coastal urban California by the Coast Range and impassable winter
 roads.
 
-**Double Cross flag** — The State of Jefferson banner: a green field
+**Double-Cross flag** — The State of Jefferson banner: a green field
 with a gold miner's pan inscribed with two black "X"s, symbolizing
 being doubly betrayed by Sacramento and Salem. See [@sec:jefferson].
 

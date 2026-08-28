@@ -407,6 +407,39 @@ class TestSupportingModulesUnderCoverage:
             )
             assert max(nonwhite_fraction(border) for border in borders) < 0.02, f"{name} content is clipped at edge"
 
+    def test_data_axes_have_unit_labels(self, pipeline_artifacts, figures_dir: Path) -> None:
+        """Every coordinate-axes figure states what each axis measures, with units."""
+        svg_expectations = {
+            "currents_timeline.svg": ("Calendar year of event",),
+            "tsunami_timeline.svg": ("Estimated peak wave height",),
+            "climograph.svg": ("Precipitation (inches per month)", "Temperature"),
+            "sea_level_scenarios.svg": ("Relative water-level shift in feet",),
+            "population_trend.svg": ("Population (persons)",),
+            "economic_sectors.svg": ("Employment (estimated persons)",),
+            "extraction_decline.svg": ("Estimated jobs",),
+            "redwood_decline_chart.svg": ("Old-Growth Coast Redwood (acres)",),
+            "tsunami_inundation_diagram.svg": ("Water Elevation above MLLW (m)",),
+            "harbor_timeline.svg": ("Year",),
+            "historical_timeline.svg": ("Year",),
+            "cascadia_paleoseismology.svg": ("Years before present (BP)",),
+            "smith_river_protection.svg": ("Designated Smith River corridor miles",),
+            "housing_pipeline.svg": ("Quantity (bar labels identify unit type)",),
+            "archaeology_evidence_ladder.svg": ("Approximate calendar year",),
+            "section_word_counts.svg": ("Word Count",),
+            "citation_density.svg": ("Citations / 1,000 Words",),
+            "readability_metrics.svg": ("Manuscript Part",),
+        }
+        for name, labels in svg_expectations.items():
+            svg = (figures_dir / name).read_text(encoding="utf-8")
+            for label in labels:
+                assert label in svg, f"{name} missing axis label {label!r}"
+
+    def test_title_figures_carry_titles(self, pipeline_artifacts, figures_dir: Path) -> None:
+        """Figures whose axes are turned off carry an explicit title so the
+        figure is interpretable without the manuscript caption."""
+        svg = (figures_dir / "nested_systems_map.svg").read_text(encoding="utf-8")
+        assert "Nested Systems Map" in svg
+
     def test_individual_plotter_signatures(self) -> None:
         from src import figures as fig_module
 

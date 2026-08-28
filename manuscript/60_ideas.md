@@ -8,7 +8,8 @@ reproducibility standards. Each becomes a working instrument only when
 institutions use it: a mapped inundation zone changes where housing is
 permitted, a rate hearing decides whether a utility system can finance
 lifeline repairs, and a monitoring plan turns dam removal from a
-ceremony into a testable recovery program.
+ceremony into a testable recovery program
+[@ostrom2009ses; @gunderson_holling2002panarchy].
 
 Other ideas are cultural: Jeffersonian grievance, redwood sanctity,
 lighthouse tourism, coastal arts, Bigfoot and the Klamath Knot, and the

@@ -82,4 +82,5 @@ documenting the Smith River wild and scenic corridor, and by the
 National Park Service interpretive program. The genre fuses
 scientific documentation with the literary numinous tradition
 and constitutes the regional visual culture's
-twenty-first-century center of gravity.
+twenty-first-century center of gravity [@preston2007wildtrees;
+@nps_redwood_visitor].

@@ -154,7 +154,8 @@ child welfare, elder care, tribal services, and behavioral health. In a
 small rural county, these functions are not parallel bureaucracies so
 much as overlapping circuits: the same households often move between the
 hospital, Open Door, county eligibility offices, food distribution, school
-liaisons, and informal neighbor networks in a single month.
+liaisons, and informal neighbor networks in a single month
+[@delnorte_hhsa_overview2026; @unitedway211_2026; @chcf2020_humboldt_delnorte_market_study].
 
 #### Nonprofits as the Rural Safety Net
 

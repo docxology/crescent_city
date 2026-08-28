@@ -241,6 +241,12 @@ def plot_nested_systems_map(output_dir: Path, **_: object) -> Path:
         "Conceptual synthesis: hierarchy theory, CHANS, SES, and panarchy; local layers from manuscript sections.",
         loc="lower right",
     )
+    ax.set_title(
+        "Nested Systems Map: Crescent City and Its Frames",
+        fontsize=19,
+        fontweight="bold",
+        pad=18,
+    )
 
     fig.tight_layout()
     return save_figure(fig, "nested_systems_map", output_dir)

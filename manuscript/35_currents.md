@@ -180,4 +180,5 @@ town simultaneously confronting twenty-first-century rebuilding
 (housing, infrastructure, tribal restoration, civic-press transition)
 and the deeper vulnerabilities (seismic, financial, institutional)
 that the geography of the locked southern Cascadia margin will continue
-to impose for as long as there is a community here to record them.
+to impose for as long as there is a community here to record them
+[@quadruplicate_intel; @goldfinger2012].

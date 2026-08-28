@@ -92,7 +92,7 @@ Key engineering features of the new basin include:
   the prior 1960s "design for 1964" approach
 - A fully redundant moorage release system allowing rapid
   vessel detachment in the event of a warned distant-source
-  tsunami
+  tsunami [@harbor_recon]
 
 The harbor authority and the project's engineers describe the
 new basin as a purpose-built tsunami-resistant harbor, with local

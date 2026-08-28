@@ -52,6 +52,27 @@ def test_glossary_present(manuscript_dir: Path) -> None:
     assert len(body) > 1_000, "Glossary suspiciously short"
 
 
+def test_every_glossary_term_is_used_in_prose(project_root: Path, manuscript_dir: Path) -> None:
+    """Glossary -> prose direction: no orphaned glossary entries.
+
+    Delegates to scripts/audit/check_glossary_usage.py so the audit script
+    and the pytest gate cannot drift.
+    """
+    import subprocess
+    import sys
+
+    script = project_root / "scripts" / "audit" / "check_glossary_usage.py"
+    assert script.exists(), f"audit script missing: {script}"
+    result = subprocess.run(
+        [sys.executable, str(script)],
+        capture_output=True,
+        text=True,
+        cwd=project_root,
+    )
+    assert result.returncode == 0, f"Glossary-usage audit failed:\n{result.stdout}\n{result.stderr}"
+    assert "OK: all" in result.stdout
+
+
 def test_glossary_covers_high_frequency_acronyms(manuscript_dir: Path) -> None:
     """Any all-caps acronym >=4 chars appearing >=3 times in prose should
     be defined in the glossary OR appear in the allowlist."""

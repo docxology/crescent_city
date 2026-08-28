@@ -7,7 +7,8 @@ the sea. In June 1775, the Spanish vessels *Santiago* and *Sonora*, led by
 Bruno de Heceta and Juan Francisco de la Bodega y Quadra, sailed past the
 northern California coast and claimed the territory for Spain. No landing
 was made near present-day Crescent City, but the expedition's logs record
-smoke from Indigenous campfires along the shore.
+smoke from Indigenous campfires along the shore [@del_norte_history;
+@crescent_city].
 The detail matters because it reverses the usual "empty coast" frame:
 the first European evidence for this shoreline is evidence of an
 already inhabited and managed landscape, not a discovery of vacant space.

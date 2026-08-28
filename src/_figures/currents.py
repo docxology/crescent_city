@@ -325,6 +325,7 @@ def plot_currents_timeline(
     ax.set_xticks([2024, 2025, 2026])
     ax.set_xticklabels(["2024", "2025", "2026"])
     ax.set_yticks([])
+    ax.set_xlabel("Calendar year of event", fontsize=11.5, labelpad=6)
     ax.set_title(
         f"Currents: Crescent City and Del Norte County, 2024-{audit_label}",
         fontsize=19.2,

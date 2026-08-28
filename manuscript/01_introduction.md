@@ -6,8 +6,9 @@ At ten minutes before midnight on Good Friday, 1964, the first wave
 reached the Crescent City waterfront. Six hours earlier, the seafloor in
 Prince William Sound, Alaska, had risen between two and ten meters in
 roughly ninety seconds, during the second-largest earthquake ever
-instrumentally measured. The Pacific had been moving toward the
-California coast at the speed of a jetliner ever since.
+instrumentally measured
+[@plafker1969tectonics; @dengler2005retro]. The Pacific had been moving
+toward the California coast at the speed of a jetliner ever since.
 
 By half-past one the next morning, the fourth and largest wave reached
 the harbor. Its peak water elevation rose roughly twenty-one feet above

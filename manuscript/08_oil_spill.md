@@ -16,8 +16,9 @@ The local record is not a history of one catastrophic tanker failure.
 Crescent City has not experienced an event comparable to the 1969 Santa
 Barbara Channel blowout or the 1989 *Exxon Valdez* disaster in Prince
 William Sound, the same broad Alaska margin that produced the 1964
-tsunami. The region has instead faced a series of smaller petroleum
-contamination events, any one of which can matter in a salmon estuary.
+tsunami [@oil_pollution_act_1990; @cdfw_ospr_history]. The region has
+instead faced a series of smaller petroleum contamination events, any
+one of which can matter in a salmon estuary [@stuyvesant_oilspill_1999].
 
 The most consequential regional incident was the M/V *Stuyvesant* spill
 of 6 September 1999. The seagoing hopper dredge punctured its own fuel

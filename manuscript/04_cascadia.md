@@ -153,7 +153,7 @@ disproportionately. The 1964 Alaska event produced higher run-up
 at Crescent City than anywhere else on the contiguous U.S. west
 coast; the 2011 Tōhoku event produced 14–15-knot horizontal currents
 in the inner harbor after a comparatively modest 2.47-meter peak
-amplitude. Why?
+amplitude [@dengler2008vulnerability; @dengler2008kuril]. Why?
 
 Two reinforcing mechanisms are at work. First, the offshore
 continental-shelf bathymetry and the Mendocino Escarpment focus
@@ -263,4 +263,5 @@ narrative is not a substitute for the geological record, but it is
 the longest continuous human chronicle of Cascadia available — and,
 for the small Crescent City community that now lives on the
 displaced and reburied alluvium of the inner forearc, it is the
-account that has been told longest in the place itself.
+account that has been told longest in the place itself
+[@ludwin2007folklore; @mcmillan2002mountain; @thompson1991].
