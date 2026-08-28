@@ -112,6 +112,7 @@ discussion.
 | `99_references.md` | Bibliography section | Fit with generated bibliography | Citation tests remain source of truth. |
 | `A1_figure_catalogue.md` | Figure provenance | Fit with registry and `figure_provenance.csv` | Keep every entry synced with the manifest contract. |
 | `A2_glossary.md` | Term definitions | Fit with manuscript terminology | Avoid adding unsourced substantive claims. |
+| `A3_quadruplicate.md` | Companion appendix | Fit with primary platform documentation (`quadruplicate_intel`, `quadruplicate_github`) | Keep capability descriptions tied to the cited platform sources; avoid promotional claims. |
 
 ## Completion Standard
 

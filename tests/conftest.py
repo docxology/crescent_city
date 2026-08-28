@@ -17,8 +17,17 @@ import pytest
 
 # ── Resolve paths relative to this test file ────────────────────────────
 
+import importlib.util
+_spec = importlib.util.spec_from_file_location(
+    "_cc_repo_paths", Path(__file__).resolve().parent.parent / "src" / "repo_paths.py"
+)
+assert _spec is not None and _spec.loader is not None
+_mod = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_mod)
+find_repo_root = _mod.find_repo_root
+
 _PROJECT_DIR = Path(__file__).resolve().parent.parent  # projects/crescent_city
-_REPO_ROOT = _PROJECT_DIR.parent.parent  # repository root
+_REPO_ROOT = find_repo_root(_PROJECT_DIR)  # template monorepo root
 
 sys.path.insert(0, str(_REPO_ROOT))
 sys.path.insert(0, str(_PROJECT_DIR / "src"))

@@ -29,7 +29,16 @@ from pathlib import Path
 # ── Resolve project and repo roots ──────────────────────────────────────
 _SCRIPT_DIR = Path(__file__).resolve().parent
 _PROJECT_DIR = _SCRIPT_DIR.parent  # projects/crescent_city
-_REPO_ROOT = _PROJECT_DIR.parent.parent  # repository root
+import importlib.util
+
+_repo_paths_spec = importlib.util.spec_from_file_location(
+    "_cc_repo_paths", _PROJECT_DIR / "src" / "repo_paths.py"
+)
+assert _repo_paths_spec is not None and _repo_paths_spec.loader is not None
+_repo_paths_mod = importlib.util.module_from_spec(_repo_paths_spec)
+_repo_paths_spec.loader.exec_module(_repo_paths_mod)
+
+_REPO_ROOT = _repo_paths_mod.find_repo_root(_PROJECT_DIR)  # template monorepo root
 
 sys.path.insert(0, str(_PROJECT_DIR / "src"))
 sys.path.insert(0, str(_PROJECT_DIR))

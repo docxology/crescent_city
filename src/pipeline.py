@@ -22,7 +22,16 @@ from pathlib import Path
 
 # ── Add project + repo roots to path ────────────────────────────────────
 
-_REPO_ROOT = Path(__file__).resolve().parents[3]  # root of monorepo
+import importlib.util  # noqa: E402
+
+_repo_paths_spec = importlib.util.spec_from_file_location(
+    "_cc_repo_paths", Path(__file__).resolve().parent / "repo_paths.py"
+)
+assert _repo_paths_spec is not None and _repo_paths_spec.loader is not None
+_repo_paths_mod = importlib.util.module_from_spec(_repo_paths_spec)
+_repo_paths_spec.loader.exec_module(_repo_paths_mod)
+
+_REPO_ROOT = _repo_paths_mod.find_repo_root(Path(__file__))
 _DEFAULT_PROJECT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(_DEFAULT_PROJECT_DIR / "src"))
 sys.path.insert(0, str(_DEFAULT_PROJECT_DIR))

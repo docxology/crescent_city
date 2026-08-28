@@ -13,8 +13,16 @@ import json
 import sys
 from pathlib import Path
 
+import importlib.util
+
 _project_root = Path(__file__).resolve().parent.parent
-_repo_root = _project_root.parent.parent
+_repo_paths_spec = importlib.util.spec_from_file_location(
+    "_cc_repo_paths", _project_root / "src" / "repo_paths.py"
+)
+assert _repo_paths_spec is not None and _repo_paths_spec.loader is not None
+_repo_paths_mod = importlib.util.module_from_spec(_repo_paths_spec)
+_repo_paths_spec.loader.exec_module(_repo_paths_mod)
+_repo_root = _repo_paths_mod.find_repo_root(_project_root)
 sys.path.insert(0, str(_repo_root))
 sys.path.insert(0, str(_project_root))
 sys.path.insert(0, str(_project_root / "src"))

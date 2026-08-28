@@ -29,13 +29,28 @@ def _project_docs(project_root: Path) -> list[Path]:
     return sorted(set(docs))
 
 
-def _local_markdown_links(path: Path) -> list[Path]:
+def _local_markdown_links(path: Path, project_root: Path | None = None) -> list[Path]:
+    """Resolve local markdown links.
+
+    Links that escape the project root (``../../...``) historically pointed
+    into the template monorepo. Resolve those against the monorepo root found
+    via :func:`src.repo_paths.find_repo_root` so they stay valid in the
+    relocated sidecar layout too.
+    """
     links: list[Path] = []
+    repo_root: Path | None = None
     for raw in _LINK_RE.findall(path.read_text(encoding="utf-8")):
         target = raw.split("#", 1)[0].strip()
         if not target or target.startswith(("http://", "https://", "mailto:")):
             continue
-        links.append((path.parent / target).resolve())
+        resolved = (path.parent / target).resolve()
+        if project_root is not None and not resolved.is_relative_to(project_root.resolve()):
+            if repo_root is None:
+                from src.repo_paths import find_repo_root
+
+                repo_root = find_repo_root(path)
+            resolved = (repo_root / target.replace("../", "", 3)).resolve()
+        links.append(resolved)
     return links
 
 
@@ -43,7 +58,7 @@ def test_project_docs_links_resolve(project_root: Path) -> None:
     """README / AGENTS / docs Markdown links should not point at vanished files."""
     missing: list[str] = []
     for doc in _project_docs(project_root):
-        for target in _local_markdown_links(doc):
+        for target in _local_markdown_links(doc, project_root):
             if not target.exists():
                 missing.append(f"{doc.relative_to(project_root)} -> {target}")
     assert not missing, "Broken local documentation links:\n" + "\n".join(missing)

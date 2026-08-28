@@ -14,7 +14,16 @@ from pathlib import Path
 import pytest
 
 _PROJECT_DIR = Path(__file__).resolve().parent.parent
-_REPO_ROOT = _PROJECT_DIR.parent.parent
+
+import importlib.util as _ilu
+
+_spec = _ilu.spec_from_file_location(
+    "_cc_repo_paths", _PROJECT_DIR / "src" / "repo_paths.py"
+)
+assert _spec is not None and _spec.loader is not None
+_mod = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_mod)
+_REPO_ROOT = _mod.find_repo_root(_PROJECT_DIR)
 SCRIPT_FIGURE_TIMEOUT_SECONDS = 300
 
 
