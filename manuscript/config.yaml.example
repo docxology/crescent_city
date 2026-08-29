@@ -1,0 +1,85 @@
+# Fork template — copy to config.yaml and replace TODO-OWNER values.
+# Derived from this repository's own manuscript/config.yaml; structural
+# fields mirror the live config. See manuscript/AGENTS.md for the token protocol.
+
+# crescent_city — configuration
+
+paper:
+  title: "Crescent City in Living Waves"
+  subtitle: "Space, Time, People, and Minds on the Southern Cascadian Coast"
+  version: "1.0.0"
+
+authors:
+  - name: "TODO-OWNER: author name"
+    orcid: ""
+    email: "TODO-OWNER: author email"
+    affiliation: "TODO-OWNER: affiliation"
+    corresponding: true
+
+publication:
+  doi: ""
+  year: "2026"
+  repository_url: "https://github.com/docxology/crescent_city"
+
+keywords:
+  - "Crescent City"
+  - "California"
+  - "Northern California"
+  - "State of Jefferson"
+  - "Pacific coast"
+  - "Cascadia"
+  - "United States of America"
+  - "Displacement"
+  - "lumber industry"
+  - "tsunami resilience"
+  - "Del Norte County"
+  - "Pacific coast settlement"
+  - "environmental history"
+  - "Generative History"
+
+metadata:
+  # Primary publication license for the manuscript text and rendered
+  # scholarly artifact. Source code is Apache-2.0; data files retain the
+  # public-domain / open-data status of their originating agencies.
+  license: "CC-BY-4.0"
+  code_license: "Apache-2.0"
+  data_license: "public-domain-and-open-data-by-source"
+  language: "en"
+
+manuscript_dir: "manuscript"
+
+prose:
+  target_grade_level_min: 12.0
+  target_grade_level_max: 20.0
+  long_sentence_threshold: 35
+  citation_density_min_per_1000: 3.0
+  # This manuscript is a continuous book: Part files (02, 08, 15, …)
+  # use `#` H1, and chapter files under each part use `##` H2. We
+  # therefore disable the per-file H1 requirement; the equivalent
+  # invariant — every chapter has a top-level heading anchor — is
+  # already enforced by the cross-reference resolution check.
+  require_h1_per_section: false
+  forbid_skipped_levels: true
+
+bibliography:
+  references_path: "manuscript/references.bib"
+  fail_on_missing: true
+  # Tightened to true on 2026-08-28 after the orphan list was audited:
+  # every non-cited entry is now covered by the explicit ``reserve_keys``
+  # allowlist below, so any NEW orphaned bibliography entry fails the
+  # build instead of silently accumulating.
+  fail_on_unused: true
+  # Audited reserve/background sources intentionally kept in the working
+  # library even when not cited in the current manuscript text.
+  reserve_keys:
+    - delaplane1941dispatches
+    - kqed_pelican_bay
+    - latimes2025lcgtunnel
+    - redwoodvoice2026sewerplant
+    - spieldenner2007
+
+report:
+  output_path: "output/review_report.md"
+  include_per_file_table: true
+  include_outline: true
+  include_quality_flags: true
