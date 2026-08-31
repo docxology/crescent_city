@@ -79,9 +79,9 @@ PYTHONPATH=. uv run python scripts/z_generate_manuscript_variables.py
 Render, validate, and copy from the template repository root:
 
 ```bash
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
-PYTHONPATH=. uv run python scripts/05_copy_outputs.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
 ```
 
 ## Determinism Boundary
@@ -93,7 +93,7 @@ The reproducibility contract is structural and source-linked.
 | SVG figures | Used for bit-for-bit determinism checks. |
 | PNG figures | Visually deterministic; embedded metadata can vary across `matplotlib` or `libpng` versions. |
 | `output/pipeline_report.json` | Deterministic for the same source tree and dependency set. |
-| `output/CITATION.cff`, `output/zenodo_metadata.json`, `output/self_citation.bib` | Derived from `manuscript/config.yaml`. |
+| `output/CITATION.cff`, `output/zenodo_metadata.json`, `output/self_citation.bib` | Derived from `docs/manuscript/config.yaml`. |
 | PDF | Should render consistently, but exact bytes can vary with TeX, fonts, timestamps, and platform packages. |
 
 When bit-for-bit reproduction matters, compare source files, JSON
@@ -113,14 +113,14 @@ reports, and SVG outputs before comparing PDF bytes.
 | `../../output/crescent_city/crescent_city_combined.pdf` | Repository-level release copy |
 
 Do not edit any file in `output/` as source. Rebuild it from
-`manuscript/`, `data/`, `src/`, and `scripts/`.
+`docs/manuscript/`, `data/`, `src/`, and `scripts/`.
 
 ## Troubleshooting
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | `ModuleNotFoundError: infrastructure` | Command was run from the wrong directory or without `PYTHONPATH=.` | Run from the template root for renderer commands, or from the project directory for project-local commands. |
-| `pandoc` or `xelatex` missing | System renderer dependency is absent | Install the system toolchain and rerun `scripts/03_render_pdf.py`. |
+| `pandoc` or `xelatex` missing | System renderer dependency is absent | Install the system toolchain and rerun `scripts/pipeline/stage_03_render.py`. |
 | Figure count mismatch | Registry, manuscript catalog, generated files, or docs drifted | Run figure tests and follow [figure_maintenance.md](figure_maintenance.md). |
 | Current-event test fails | `checked_as_of`, `source_tier`, or `refresh_trigger` is stale or malformed | Follow [source_refresh_workflow.md](source_refresh_workflow.md). |
 | Validation passes but a claim is stale | Artifact validation cannot verify fresh public records | Use [sources_provenance_ethics.md](sources_provenance_ethics.md) and [claim_ledger.md](claim_ledger.md). |

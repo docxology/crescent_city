@@ -43,7 +43,7 @@ working instructions for this specific project.
 |---|---|
 | Public project overview and figure list | `../README.md` |
 | Agent edit contract | `../AGENTS.md` |
-| Manuscript source | `../manuscript/` |
+| Manuscript source | `../docs/manuscript/` |
 | Data source tables | `../data/` |
 | Figure registry | `../src/figures.py` |
 | Project pipeline logic | `../src/pipeline.py` |

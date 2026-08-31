@@ -4,12 +4,12 @@ This guide explains how to edit the Crescent City manuscript without
 breaking citation integrity, cross-references, figure contracts, or the
 project's evidence-language discipline.
 
-Use `../manuscript/SYNTAX.md` for syntax examples. Use this guide for the
+Use `../docs/manuscript/SYNTAX.md` for syntax examples. Use this guide for the
 authoring workflow and review expectations.
 
 ## Source Files
 
-Hand-authored source files live in `../manuscript/`.
+Hand-authored source files live in `../docs/manuscript/`.
 
 | File group | Role |
 |---|---|
@@ -47,9 +47,9 @@ Use Pandoc citation syntax:
 ```
 
 Before prose depends on a source, add the key to
-`../manuscript/references.bib`. If a source is intentionally kept uncited
+`../docs/manuscript/references.bib`. If a source is intentionally kept uncited
 as a background or update-trail source, list it in `bibliography.reserve_keys`
-in `../manuscript/config.yaml` and document the reason in
+in `../docs/manuscript/config.yaml` and document the reason in
 `claim_ledger.md`.
 
 ## Evidence Language
@@ -72,7 +72,7 @@ grant, election, fishery, or agency rows:
 
 1. Follow `source_refresh_workflow.md`.
 2. Update `../data/historical_events.json`.
-3. Update source keys in `../manuscript/references.bib`.
+3. Update source keys in `../docs/manuscript/references.bib`.
 4. Update `35_currents.md`, `71_timeline.md`, and captions if needed.
 5. Regenerate figures if dates, categories, or labels changed.
 
@@ -108,8 +108,8 @@ Run from the repository root when preparing the final artifact:
 
 ```bash
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```
 
 ## Common Mistakes
@@ -117,7 +117,7 @@ PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
 | Mistake | Fix |
 |---|---|
 | Adding a citation key only in prose | Add the BibTeX entry and run citation tests |
-| Editing hydrated output files | Edit source files in `../manuscript/` |
+| Editing hydrated output files | Edit source files in `../docs/manuscript/` |
 | Writing "will happen" for scheduled events | Use scheduled or proposed language until official records update |
 | Adding a figure without updating the catalog | Update `A1_figure_catalogue.md` and tests/docs if count changed |
 | Hand-authoring pipeline counts | Use manuscript variables or cite the pipeline report |

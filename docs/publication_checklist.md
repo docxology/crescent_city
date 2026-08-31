@@ -41,9 +41,9 @@ Confirm `projects/crescent_city/output/pipeline_report.json` reports:
 ## 3. Render And Validate
 
 ```bash
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
-PYTHONPATH=. uv run python scripts/05_copy_outputs.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
 ```
 
 Confirm these files exist:
@@ -57,7 +57,7 @@ output/crescent_city/crescent_city_combined.pdf
 
 ## 4. Metadata
 
-Check the publication metadata generated from `manuscript/config.yaml`:
+Check the publication metadata generated from `docs/manuscript/config.yaml`:
 
 ```text
 projects/crescent_city/output/CITATION.cff
@@ -66,7 +66,7 @@ projects/crescent_city/output/self_citation.bib
 ```
 
 If title, authors, license, keywords, DOI, or publication year changes,
-edit `manuscript/config.yaml`, rerun the strict project pipeline, then
+edit `docs/manuscript/config.yaml`, rerun the strict project pipeline, then
 render again.
 
 ## 5. Reader-Facing Spot Checks

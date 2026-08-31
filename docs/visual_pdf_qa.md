@@ -48,8 +48,8 @@ PYTHONPATH=. uv run pytest tests/test_figures.py tests/test_pipeline_integration
 From the template repository root:
 
 ```bash
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```
 
 If any figure appears clipped or visually ambiguous, edit the source

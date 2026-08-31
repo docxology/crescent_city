@@ -16,8 +16,8 @@ for reading the underlying sources.
 | What did the latest pipeline check? | `../output/pipeline_report.json` and `../output/review_report.md` |
 | What did output validation check? | `../output/reports/validation_report.md` |
 | What risks were identified in adversarial review? | [redteam_review_2026-05-15.md](redteam_review_2026-05-15.md) |
-| Which figure supports a visual claim? | `../manuscript/A1_figure_catalogue.md` and [figure_maintenance.md](figure_maintenance.md) |
-| Which citation keys are cited or reserved? | `../manuscript/references.bib`, `../manuscript/config.yaml`, and [claim_ledger.md](claim_ledger.md) |
+| Which figure supports a visual claim? | `../docs/manuscript/A1_figure_catalogue.md` and [figure_maintenance.md](figure_maintenance.md) |
+| Which citation keys are cited or reserved? | `../docs/manuscript/references.bib`, `../docs/manuscript/config.yaml`, and [claim_ledger.md](claim_ledger.md) |
 
 Generated reports are useful audit evidence for a specific run. They are
 not source truth and should be regenerated after source edits.

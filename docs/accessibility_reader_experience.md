@@ -36,7 +36,7 @@ catalog entry.
 |---|---|
 | Caption | State what is shown, the evidence class, and the interpretive claim. |
 | Source trail | Keep `source_keys` in data files and data-source notes in the figure catalog. |
-| Long description | Keep a concise description in `manuscript/A1_figure_catalogue.md` and `data/figure_provenance.csv`. |
+| Long description | Keep a concise description in `docs/manuscript/A1_figure_catalogue.md` and `data/figure_provenance.csv`. |
 | Reader risk | Use the `reader_risk` field in `data/figure_provenance.csv` to flag figures that can be overread. |
 | Color | Use the project palette consistently and avoid relying on color alone when shape, label, ordering, or line style can carry the same distinction. |
 | Labels | Keep text large enough for the rendered PDF, not just the standalone PNG. |
@@ -58,7 +58,7 @@ color-contrast audit.
 - Avoid unexplained acronyms in captions and tables.
 
 For manuscript mechanics, use [manuscript_authoring.md](manuscript_authoring.md)
-and `../manuscript/SYNTAX.md`.
+and `../docs/manuscript/SYNTAX.md`.
 
 ## Release Spot Check
 

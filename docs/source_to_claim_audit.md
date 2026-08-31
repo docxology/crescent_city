@@ -120,3 +120,5 @@ Before a public release, rerun the current-event refresh protocol, then
 run the strict pipeline, render, and validation commands in
 `publication_checklist.md`. A green build is necessary, but claim-fit
 review remains a separate editorial gate.
+
+Status/meta: `MANUSCRIPT_STATUS.md` — publication-readiness status surface (not a prose source; no claims to audit).

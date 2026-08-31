@@ -63,8 +63,8 @@ same path used by repository-level scripts:
 ```bash
 PYTHONPATH=. uv run pytest projects/crescent_city/tests/ -q
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```
 
 ## Pipeline Checks
@@ -88,7 +88,7 @@ Current expected shape: 5/5 checks, 25 figures, and true
 
 ## Renderer Validation
 
-`scripts/04_validate_output.py --project crescent_city` checks generated
+`scripts/pipeline/stage_04_validate.py --project crescent_city` checks generated
 artifacts after rendering. It validates PDF readability, Markdown output,
 directory structure, and the figure registry. It is necessary before
 sharing a rendered PDF, but it is not a replacement for source-refresh
@@ -102,9 +102,9 @@ Use `visual_pdf_qa.md` for manual figure-scale and caption-flow review.
 
 | Failure | First action |
 |---|---|
-| Missing citation key | Check `../manuscript/references.bib` and citation spelling |
+| Missing citation key | Check `../docs/manuscript/references.bib` and citation spelling |
 | Unused non-reserve source | Cite it, remove it, or document it in `bibliography.reserve_keys` plus `claim_ledger.md` |
-| Figure count mismatch | Check `../src/figures.py`, output files, and `../manuscript/A1_figure_catalogue.md` |
+| Figure count mismatch | Check `../src/figures.py`, output files, and `../docs/manuscript/A1_figure_catalogue.md` |
 | Current-event metadata failure | Follow `source_refresh_workflow.md` |
 | Source-tier mismatch | Use the exact tiers in `sources_provenance_ethics.md` |
 | Documentation link failure | Resolve links relative to the file containing the link |

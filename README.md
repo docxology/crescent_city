@@ -9,10 +9,10 @@ downtown, and into the present condition of a community of roughly
 prison group quarters, living on the locked
 southern segment of the **Cascadia subduction zone**.
 
-The manuscript spans **46 topical chapters** inside four nested-systems
+The manuscript spans **49 topical chapters** (as of 2026-08-31; verified by `ls docs/manuscript/[0-9][0-9]_*.md | wc -l` = 56, minus 4 Part openers, abstract, introduction, and references) inside four nested-systems
 Parts — **Space, Time, People, and Ideas** — plus abstract,
 introduction, timeline, methods, reproducibility, references, and two
-appendices. It includes **24 reproducible figures**, a curated
+appendices. It includes **25 reproducible figures** (count = `len(FIGURE_REGISTRY)` in `src/figures.py`), a curated
 BibTeX bibliography validated during each build, and a typeset PDF
 rendered via Pandoc + XeLaTeX + pandoc-crossref.
 
@@ -25,6 +25,20 @@ Built on the
 Public source and release artifacts are published at
 [`docxology/crescent_city`](https://github.com/docxology/crescent_city);
 the archival DOI is `10.5281/zenodo.20286171`.
+
+## Orientation (for a cold-starting agent or reader)
+
+| Question | Authoritative answer | Verify with |
+|---|---|---|
+| What is this? | This README + [AGENTS.md](AGENTS.md) (agent contract) | read both first |
+| Current state? | [docs/manuscript/MANUSCRIPT_STATUS.md](docs/manuscript/MANUSCRIPT_STATUS.md) — the single status surface | read it, don't assume |
+| What's next? | [TODO.md](TODO.md) — the single backlog; do not scan git log for intent | read its Major section |
+| Revision history? | [CHANGELOG.md](CHANGELOG.md) + dated `REVIEW_LOG_*.md` files | read newest entries |
+| Primary verification? | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` (project quality) and `PYTHONPATH=. uv run pytest tests/ -q` (suite) | run them |
+
+Known warning (2026-08-31): the tree is mid-migration `manuscript/` →
+`docs/manuscript/`; `src/`/`tests/` still point at the old path and ~50 tests
+error for that single reason. Details in [TODO.md](TODO.md) Major section.
 
 ## Quick Start
 
@@ -49,8 +63,8 @@ PYTHONPATH=. uv run python \
     projects/crescent_city/scripts/z_generate_manuscript_variables.py
 
 # Render and validate the full PDF through the shared infrastructure
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```
 
 ## Manuscript Scope
@@ -73,7 +87,7 @@ Plus appendices: **A1 Figure Catalog**, **A2 Glossary**.
 
 Every figure is generated deterministically by a Python plotter
 registered in `src/figures.py`. The complete catalog lives in the
-[manuscript appendix](manuscript/A1_figure_catalogue.md); the
+[manuscript appendix](docs/manuscript/A1_figure_catalogue.md); the
 following table is the operational reference:
 
 | # | Function | Topic |
@@ -108,7 +122,7 @@ following table is the operational reference:
 
 ```
 projects/crescent_city/
-|-- manuscript/              # Numbered Markdown sources + appendices + references.bib
+|-- docs/manuscript/              # Numbered Markdown sources + appendices + references.bib
 |   |-- 00_abstract.md ... 73_reproducibility.md
 |   |-- A1_figure_catalogue.md     # Per-figure catalog
 |   |-- A2_glossary.md             # Technical-term glossary
@@ -119,7 +133,7 @@ projects/crescent_city/
 |-- src/                     # Domain Python package
 |   |-- config.py            # Typed YAML loader
 |   |-- pipeline.py          # Read -> analyze -> cross-check
-|   |-- figures.py           # 24-figure public API + registry
+|   |-- figures.py           # 25-figure public API + registry
 |   |-- _figures/            # Plotter submodules
 |   |   |-- _style.py            # Wong 2011 palette + rcParams
 |   |   |-- _io.py               # PNG+SVG persistence helper
@@ -155,7 +169,7 @@ projects/crescent_city/
 |   |-- currents_categories.yaml
 |   `-- ...
 `-- output/                  # Regeneratable; ignored by git
-    |-- figures/             # 24 x {PNG, SVG}
+    |-- figures/             # 25 x {PNG, SVG}
     |-- pdf/                 # crescent_city_combined.pdf
     `-- *.json, *.md
 ```
@@ -169,7 +183,7 @@ agent-facing `AGENTS.md` contract.
 |---|---|---|
 | `data/` | [data/README.md](data/README.md) | [data/AGENTS.md](data/AGENTS.md) |
 | `docs/` | [docs/README.md](docs/README.md) | [docs/AGENTS.md](docs/AGENTS.md) |
-| `manuscript/` | [manuscript/README.md](manuscript/README.md) | [manuscript/AGENTS.md](manuscript/AGENTS.md) |
+| `docs/manuscript/` | [docs/manuscript/README.md](docs/manuscript/README.md) | [docs/manuscript/AGENTS.md](docs/manuscript/AGENTS.md) |
 | `scripts/` | [scripts/README.md](scripts/README.md) | [scripts/AGENTS.md](scripts/AGENTS.md) |
 | `src/` | [src/README.md](src/README.md) | [src/AGENTS.md](src/AGENTS.md) |
 | `src/_figures/` | [src/_figures/README.md](src/_figures/README.md) | [src/_figures/AGENTS.md](src/_figures/AGENTS.md) |
@@ -177,7 +191,7 @@ agent-facing `AGENTS.md` contract.
 
 ## Configuration
 
-Every editorial-policy knob lives in `manuscript/config.yaml`:
+Every editorial-policy knob lives in `docs/manuscript/config.yaml`:
 
 | Section | Key | Default | Meaning |
 |---|---|---|---|
@@ -186,7 +200,7 @@ Every editorial-policy knob lives in `manuscript/config.yaml`:
 | `prose` | `citation_density_min_per_1000` | `3.0` | Minimum citations per 1000 words |
 | `prose` | `require_h1_per_section` | `false` | Part files use H1 and chapter files use H2; cross-reference tests enforce anchors |
 | `prose` | `forbid_skipped_levels` | `true` | Heading levels must be contiguous |
-| `bibliography` | `references_path` | `manuscript/references.bib` | Path to BibTeX file |
+| `bibliography` | `references_path` | `docs/manuscript/references.bib` | Path to BibTeX file |
 | `bibliography` | `fail_on_missing` | `true` | Fail if a cited `[@key]` is not in the bib |
 | `bibliography` | `fail_on_unused` | `false` | Uncited entries must either be cited or listed as audited `reserve_keys` |
 
@@ -212,12 +226,12 @@ The test suite validates:
 
 - 25 figures are produced; each has a matching SVG sibling and
   exceeds 5 KB
-- The figure manifest records all 24 registry entries, declared data
+- The figure manifest records all 25 registry entries, declared data
   inputs, evidence classes, provenance fields, long descriptions, and
   output hashes
 - The `FIGURE_REGISTRY` matches `generate_all_figures` exactly
 - Every plotter's signature matches its declared `needs_manuscript` flag
-- The pipeline report records `figures_generated >= 24`
+- The pipeline report records `figures_generated >= 25`
 - The figure manifest records declared inputs, extracted BibTeX source
   keys, and SHA-256 hashes for generated PNG/SVG siblings
 - Prose emphasis uses italics; bold is reserved for the structural
@@ -234,7 +248,7 @@ independently reverified; high-risk and current-status claims still need
 the [claim-ledger and source-refresh workflow](docs/claim_ledger.md)
 before publication. That ledger also records the reserve-source audit:
 future uncited BibTeX entries should be cited, explicitly reserved in
-`manuscript/config.yaml`, or removed.
+`docs/manuscript/config.yaml`, or removed.
 
 For source-tier definitions, sensitive-material boundaries, environment
 reproduction, release versioning, audit limits, accessibility checks, and
@@ -267,9 +281,9 @@ into temporary directories.
 * [`docs/accessibility_reader_experience.md`](docs/accessibility_reader_experience.md) — reader-facing format and figure accessibility checks
 * [`docs/release_archival_versioning.md`](docs/release_archival_versioning.md) — release artifacts, versioning, DOI flow, and corrections
 * [`CHANGELOG.md`](CHANGELOG.md) — editorial revision history
-* [`manuscript/SYNTAX.md`](manuscript/SYNTAX.md) — Pandoc citation conventions
-* [`manuscript/A1_figure_catalogue.md`](manuscript/A1_figure_catalogue.md) — per-figure catalog
-* [`manuscript/A2_glossary.md`](manuscript/A2_glossary.md) — technical-term glossary
+* [`docs/manuscript/SYNTAX.md`](docs/manuscript/SYNTAX.md) — Pandoc citation conventions
+* [`docs/manuscript/A1_figure_catalogue.md`](docs/manuscript/A1_figure_catalogue.md) — per-figure catalog
+* [`docs/manuscript/A2_glossary.md`](docs/manuscript/A2_glossary.md) — technical-term glossary
 * [`docs/architecture.md`](docs/architecture.md) — module dependency graph
 * [`infrastructure/prose/SKILL.md`](../../infrastructure/prose/SKILL.md) — prose-analysis API
 * [`infrastructure/reference/SKILL.md`](../../infrastructure/reference/SKILL.md) — bibliography validation API

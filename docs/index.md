@@ -14,8 +14,8 @@ research exemplar. Start with the task you are trying to complete.
 | Check source provenance and ethics | [sources_provenance_ethics.md](sources_provenance_ethics.md) | [claim_ledger.md](claim_ledger.md), [source_refresh_workflow.md](source_refresh_workflow.md) |
 | Audit source-to-claim fit | [source_to_claim_audit.md](source_to_claim_audit.md) | [claim_ledger.md](claim_ledger.md), [sources_provenance_ethics.md](sources_provenance_ethics.md) |
 | Review data QA controls | [data_validation_qa.md](data_validation_qa.md) | `../tests/test_data.py`, [testing_and_quality.md](testing_and_quality.md) |
-| Add or revise a figure | [figure_maintenance.md](figure_maintenance.md) | `../src/_figures/README.md`, `../manuscript/A1_figure_catalogue.md` |
-| Edit manuscript prose | [manuscript_authoring.md](manuscript_authoring.md) | `../manuscript/SYNTAX.md`, [claim_ledger.md](claim_ledger.md) |
+| Add or revise a figure | [figure_maintenance.md](figure_maintenance.md) | `../src/_figures/README.md`, `../docs/manuscript/A1_figure_catalogue.md` |
+| Edit manuscript prose | [manuscript_authoring.md](manuscript_authoring.md) | `../docs/manuscript/SYNTAX.md`, [claim_ledger.md](claim_ledger.md) |
 | Update a recent civic event | [current_events_refresh.md](current_events_refresh.md) | [source_refresh_workflow.md](source_refresh_workflow.md), [claim_ledger.md](claim_ledger.md) |
 | Choose tests for a change | [testing_and_quality.md](testing_and_quality.md) | `../tests/README.md` |
 | Reproduce the environment | [environment_reproducibility.md](environment_reproducibility.md) | [rendering_and_outputs.md](rendering_and_outputs.md) |
@@ -32,8 +32,8 @@ research exemplar. Start with the task you are trying to complete.
 |---|---|
 | Public project overview | [../README.md](../README.md) |
 | Agent project contract | [../AGENTS.md](../AGENTS.md) |
-| Manuscript syntax | [../manuscript/SYNTAX.md](../manuscript/SYNTAX.md) |
-| Figure catalog | [../manuscript/A1_figure_catalogue.md](../manuscript/A1_figure_catalogue.md) |
+| Manuscript syntax | [../docs/manuscript/SYNTAX.md](../docs/manuscript/SYNTAX.md) |
+| Figure catalog | [../docs/manuscript/A1_figure_catalogue.md](../docs/manuscript/A1_figure_catalogue.md) |
 | Data file contract | [../data/README.md](../data/README.md) |
 | Script contract | [../scripts/README.md](../scripts/README.md) |
 | Test contract | [../tests/README.md](../tests/README.md) |

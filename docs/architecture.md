@@ -5,7 +5,7 @@ repository. It keeps hand-authored manuscript and data sources separate
 from project logic, thin CLI orchestration, generated artifacts, and
 project documentation.
 
-The core rule is simple: source truth lives in `manuscript/`, `data/`,
+The core rule is simple: source truth lives in `docs/manuscript/`, `data/`,
 `src/`, `scripts/`, and checked-in docs. `output/` is rebuildable.
 
 ## System Map
@@ -13,7 +13,7 @@ The core rule is simple: source truth lives in `manuscript/`, `data/`,
 ```mermaid
 flowchart TB
     P["projects/crescent_city"]
-    P --> M["manuscript/<br/>Markdown, config, preamble, BibTeX"]
+    P --> M["docs/manuscript/<br/>Markdown, config, preamble, BibTeX"]
     P --> D["data/<br/>CSV, JSON, YAML inputs"]
     P --> S["src/<br/>project package"]
     P --> C["scripts/<br/>thin CLIs"]
@@ -51,7 +51,7 @@ flowchart TB
 
 | Layer | Location | Contract |
 |---|---|---|
-| Manuscript source | `manuscript/` | Hand-authored Markdown, config, preamble, and bibliography |
+| Manuscript source | `docs/manuscript/` | Hand-authored Markdown, config, preamble, and bibliography |
 | Data source | `data/` | Small checked-in source tables with provenance fields |
 | Domain code | `src/` | Importable project library; no CLI argument parsing |
 | Figure modules | `src/_figures/` | Plotters save PNG outputs and SVG siblings through shared helpers |
@@ -68,13 +68,13 @@ serve different purposes and should both be used before publication.
 | Pipeline | Command | Purpose | Primary outputs |
 |---|---|---|---|
 | Project quality pipeline | `PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict` | Analyze prose, check citations and headings, generate figures, write review and publication metadata | `projects/crescent_city/output/pipeline_report.json`, `review_report.md`, `figures/`, `CITATION.cff` |
-| Shared renderer | `PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city` | Hydrate manuscript variables and render combined PDF, combined HTML, per-section HTML, and slides | `projects/crescent_city/output/pdf/crescent_city_combined.pdf`, `web/index.html`, `slides/` |
+| Shared renderer | `PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city` | Hydrate manuscript variables and render combined PDF, combined HTML, per-section HTML, and slides | `projects/crescent_city/output/pdf/crescent_city_combined.pdf`, `web/index.html`, `slides/` |
 
 Validation and copy-out are separate repository-level stages:
 
 ```bash
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
-PYTHONPATH=. uv run python scripts/05_copy_outputs.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
 ```
 
 ## Project Pipeline Flow
@@ -82,7 +82,7 @@ PYTHONPATH=. uv run python scripts/05_copy_outputs.py --project crescent_city
 `scripts/run_history_pipeline.py` is the CLI entry point. Internally it
 calls:
 
-1. `src.config.load_project_config()` for `manuscript/config.yaml`.
+1. `src.config.load_project_config()` for `docs/manuscript/config.yaml`.
 2. `infrastructure.prose.report.analyze_manuscript()` for prose metrics.
 3. Local `CheckResult` gates for grade band, citation density, heading
    levels, section cross-references, and BibTeX consistency.
@@ -95,16 +95,16 @@ bibliography, review, and publishing stages.
 
 ## Rendering Flow
 
-The shared renderer does not treat `manuscript/` as already publication
+The shared renderer does not treat `docs/manuscript/` as already publication
 ready. It first runs manuscript-variable hydration and writes substituted
 copies under `output/manuscript/`. It then renders from that hydrated
 directory.
 
 ```mermaid
 flowchart LR
-    M["manuscript/*.md"] --> V["z_generate_manuscript_variables.py"]
+    M["docs/manuscript/*.md"] --> V["z_generate_manuscript_variables.py"]
     V --> OM["output/manuscript/*.md"]
-    OM --> R["scripts/03_render_pdf.py"]
+    OM --> R["scripts/pipeline/stage_03_render.py"]
     F["output/figures"] --> R
     B["references.bib"] --> R
     R --> PDF["output/pdf/crescent_city_combined.pdf"]
@@ -130,7 +130,7 @@ When adding or changing a figure:
 2. Implement the plotter in `src/_figures/`.
 3. Register it in `src/figures.py`.
 4. Update `data/figure_provenance.csv`.
-5. Update `manuscript/A1_figure_catalogue.md` and any manuscript image
+5. Update `docs/manuscript/A1_figure_catalogue.md` and any manuscript image
    blocks or captions.
 6. Run figure tests and the strict pipeline.
 
@@ -141,7 +141,7 @@ When adding or changing a figure:
 | New manuscript variable | `src/manuscript_variables.py` and `scripts/z_generate_manuscript_variables.py` |
 | New data-backed figure | `data/`, `src/_figures/`, `src/figures.py` |
 | New quality gate | `src/pipeline.py`, with tests in `tests/` |
-| New publication metadata field | `manuscript/config.yaml` and `src/publishing.py` |
+| New publication metadata field | `docs/manuscript/config.yaml` and `src/publishing.py` |
 | New documentation contract | `docs/`, then `tests/test_documentation.py` if it should be guarded |
 
 See `data_dictionary.md`, `figure_maintenance.md`,
@@ -153,7 +153,7 @@ operator guides behind these extension points.
 | Failure | Likely subsystem | Start here |
 |---|---|---|
 | Missing or stale figure | `data/`, `src/_figures/`, `src/figures.py` | `PYTHONPATH=. uv run pytest projects/crescent_city/tests/test_figures.py -q` |
-| Broken citation | `manuscript/*.md`, `manuscript/references.bib` | `PYTHONPATH=. uv run pytest projects/crescent_city/tests/test_citations.py -q` |
+| Broken citation | `docs/manuscript/*.md`, `docs/manuscript/references.bib` | `PYTHONPATH=. uv run pytest projects/crescent_city/tests/test_citations.py -q` |
 | Render-only PDF problem | Hydrated manuscript, LaTeX preamble, shared renderer | `docs/rendering_and_outputs.md` |
 | Stale current-event claim | `data/historical_events.json`, manuscript current chapters | `docs/source_refresh_workflow.md` |
 | Documentation drift | `docs/`, root README/AGENTS, folder guides | `PYTHONPATH=. uv run pytest projects/crescent_city/tests/test_documentation.py -q` |

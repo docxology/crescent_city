@@ -12,7 +12,7 @@ Source data lives in `../data/`. Generated figures and reports live in
 
 | Convention | Meaning |
 |---|---|
-| `source_keys` | Semicolon- or list-style BibTeX key references into `../manuscript/references.bib` |
+| `source_keys` | Semicolon- or list-style BibTeX key references into `../docs/manuscript/references.bib` |
 | `evidence_class` / `evidence_type` | What kind of evidence the row encodes: measured, modeled, projected, schematic, public status, estimate, or chronology |
 | `notes` | Short row-level caveat or provenance note |
 | Stable IDs | Fields such as `event_id`, `point_id`, `stat_id`, `metric_id`, and `node_id` are audit anchors; change them only when the underlying claim changes |
@@ -46,7 +46,7 @@ For exact current-event source-tier labels and ethical boundaries, see
 | `archaeology_evidence_layers.csv` | Public archaeology evidence ladder | `layer_id`, `year_start`, `year_end`, `evidence_class`, `public_detail_level`, `source_keys` | High for ethical boundaries, low for row mechanics |
 | `healthcare_access_nodes.csv` | Rural health network nodes | `node_id`, `label`, `node_type`, `x`, `y`, `capacity_label`, `evidence_class`, `source_keys` | Medium because capacity and service availability differ |
 | `healthcare_access_edges.csv` | Rural health network pathways | `edge_id`, `source`, `target`, `label`, `evidence_class`, `source_keys` | Medium when referral, transfer, or service pathways change |
-| `figure_provenance.csv` | Figure manifest and accessibility metadata | `figure_name`, `source_freshness`, `source_type`, `last_checked`, `visual_evidence_mode`, `reader_risk`, `long_description` | Medium because it must stay synchronized with `src/figures.py` and `manuscript/A1_figure_catalogue.md` |
+| `figure_provenance.csv` | Figure manifest and accessibility metadata | `figure_name`, `source_freshness`, `source_type`, `last_checked`, `visual_evidence_mode`, `reader_risk`, `long_description` | Medium because it must stay synchronized with `src/figures.py` and `docs/manuscript/A1_figure_catalogue.md` |
 
 ## Current-Event Records
 
@@ -71,7 +71,7 @@ as completed history.
 ## Data Edit Checklist
 
 1. Update the data row before updating a figure or manuscript paragraph.
-2. Keep `source_keys` aligned with `../manuscript/references.bib`.
+2. Keep `source_keys` aligned with `../docs/manuscript/references.bib`.
 3. Preserve stable IDs unless the historical claim itself changes.
 4. For recent rows, update `checked_as_of`, `source_tier`, and
    `refresh_trigger`; use only the source tiers documented in
@@ -93,6 +93,6 @@ Run from the template repository root when preparing render outputs:
 
 ```bash
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```

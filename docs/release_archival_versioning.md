@@ -14,10 +14,10 @@ A public release candidate is ready only when all of these are true:
 | Source freshness | [claim_ledger.md](claim_ledger.md) and [source_refresh_workflow.md](source_refresh_workflow.md) have been checked for volatile claims. |
 | Project tests | The project test suite or targeted release subset passes. |
 | Strict pipeline | `scripts/run_history_pipeline.py --strict` passes and writes current reports. |
-| Render | `scripts/03_render_pdf.py --project crescent_city` succeeds from the template root. |
-| Validation | `scripts/04_validate_output.py --project crescent_city` passes. |
-| Copy-out | `scripts/05_copy_outputs.py --project crescent_city` creates the repository-level release folder. |
-| Metadata | `CITATION.cff`, `zenodo_metadata.json`, and `self_citation.bib` are regenerated from `manuscript/config.yaml`. |
+| Render | `scripts/pipeline/stage_03_render.py --project crescent_city` succeeds from the template root. |
+| Validation | `scripts/pipeline/stage_04_validate.py --project crescent_city` passes. |
+| Copy-out | `scripts/pipeline/stage_05_copy.py --project crescent_city` creates the repository-level release folder. |
+| Metadata | `CITATION.cff`, `zenodo_metadata.json`, and `self_citation.bib` are regenerated from `docs/manuscript/config.yaml`. |
 
 Do not treat a green test run as a release by itself. Current public
 records can change after tests pass.
@@ -31,7 +31,7 @@ paper:
   version: "1.0.0"
 ```
 
-from `../manuscript/config.yaml`. That value drives generated publishing
+from `../docs/manuscript/config.yaml`. That value drives generated publishing
 metadata. Change it only when preparing a release, correction, or
 substantive public revision.
 
@@ -71,7 +71,7 @@ the checked-in manuscript, data, code, tests, and documentation.
 ## DOI And Zenodo Flow
 
 The assigned archival DOI is `10.5281/zenodo.20286171`, and
-`../manuscript/config.yaml` is the source of truth for both the DOI and
+`../docs/manuscript/config.yaml` is the source of truth for both the DOI and
 the public repository URL, `https://github.com/docxology/crescent_city`.
 For each release:
 

@@ -5,7 +5,7 @@ be reproducible from checked-in manuscript text, checked-in data, or
 explicit schematic geometry.
 
 The operational source of truth is `../src/figures.py`. The manuscript
-catalog is `../manuscript/A1_figure_catalogue.md`.
+catalog is `../docs/manuscript/A1_figure_catalogue.md`.
 
 Each generation pass also writes
 `../output/figures/figure_manifest.json`. That manifest is deterministic:
@@ -86,7 +86,7 @@ tests, documentation, and manuscript image references.
    figure names source basis, evidence class, limitation, and interpretive
    claim.
 9. Update `../data/figure_provenance.csv` and
-   `../manuscript/A1_figure_catalogue.md`.
+   `../docs/manuscript/A1_figure_catalogue.md`.
 10. Update docs if the figure count, source basis, or maintenance contract
    changed.
 
@@ -100,7 +100,7 @@ A good caption names:
 - The interpretive claim the figure supports.
 
 Every figure also needs a concise long description in
-`../manuscript/A1_figure_catalogue.md`, mirrored in
+`../docs/manuscript/A1_figure_catalogue.md`, mirrored in
 `../data/figure_provenance.csv`, so the accessibility description and the
 generated manifest remain synchronized.
 
@@ -133,6 +133,6 @@ repository root:
 
 ```bash
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```

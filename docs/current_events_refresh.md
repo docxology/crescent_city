@@ -66,6 +66,6 @@ PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 From the template repository root, then run:
 
 ```bash
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```

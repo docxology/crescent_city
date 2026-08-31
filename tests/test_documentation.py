@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 _LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
-_DOC_DIRS = ("data", "docs", "manuscript", "scripts", "src", "src/_figures", "tests")
+_DOC_DIRS = ("data", "docs", "docs/manuscript", "scripts", "src", "src/_figures", "tests")
 _CANONICAL_AUDIT_DOCS = (
     "accessibility_reader_experience.md",
     "audit_trail_limitations.md",
@@ -22,7 +22,7 @@ _CANONICAL_AUDIT_DOCS = (
 
 
 def _project_docs(project_root: Path) -> list[Path]:
-    docs = [project_root / "README.md", project_root / "AGENTS.md", project_root / "manuscript" / "SYNTAX.md"]
+    docs = [project_root / "README.md", project_root / "AGENTS.md", project_root / "docs" / "manuscript" / "SYNTAX.md"]
     docs.extend(sorted((project_root / "docs").glob("*.md")))
     for dirname in _DOC_DIRS:
         docs.extend([project_root / dirname / "README.md", project_root / dirname / "AGENTS.md"])
@@ -173,7 +173,7 @@ def test_project_docs_match_current_manuscript_shape(project_root: Path) -> None
     assert "00_abstract → 73_reproducibility.md" in agents
     assert "`require_h1_per_section` | `false`" in readme
     assert "Directory-Level Documentation" in readme
-    assert "58 analyzed Markdown source files" in overview
+    assert "56 numbered Markdown source files" in overview
     assert "cited-key, reserve-key, and unused-entry counts are reported by each pipeline run" in overview
     assert "docs/claim_ledger.md" in overview
     assert "claim-ledger and source-refresh workflow" in readme
@@ -187,7 +187,7 @@ def test_source_to_claim_audit_covers_every_manuscript_file(project_root: Path) 
     support_files = {"AGENTS.md", "README.md", "SYNTAX.md", "preamble.md"}
     missing = [
         path.name
-        for path in sorted((project_root / "manuscript").glob("*.md"))
+        for path in sorted((project_root / "docs" / "manuscript").glob("*.md"))
         if path.name not in support_files and path.name not in audit
     ]
     assert not missing, "source_to_claim_audit.md omits manuscript files: " + ", ".join(missing)
