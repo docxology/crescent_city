@@ -8,6 +8,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/);
 the manuscript itself is versioned by the `paper.version` field in
 `docs/manuscript/config.yaml`.
 
+## [Unreleased] — 2026-09-01
+
+### Verified
+
+- 2026-09-01 improvement lane: strict project pipeline re-run green after
+  the `docs/manuscript/` migration — 5/5 checks passed, 25 figures,
+  373 unique citations, 61,030 words (`scripts/run_history_pipeline.py
+  --strict`, exit 0). Residual stale figure-count mentions (10) fixed in
+  manuscript and directory docs; stale-count test guard now derives from
+  the live registry instead of a hard-coded previous count.
+
 ## [Unreleased] — 2026-08-28
 
 ### Changed
