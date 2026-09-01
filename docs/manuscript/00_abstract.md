@@ -57,7 +57,7 @@ federal-agency reports, and census data [@sapir1930; @gould1966pointstgeorge;
 @cook1976; @uscb2020census].
 
 The workflow follows Peng's reproducibility framework [@peng2011reproducible]:
-analytical choices, twenty-four registry-backed figures (data-backed,
+analytical choices, twenty-five registry-backed figures (data-backed,
 schematic, and manuscript-metric), and the complete reproduction narrative in
 [@sec:figure_catalogue] are versioned alongside supporting inputs and plotters in
 `data/`, `src/`, and `scripts/`, with citations resolved against

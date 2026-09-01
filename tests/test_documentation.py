@@ -126,13 +126,45 @@ def test_project_docs_match_current_figure_registry(project_root: Path) -> None:
         doc.relative_to(project_root).as_posix(): doc.read_text(encoding="utf-8") for doc in _project_docs(project_root)
     }
     combined = "\n".join(text_by_doc.values())
-    previous_figure_count = "18"
-    previous_figure_word = "eighteen"
+
+    # Stale figure-count guard derives the stale numerals from the live
+    # registry instead of pinning a hard-coded previous count, so the next
+    # registry growth does not repeat the drift this test exists to catch.
+    _NUMBER_WORDS = {
+        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+        7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven",
+        12: "twelve", 13: "thirteen", 14: "fourteen", 15: "fifteen",
+        16: "sixteen", 17: "seventeen", 18: "eighteen", 19: "nineteen",
+        20: "twenty", 21: "twenty-one", 22: "twenty-two", 23: "twenty-three",
+        24: "twenty-four", 25: "twenty-five", 26: "twenty-six",
+        27: "twenty-seven", 28: "twenty-eight", 29: "twenty-nine",
+        30: "thirty",
+    }
+    stale_count_patterns: list[str] = []
+    for stale_count in range(1, count):
+        numeral = str(stale_count)
+        word = _NUMBER_WORDS.get(stale_count)
+        stale_count_patterns.extend(
+            [
+                rf"\b{numeral} reproducible figures\b",
+                rf"\b{numeral} figures\b",
+                rf"\b{numeral}-figure\b",
+                rf"\b{numeral} PNG\b",
+                rf"\bregistered {numeral}\b",
+                rf"\bfigures_generated >= {numeral}\b",
+            ]
+        )
+        if word is not None:
+            stale_count_patterns.extend(
+                [
+                    rf"\b{word} reproducible figures\b",
+                    rf"\b{word} figures\b",
+                    rf"\b{word}-figure\b",
+                ]
+            )
+    stale_count_patterns.append(rf"\bfigures_generated >= {count - 1}\b")
 
     stale_patterns = (
-        r"\b17 reproducible figures\b",
-        r"\b17 figures\b",
-        r"\b17-figure\b",
         r"\b306-entry\b",
         r"\b321 BibTeX\b",
         r"\b355 BibTeX entries\b",
@@ -141,14 +173,7 @@ def test_project_docs_match_current_figure_registry(project_root: Path) -> None:
         r"\b49 narrative chapters\b",
         r"\beight thematic Parts\b",
         r"\b58_reproducibility\.md\b",
-        r"\bfigures_generated >= 17\b",
-        rf"\bfigures_generated >= {previous_figure_count}\b",
-        rf"\b{previous_figure_count} reproducible figures\b",
-        rf"\b{previous_figure_count} figures\b",
-        rf"\b{previous_figure_word} figures\b",
-        rf"\b{previous_figure_count}-figure\b",
-        rf"\b{previous_figure_count} PNG\b",
-        rf"\bregistered {previous_figure_count}\b",
+        *stale_count_patterns,
         r"\b200\+ cited keys\b",
         r"Every file must have an H1",
         r"`require_h1_per_section`\s*\|\s*`true`",

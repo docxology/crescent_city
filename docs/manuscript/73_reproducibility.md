@@ -57,7 +57,7 @@ research object.
 7. Documentation: `README.md`, `AGENTS.md`, and `docs/` describe the
    public quick start, agent-facing contracts, architecture, current
    manuscript organization, and output expectations
-8. Figures: All twenty-four figures are generated from data
+8. Figures: All twenty-five figures are generated from data
    or pure code by Matplotlib plotters [@hunter2007matplotlib].
    The shared style follows a color-blind-safe palette and a
    restrained statistical-graphics standard: large text, direct
@@ -169,7 +169,7 @@ on the number.
 The pipeline is validated by the project test suite in `tests/`. The
 figure suite is governed by an explicit registry contract:
 `tests/test_figures.py::TestFigures` requires
-exactly twenty-four PNG–SVG pairs above 5 KB each; the contract
+exactly twenty-five PNG–SVG pairs above 5 KB each; the contract
 class `TestSupportingModulesUnderCoverage` further validates the
 registry signatures, the public-API exports, and the
 script-orchestrator contract. The documentation guard in

@@ -8,7 +8,7 @@ registered in `../figures.py` and documented in
 
 ## Contracts
 
-- Preserve the 24-figure registry unless explicitly changing the manuscript
+- Preserve the 25-figure registry unless explicitly changing the manuscript
   figure contract.
 - Do not hard-code generated-output paths; accept `output_dir` parameters.
 - Use checked-in data from `../../data/` for factual series; deterministic

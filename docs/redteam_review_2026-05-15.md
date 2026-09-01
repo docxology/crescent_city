@@ -11,7 +11,7 @@ Local baseline refreshed on 18 May 2026:
 - `output/pipeline_report.json`: 5/5 checks passed, 59,086 words, 370
   unique citations, average FKGL 17.40, citation density 6.26, and 24
   generated figures.
-- `docs/project_overview.md`: 58 analyzed Markdown source files, 24 PNG
+- `docs/project_overview.md`: 58 analyzed Markdown source files, 25 PNG
   plus 24 SVG figures, and 20 checked-in data inputs.
 - `data/historical_events.json`: rows from 2024 onward are expected to
   carry `checked_current_source`, `checked_as_of`, `source_tier`, and

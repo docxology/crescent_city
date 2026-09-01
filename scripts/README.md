@@ -9,7 +9,7 @@ resolve paths, and call importable functions.
 | Script | Role |
 |---|---|
 | `run_history_pipeline.py` | Runs prose checks, bibliography checks, figures, review report, and publishing metadata |
-| `y_generate_history_figures.py` | Regenerates the registered 24-figure suite |
+| `y_generate_history_figures.py` | Regenerates the registered 25-figure suite |
 | `z_generate_manuscript_variables.py` | Writes substituted manuscript files and renderer variables |
 
 ## Common Commands

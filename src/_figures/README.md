@@ -1,7 +1,7 @@
 # Figure Modules
 
 This package contains the matplotlib plotters behind the manuscript's
-registered 24 figures. Plotters are called through `../figures.py`.
+registered 25 figures. Plotters are called through `../figures.py`.
 
 ## Module Map
 

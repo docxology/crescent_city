@@ -739,7 +739,7 @@ records update the status of 2024–2026 claims.
 
 ## Style Reference for Figure Maintenance
 
-All twenty-four figures share the Wong (2011) colorblind-safe palette
+All twenty-five figures share the Wong (2011) colorblind-safe palette
 defined in `src/_figures/_style.py`. The palette is exposed publicly
 via `src.figures.PALETTE`; any new figure should reference colors by
 their palette key rather than by hex code, so palette updates remain a
@@ -756,11 +756,11 @@ the shared `rcParams`.
 The figure suite is validated by
 [`tests/test_figures.py`](../tests/test_figures.py). Tests enforce:
 
-* the registry contains the expected twenty-four figures and has no
+* the registry contains the expected twenty-five figures and has no
   duplicates;
 * every plotter's signature matches the declared
   `needs_manuscript` flag;
-* `generate_all_figures()` produces exactly twenty-four PNGs, each
+* `generate_all_figures()` produces exactly twenty-five PNGs, each
   above 5 KB and each accompanied by a matching SVG;
 * every `FigureSpec.data_inputs` file exists under `data/`;
 * manuscript-metric figures exclude folder-level documentation files;
