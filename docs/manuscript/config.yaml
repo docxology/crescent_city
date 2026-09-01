@@ -42,7 +42,7 @@ metadata:
   data_license: "public-domain-and-open-data-by-source"
   language: "en"
 
-manuscript_dir: "manuscript"
+manuscript_dir: "docs/manuscript"
 
 prose:
   target_grade_level_min: 12.0
@@ -58,7 +58,7 @@ prose:
   forbid_skipped_levels: true
 
 bibliography:
-  references_path: "manuscript/references.bib"
+  references_path: "docs/manuscript/references.bib"
   fail_on_missing: true
   # Tightened to true on 2026-08-28 after the orphan list was audited:
   # every non-cited entry is now covered by the explicit ``reserve_keys``

@@ -8,7 +8,7 @@ metadata, and renderer variables.
 
 | Module | Role |
 |---|---|
-| `config.py` | Typed loader for `manuscript/config.yaml` |
+| `config.py` | Typed loader for `docs/manuscript/config.yaml` |
 | `pipeline.py` | Prose, citation, heading, bibliography, figure, and report orchestration |
 | `figures.py` | Public figure API, `FIGURE_REGISTRY`, and figure-manifest provenance fields |
 | `manuscript_variables.py` | Computes and writes manuscript substitution variables |

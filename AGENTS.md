@@ -10,9 +10,8 @@
 | Revision history? | [CHANGELOG.md](CHANGELOG.md) + dated `REVIEW_LOG_*.md` files | read newest entries |
 | Primary verification? | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` (project quality) and `PYTHONPATH=. uv run pytest tests/ -q` (suite) | run them |
 
-Known warning (2026-08-31): the tree is mid-migration `manuscript/` →
-`docs/manuscript/`; `src/`/`tests/` still point at the old path and ~50 tests
-error for that single reason. Details in [TODO.md](TODO.md) Major section.
+Migration note (2026-08-31): the `manuscript/` → `docs/manuscript/` move is
+complete in code and docs; the full suite is green (175 passed).
 
 ## Purpose
 

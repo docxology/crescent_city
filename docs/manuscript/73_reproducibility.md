@@ -39,7 +39,7 @@ research object.
 1. Source manuscript: numbered Markdown files for the abstract,
    introduction, four Part openers, forty-six topical chapters,
    timeline, methodology, reproducibility, references, and the Figure
-   Catalog and Glossary appendices in `manuscript/`
+   Catalog and Glossary appendices in `docs/manuscript/`
 2. Raw data: CSV and JSON files in `data/`, kept in plain-text
    formats so they can be diffed, archived, and reused under FAIR
    data-management expectations [@wilkinson2016fair]
@@ -52,7 +52,7 @@ research object.
    recent events)
 4. Pipeline orchestrators: thin scripts in `scripts/` that
    call the public API and do no business logic
-5. Configuration: Typed settings in `manuscript/config.yaml`
+5. Configuration: Typed settings in `docs/manuscript/config.yaml`
 6. Dependencies: `pyproject.toml` specifies exact package versions
 7. Documentation: `README.md`, `AGENTS.md`, and `docs/` describe the
    public quick start, agent-facing contracts, architecture, current
@@ -72,7 +72,7 @@ research object.
    The complete catalog with per-figure
    data sources and one-line reproduction commands is in
    [@sec:figure_catalogue].
-9. Bibliography: `manuscript/references.bib` is the canonical
+9. Bibliography: `docs/manuscript/references.bib` is the canonical
    bibliography file. The validation report records the current cited-key
    count and unused-entry count for each build, while the file itself
    preserves peer-reviewed primary literature, federal-agency reports,
@@ -187,7 +187,7 @@ claims therefore need a source-refresh pass through the living claim ledger
 in `docs/claim_ledger.md` before publication or after material public-record
 changes. The same ledger now records the reserve-source audit: uncited
 bibliography entries should either be intentionally reserved in
-`manuscript/config.yaml` or cited in the manuscript, so the project does
+`docs/manuscript/config.yaml` or cited in the manuscript, so the project does
 not accumulate a quiet shadow bibliography.
 
 ### Licenses for Text, Code, Data, and Artifacts

@@ -6,7 +6,7 @@ Wires :mod:`infrastructure.publishing` into the project pipeline. Emits
 * ``output/zenodo_metadata.json`` — payload usable with the Zenodo API or
   the manual deposit form.
 
-Both files are derived from ``manuscript/config.yaml`` so there is no
+Both files are derived from ``docs/manuscript/config.yaml`` so there is no
 hand-edited source-of-truth drift between the manuscript header and the
 publication artifacts.
 """
@@ -95,7 +95,7 @@ def write_citation_cff(
     """Write a CFF 1.2.0 file at *output_path* derived from *config*.
 
     *config* is the dict returned by ``yaml.safe_load`` of
-    ``manuscript/config.yaml``. The function tolerates missing keys with
+    ``docs/manuscript/config.yaml``. The function tolerates missing keys with
     sensible defaults so a freshly-scaffolded project still emits a
     valid file.
     """

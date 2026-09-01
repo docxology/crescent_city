@@ -26,9 +26,9 @@ sys.path.insert(0, str(_repo_root))
 def main(argv: list[str] | None = None) -> int:
     from src.figures import generate_all_figures
 
-    manuscript_dir = _project_root / "manuscript"
+    manuscript_dir = _project_root / "docs" / "manuscript"
     if not manuscript_dir.is_dir():
-        print("❌  manuscript/ not found beside scripts/.", file=sys.stderr)
+        print("❌  docs/manuscript/ not found beside scripts/.", file=sys.stderr)
         return 1
 
     figures = generate_all_figures(

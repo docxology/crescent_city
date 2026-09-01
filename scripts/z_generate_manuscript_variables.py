@@ -37,7 +37,7 @@ def main(argv: list[str] | None = None) -> int:
     from infrastructure.prose.report import analyze_manuscript
 
     project_root = Path(_project_root)
-    config_path = project_root / "manuscript" / "config.yaml"
+    config_path = project_root / "docs" / "manuscript" / "config.yaml"
     cfg = load_project_config(config_path)
 
     manuscript_dir = project_root / cfg.manuscript_dir

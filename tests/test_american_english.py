@@ -14,7 +14,6 @@ _ROOTS = (
     "README.md",
     "data",
     "docs",
-    "manuscript",
     "scripts",
     "src",
     "tests",

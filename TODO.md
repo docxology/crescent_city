@@ -7,15 +7,14 @@ surface: `docs/manuscript/MANUSCRIPT_STATUS.md`. Revision log:
 
 ## Major
 
-- [ ] Complete the `manuscript/` → `docs/manuscript/` migration in code:
-  update `src/pipeline.py` (`MANUSCRIPT_DIR`, default config path),
-  `src/config.py` defaults (`manuscript_dir`, `references_path`),
-  `tests/conftest.py` (`manuscript_dir` fixture), and
-  `tests/test_documentation.py` (`_DOC_DIRS`, `_project_docs`,
-  `test_source_to_claim_audit_covers_every_manuscript_file`) — this alone
-  clears 50 test errors + 11 failures observed 2026-08-31
-  (`PYTHONPATH=. uv run pytest tests/ -q`), then delete the stale
-  `manuscript/` deletions from the index (paths: `src/`, `tests/`).
+- [x] Completed the `manuscript/` → `docs/manuscript/` migration in code:
+  `src/pipeline.py`, `src/config.py`, `src/figures.py`, `src/publishing.py`,
+  `scripts/y_generate_history_figures.py`,
+  `scripts/z_generate_manuscript_variables.py`,
+  `scripts/audit/check_glossary_usage.py`, `tests/conftest.py`, and
+  `tests/test_american_english.py` now point at `docs/manuscript/`;
+  `docs/manuscript/config.yaml` `manuscript_dir` updated. Full suite green:
+  175 passed (`uv run pytest tests/ -q`, 2026-08-31).
 - [ ] Re-render and validate PDF after the migration completes:
   `PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project
   crescent_city` then `scripts/pipeline/stage_04_validate.py --project

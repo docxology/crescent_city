@@ -15,7 +15,7 @@ history, systems, community systems, and recent events). This module:
   invoked by ``scripts/y_generate_history_figures.py`` and the test suite.
 
 The figure suite is documented in the manuscript Appendix
-(``manuscript/A1_figure_catalogue.md``) — each entry there names the
+(``docs/manuscript/A1_figure_catalogue.md``) — each entry there names the
 generator function and lists the data sources, so reproducing a figure
 is always a one-line script call.
 """
@@ -578,7 +578,7 @@ def generate_all_figures(
 
     Args:
         manuscript_dir: Override for the manuscript directory. Defaults
-            to ``<project>/manuscript``.
+            to ``<project>/docs/manuscript``.
         output_dir: Override for the figure output directory. Defaults
             to :data:`DEFAULT_OUTPUT_DIR` (``<project>/output/figures``).
         data_dir: Override for tabular / JSON figure inputs. Defaults
@@ -588,7 +588,7 @@ def generate_all_figures(
         List of PNG paths (one per figure, in registry order), encoded
         as strings for script manifest collection.
     """
-    ms = manuscript_dir or (Path(__file__).resolve().parents[1] / "manuscript")
+    ms = manuscript_dir or (Path(__file__).resolve().parents[1] / "docs" / "manuscript")
     out = output_dir or DEFAULT_OUTPUT_DIR
     data = data_dir or DEFAULT_DATA_DIR
     _apply_figure_provenance(FIGURE_REGISTRY, data / FIGURE_PROVENANCE_NAME)

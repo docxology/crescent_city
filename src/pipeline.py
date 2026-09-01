@@ -8,7 +8,7 @@ All business logic is delegated to:
 - :mod:`src.figures` (figure generation)
 - :mod:`src.report` (report assembly)
 
-Configuration is loaded from ``manuscript/config.yaml`` via
+Configuration is loaded from ``docs/manuscript/config.yaml`` via
 :class:`src.config.ProjectConfig`; no thresholds are hard-coded in this
 module.
 """
@@ -50,7 +50,7 @@ from src.report import write_review_report  # noqa: E402
 # ── Filesystem layout ──────────────────────────────────────────────────
 
 PROJECT_DIR = _DEFAULT_PROJECT_DIR
-MANUSCRIPT_DIR = PROJECT_DIR / "manuscript"
+MANUSCRIPT_DIR = PROJECT_DIR / "docs" / "manuscript"
 OUTPUT_DIR = PROJECT_DIR / "output"
 CONFIG_PATH = MANUSCRIPT_DIR / "config.yaml"
 
@@ -71,7 +71,7 @@ def _resolve_project_dir(project_root: Path | str | None = None) -> Path:
 def _resolve_config_path(project_dir: Path, config_path: Path | str | None = None) -> Path:
     """Resolve an optional config path against the active project root."""
     if config_path is None:
-        return project_dir / "manuscript" / "config.yaml"
+        return project_dir / "docs" / "manuscript" / "config.yaml"
     path = Path(config_path).expanduser()
     return path.resolve() if path.is_absolute() else (project_dir / path).resolve()
 
@@ -85,7 +85,7 @@ def _resolve_project_path(project_dir: Path, path: Path | str) -> Path:
 def _load_config(config_path: Path | None = None) -> ProjectConfig:
     """Load :class:`ProjectConfig`.
 
-    Defaults to ``manuscript/config.yaml`` adjacent to this project; tests can
+    Defaults to ``docs/manuscript/config.yaml`` adjacent to this project; tests can
     pass a custom path to drive failure scenarios without monkeypatching.
     """
     path = config_path or CONFIG_PATH
@@ -208,7 +208,7 @@ def run_pipeline(
 ) -> int:
     """Execute the full pipeline. Returns 0 on success, 1 on failure.
 
-    ``config_path`` overrides the default ``manuscript/config.yaml`` location;
+    ``config_path`` overrides the default ``docs/manuscript/config.yaml`` location;
     used by the test suite to drive failure scenarios without mocks.
     """
     project_dir = _resolve_project_dir(project_root)
@@ -348,7 +348,7 @@ def run_pipeline(
 
     # ── 6. Publishing artifacts ──────────────────────────────────────
     # CITATION.cff + zenodo_metadata.json + self_citation.bib, derived
-    # purely from manuscript/config.yaml so the publication metadata
+    # purely from docs/manuscript/config.yaml so the publication metadata
     # cannot drift from the manuscript header. Best-effort: a malformed
     # config.yaml is reported but does not fail the build.
     print()

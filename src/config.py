@@ -1,4 +1,4 @@
-"""Typed access to ``manuscript/config.yaml`` for the crescent_city project."""
+"""Typed access to ``docs/manuscript/config.yaml`` for the crescent_city project."""
 
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ class BibliographyConfig:
     allowlist cause the build to fail.
     """
 
-    references_path: str = "manuscript/references.bib"
+    references_path: str = "docs/manuscript/references.bib"
     fail_on_missing: bool = True
     fail_on_unused: bool = False
     reserve_keys: list[str] = field(default_factory=list)
@@ -56,7 +56,7 @@ class ProjectConfig:
     title: str
     authors: list[dict[str, str]] = field(default_factory=list)
     keywords: list[str] = field(default_factory=list)
-    manuscript_dir: str = "manuscript"
+    manuscript_dir: str = "docs/manuscript"
     prose: ProseAnalysisConfig = field(default_factory=ProseAnalysisConfig)
     bibliography: BibliographyConfig = field(default_factory=BibliographyConfig)
     report: ReportConfig = field(default_factory=ReportConfig)
@@ -72,7 +72,7 @@ class ProjectConfig:
             title=str(paper.get("title") or "Crescent City History"),
             authors=list(data.get("authors") or []),
             keywords=list(data.get("keywords") or []),
-            manuscript_dir=str(data.get("manuscript_dir") or "manuscript"),
+            manuscript_dir=str(data.get("manuscript_dir") or "docs/manuscript"),
             prose=ProseAnalysisConfig(
                 target_grade_level_min=float(prose_raw.get("target_grade_level_min", 12.0)),
                 target_grade_level_max=float(prose_raw.get("target_grade_level_max", 20.0)),
@@ -82,7 +82,7 @@ class ProjectConfig:
                 forbid_skipped_levels=bool(prose_raw.get("forbid_skipped_levels", True)),
             ),
             bibliography=BibliographyConfig(
-                references_path=str(bib_raw.get("references_path") or "manuscript/references.bib"),
+                references_path=str(bib_raw.get("references_path") or "docs/manuscript/references.bib"),
                 fail_on_missing=bool(bib_raw.get("fail_on_missing", True)),
                 fail_on_unused=bool(bib_raw.get("fail_on_unused", False)),
                 reserve_keys=list(bib_raw.get("reserve_keys") or []),

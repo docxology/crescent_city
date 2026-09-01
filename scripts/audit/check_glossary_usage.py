@@ -2,7 +2,7 @@
 """Bidirectional glossary coverage audit.
 
 Direction 1 (glossary -> prose): every `**term** —` entry in
-`manuscript/A2_glossary.md` must appear somewhere in the manuscript prose
+`docs/manuscript/A2_glossary.md` must appear somewhere in the manuscript prose
 (case-insensitive, hyphen/space-normalized, parenthetical expansions and
 slash-separated alternates allowed).
 
@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-MANUSCRIPT_DIR = PROJECT_ROOT / "manuscript"
+MANUSCRIPT_DIR = PROJECT_ROOT / "docs" / "manuscript"
 GLOSSARY = MANUSCRIPT_DIR / "A2_glossary.md"
 
 # Files whose content is meta-documentation rather than prose about the place.

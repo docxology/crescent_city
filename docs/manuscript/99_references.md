@@ -1,7 +1,7 @@
 # References {#sec:references}
 
 The complete bibliography for this manuscript is maintained in
-[`manuscript/references.bib`](references.bib) and is read by
+[`docs/manuscript/references.bib`](references.bib) and is read by
 Pandoc during PDF render. The build pipeline invokes Pandoc with
 `--natbib`, so every Pandoc-style citation token in the manuscript is
 rewritten to the appropriate LaTeX citation command and resolved
@@ -44,5 +44,5 @@ that every prose citation resolves:
 
 ```bash
 uv run python -m infrastructure.reference.citation.cli validate \
-    projects/crescent_city/manuscript/references.bib --strict
+    projects/crescent_city/docs/manuscript/references.bib --strict
 ```

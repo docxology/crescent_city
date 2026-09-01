@@ -4,7 +4,7 @@
 
 This package owns figure rendering. Every public plotter should be
 registered in `../figures.py` and documented in
-`../../manuscript/A1_figure_catalogue.md`.
+`../../docs/manuscript/A1_figure_catalogue.md`.
 
 ## Contracts
 
@@ -16,7 +16,7 @@ registered in `../figures.py` and documented in
 - Keep source notes and captions honest about measured, modeled, estimated,
   schematic, or provisional data.
 - Keep `../../data/figure_provenance.csv` and
-  `../../manuscript/A1_figure_catalogue.md` synchronized when a figure's
+  `../../docs/manuscript/A1_figure_catalogue.md` synchronized when a figure's
   source freshness, reader risk, or long description changes.
 
 ## Checks

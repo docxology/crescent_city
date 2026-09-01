@@ -49,8 +49,8 @@ def repo_root() -> Path:
 
 @pytest.fixture(scope="session")
 def manuscript_dir(project_root: Path) -> Path:
-    assert (project_root / "manuscript").is_dir()
-    return project_root / "manuscript"
+    assert (project_root / "docs" / "manuscript").is_dir()
+    return project_root / "docs" / "manuscript"
 
 
 @pytest.fixture(scope="session")
@@ -79,7 +79,7 @@ def config(project_root: Path):
     """Load the project configuration."""
     from infrastructure.config.loader import load_config
 
-    return load_config(str(project_root / "manuscript"))
+    return load_config(str(project_root / "docs" / "manuscript"))
 
 
 @pytest.fixture(scope="session")
