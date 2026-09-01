@@ -86,7 +86,7 @@ calls:
 2. `infrastructure.prose.report.analyze_manuscript()` for prose metrics.
 3. Local `CheckResult` gates for grade band, citation density, heading
    levels, section cross-references, and BibTeX consistency.
-4. `src.figures.generate_all_figures()` for the 24-figure suite.
+4. `src.figures.generate_all_figures()` for the 25-figure suite.
 5. `src.report.write_review_report()` for the human-readable review.
 6. `src.publishing.write_publishing_artifacts()` for citation metadata.
 

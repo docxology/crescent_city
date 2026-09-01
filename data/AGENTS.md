@@ -13,11 +13,11 @@ the manuscript figures or support source-backed claims.
   publishable public-event locations; redact both fields for Indigenous,
   archaeology-adjacent, massacre, cultural-landscape, or protected-resource
   rows.
-- Keep every data-source citation resolvable in `../manuscript/references.bib`.
+- Keep every data-source citation resolvable in `../docs/manuscript/references.bib`.
 - Preserve schemas used by `../src/_figures/` and `../tests/test_data.py`.
 - Keep `figure_provenance.csv` as the machine-readable source for figure
   source freshness, reader risk, and long descriptions; update it with
-  `../manuscript/A1_figure_catalogue.md`.
+  `../docs/manuscript/A1_figure_catalogue.md`.
 - When changing 2024-2026 rows, verify the claim against an official or
   primary source before updating the row.
 - Every 2024-2026 row must carry a non-empty `date_iso`, `source_tier`,

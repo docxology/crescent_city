@@ -79,7 +79,7 @@ render again.
   is needed.
 - Confirm links and cross-references do not show unresolved raw tokens in
   the PDF.
-- Confirm figure count and figure captions match the 24-figure registry.
+- Confirm figure count and figure captions match the 25-figure registry.
 - Confirm figure long descriptions and provenance fields match
   `data/figure_provenance.csv`.
 - Follow `docs/visual_pdf_qa.md` for sampled rendered-page and

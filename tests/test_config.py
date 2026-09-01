@@ -1,4 +1,4 @@
-"""Configuration tests — manuscript/config.yaml + src.config loader."""
+"""Configuration tests — docs/manuscript/config.yaml + src.config loader."""
 
 from __future__ import annotations
 

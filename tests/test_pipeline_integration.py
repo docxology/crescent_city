@@ -87,7 +87,7 @@ class TestPublishingArtifacts:
     def test_publishing_artifacts_use_config_metadata(
         self, pipeline_artifacts, output_dir: Path, manuscript_dir: Path
     ) -> None:
-        """CITATION.cff must reflect ``manuscript/config.yaml`` (no drift)."""
+        """CITATION.cff must reflect ``docs/manuscript/config.yaml`` (no drift)."""
         import yaml
 
         cfg = yaml.safe_load((manuscript_dir / "config.yaml").read_text())

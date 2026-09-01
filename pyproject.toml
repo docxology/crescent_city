@@ -24,6 +24,13 @@ dev = [
     "pytest-cov>=4.1.0",
 ]
 
+[tool.ruff]
+# Scripts/tests resolve repo paths before importing stdlib-adjacent modules;
+# the import-after-path-setup pattern is intentional (E402).
+[tool.ruff.lint.per-file-ignores]
+"scripts/run_history_pipeline.py" = ["E402"]
+"tests/test_figures.py" = ["E402"]
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]

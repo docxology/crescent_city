@@ -11,7 +11,7 @@ A green project build means:
 - Citation keys resolve against `references.bib`.
 - Bibliography reserve policy is explicit.
 - Data files match expected schemas and current-event metadata rules.
-- The 24-figure registry regenerates PNG and SVG outputs and records
+- The 25-figure registry regenerates PNG and SVG outputs and records
   source-freshness, reader-risk, long-description, and checksum
   metadata.
 - Documentation links and guarded facts have not drifted.

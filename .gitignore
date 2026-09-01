@@ -4,5 +4,6 @@ output/
 .coverage.*
 .pytest_cache/
 __pycache__/
+src/crescent_city.egg-info/
 *.pyc
 .benchmarks/

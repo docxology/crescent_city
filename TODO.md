@@ -22,9 +22,9 @@ surface: `docs/manuscript/MANUSCRIPT_STATUS.md`. Revision log:
 
 ## Medium
 
-- [ ] Decide whether `src/crescent_city.egg-info/` should stay tracked —
-  build artifacts (`PKG-INFO`, `SOURCES.txt`) currently show as modified in
-  `git status` (paths: `src/crescent_city.egg-info/`, `.gitignore`).
+- [x] `src/crescent_city.egg-info/` untracked and gitignored; build
+  artifacts no longer show as modified (2026-09-01 improvement lane;
+  local working copy left on disk, now ignored).
 - [ ] `tests/test_documentation.py::test_project_docs_match_current_figure_registry`
   hard-codes "previous_figure_count = 18" as the only stale-count guard;
   consider deriving prior counts or dropping the pin so the next count bump
@@ -32,6 +32,11 @@ surface: `docs/manuscript/MANUSCRIPT_STATUS.md`. Revision log:
 
 ## Minor
 
+- [x] Last stale `manuscript/` doc references fixed (data/AGENTS.md,
+  tests/AGENTS.md, test docstrings); stale mid-migration warning removed
+  from README.md; residual "24-figure" mentions corrected to 25 in
+  testing_and_quality.md, architecture.md, publication_checklist.md
+  (2026-09-01 improvement lane).
 - [x] README "46 topical chapters" / mixed 24/25 figure counts → corrected to
   49 chapters / 25 figures (2026-08-31, agent-ergonomics pass).
 - [x] Nonexistent renderer launchers (`scripts/03_render_pdf.py` etc.) renamed
