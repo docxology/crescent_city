@@ -28,7 +28,7 @@ checks with mocks.
 | Dimension | Current rule |
 |---|---|
 | Completeness | Required fields must exist for chronology and figure-method files. |
-| Traceability | Source-backed rows and generated figure-manifest source keys must reference BibTeX keys in `../manuscript/references.bib`. |
+| Traceability | Source-backed rows and generated figure-manifest source keys must reference BibTeX keys in `../docs/manuscript/references.bib`. |
 | Stability | IDs are audit anchors and should not change unless the underlying claim changes. |
 | Timeliness | Recent events carry `checked_as_of` and `refresh_trigger`. |
 | Authority | Current-event rows use enforced `source_tier` labels. |
@@ -68,7 +68,7 @@ the test, data, and docs in the same change.
 ## QA Workflow For Data Changes
 
 1. Edit the source data file first.
-2. Confirm source keys exist in `../manuscript/references.bib`.
+2. Confirm source keys exist in `../docs/manuscript/references.bib`.
 3. Update affected manuscript prose, captions, and claim-ledger rows.
 4. Regenerate figures when any plotted value, label, date, or category
    changed.

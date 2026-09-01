@@ -39,13 +39,13 @@ PYTHONPATH=. uv run python projects/crescent_city/scripts/y_generate_history_fig
 
 ```bash
 # Render combined PDF, combined HTML, per-section HTML, and per-section slides.
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
 
 # Validate rendered artifacts, Markdown, output structure, and figure registry.
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 
 # Copy project outputs to output/crescent_city/ at the repository root.
-PYTHONPATH=. uv run python scripts/05_copy_outputs.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
 ```
 
 The main rendered PDF is:
@@ -69,7 +69,7 @@ Use this when testing a copied project tree.
 ```bash
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py \
   --project-root /tmp/crescent_city_copy \
-  --config manuscript/config.yaml \
+  --config docs/manuscript/config.yaml \
   --strict
 ```
 
@@ -96,15 +96,15 @@ Primary outputs land under `projects/crescent_city/output/`.
 | I changed prose, citations, data, or figures | `projects/crescent_city/scripts/run_history_pipeline.py --strict` |
 | I changed only plotting code or figure data | `projects/crescent_city/scripts/run_history_pipeline.py --figures-only`, then targeted tests |
 | I changed docs only | `uv run pytest projects/crescent_city/tests/test_documentation.py projects/crescent_city/tests/test_american_english.py -q` |
-| I need a PDF for reading | `scripts/03_render_pdf.py --project crescent_city` |
-| I need a release handoff folder | render, validate, then `scripts/05_copy_outputs.py --project crescent_city` |
+| I need a PDF for reading | `scripts/pipeline/stage_03_render.py --project crescent_city` |
+| I need a release handoff folder | render, validate, then `scripts/pipeline/stage_05_copy.py --project crescent_city` |
 
 ## Fast Troubleshooting
 
 | Symptom | First check |
 |---|---|
 | Missing figure during render | Run the strict project pipeline or the figure-only command. |
-| Citation failure | Check the cited key in `manuscript/references.bib` and `manuscript/SYNTAX.md`. |
+| Citation failure | Check the cited key in `docs/manuscript/references.bib` and `docs/manuscript/SYNTAX.md`. |
 | Documentation link failure | Run `tests/test_documentation.py` and fix the relative link target. |
 | Stale current-event claim | Follow `source_refresh_workflow.md`, `sources_provenance_ethics.md`, and `claim_ledger.md`. |
-| PDF compiles but release folder is missing | Run `scripts/05_copy_outputs.py --project crescent_city`. |
+| PDF compiles but release folder is missing | Run `scripts/pipeline/stage_05_copy.py --project crescent_city`. |

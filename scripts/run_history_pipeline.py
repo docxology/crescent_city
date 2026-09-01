@@ -14,7 +14,7 @@ Usage::
     uv run python scripts/run_history_pipeline.py --strict
 
     # Alternate project root / config
-    uv run python scripts/run_history_pipeline.py --project-root /tmp/crescent_copy --config manuscript/config.yaml
+    uv run python scripts/run_history_pipeline.py --project-root /tmp/crescent_copy --config docs/manuscript/config.yaml
 
     # List available steps
     uv run python scripts/run_history_pipeline.py --list

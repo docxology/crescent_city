@@ -37,7 +37,7 @@ source-tier meanings, sensitive-material limits, and reuse rules, see
 
 ## Update Rules
 
-- Keep source keys aligned with `manuscript/references.bib`.
+- Keep source keys aligned with `docs/manuscript/references.bib`.
 - Use only the current-event `source_tier` values documented in
   `../docs/sources_provenance_ethics.md` and enforced by
   `../tests/test_data.py`.
@@ -46,7 +46,7 @@ source-tier meanings, sensitive-material limits, and reuse rules, see
   plotted value is measured, projected, modeled, inferred, schematic, or
   a checked public status.
 - Keep `figure_provenance.csv` synchronized with `src/figures.py` and
-  `manuscript/A1_figure_catalogue.md`; tests expect one row per
+  `docs/manuscript/A1_figure_catalogue.md`; tests expect one row per
   registered figure in registry order.
 - Keep `event_id`, `point_id`, and `stat_id` values stable unless the
   underlying historical claim changes; tests treat them as audit anchors.
