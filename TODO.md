@@ -25,10 +25,11 @@ surface: `docs/manuscript/MANUSCRIPT_STATUS.md`. Revision log:
 - [x] `src/crescent_city.egg-info/` untracked and gitignored; build
   artifacts no longer show as modified (2026-09-01 improvement lane;
   local working copy left on disk, now ignored).
-- [ ] `tests/test_documentation.py::test_project_docs_match_current_figure_registry`
-  hard-codes "previous_figure_count = 18" as the only stale-count guard;
-  consider deriving prior counts or dropping the pin so the next count bump
-  doesn't repeat this audit's drift (paths: `tests/test_documentation.py:129`).
+- [x] `tests/test_documentation.py` stale figure-count guard now derives
+  stale numerals/number-words from every count below `len(FIGURE_REGISTRY)`
+  instead of hard-coding "previous_figure_count = 18"; negative control
+  verified (planted stale count fails the test) (2026-09-01 improvement
+  lane, 60eb829).
 
 ## Minor
 
