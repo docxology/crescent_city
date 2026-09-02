@@ -24,6 +24,7 @@ from ._style import PALETTE, add_wrapped_footer
 _EXCLUDED_MANUSCRIPT_FILES = {
     "99_references.md",
     "AGENTS.md",
+    "MANUSCRIPT_STATUS.md",
     "README.md",
     "SYNTAX.md",
     "preamble.md",

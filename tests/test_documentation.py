@@ -165,6 +165,8 @@ def test_project_docs_match_current_figure_registry(project_root: Path) -> None:
     stale_count_patterns.append(rf"\bfigures_generated >= {count - 1}\b")
 
     stale_patterns = (
+        r"\b60,030 words\b",
+        r"\b61,030 words\b",
         r"\b306-entry\b",
         r"\b321 BibTeX\b",
         r"\b355 BibTeX entries\b",

@@ -34,7 +34,9 @@ def main(argv: list[str] | None = None) -> int:
         compute_variables,
         write_variables,
     )
-    from infrastructure.prose.report import analyze_manuscript
+    from src.pipeline import _LOCAL_META_FILES
+    from infrastructure.prose.markdown import read_manuscript_dir
+    from infrastructure.prose.report import analyze_files
 
     project_root = Path(_project_root)
     config_path = project_root / "docs" / "manuscript" / "config.yaml"
@@ -45,7 +47,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"❌  Manuscript directory not found: {manuscript_dir}")
         return 1
 
-    report = analyze_manuscript(manuscript_dir)
+    files = read_manuscript_dir(manuscript_dir)
+    for meta_name in _LOCAL_META_FILES:
+        files.pop(meta_name, None)
+    report = analyze_files(files)
 
     variables = compute_variables(report, config_title=cfg.title)
     variables_json = json.dumps(variables.to_dict(), indent=2, ensure_ascii=False) + "\n"

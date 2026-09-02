@@ -335,6 +335,7 @@ class TestSupportingModulesUnderCoverage:
         assert "README.md" not in names
         assert "AGENTS.md" not in names
         assert "SYNTAX.md" not in names
+        assert "MANUSCRIPT_STATUS.md" not in names
 
     def test_svg_preserves_key_text_for_accessibility(self, pipeline_artifacts, figures_dir: Path) -> None:
         checks = {

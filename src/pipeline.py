@@ -37,9 +37,10 @@ sys.path.insert(0, str(_DEFAULT_PROJECT_DIR / "src"))
 sys.path.insert(0, str(_DEFAULT_PROJECT_DIR))
 sys.path.insert(0, str(_REPO_ROOT))
 
+from infrastructure.prose.markdown import read_manuscript_dir  # noqa: E402
 from infrastructure.prose.report import (  # noqa: E402
     ManuscriptReport,
-    analyze_manuscript,
+    analyze_files,
 )
 
 from src.checks import CheckResult  # noqa: E402
@@ -53,6 +54,10 @@ PROJECT_DIR = _DEFAULT_PROJECT_DIR
 MANUSCRIPT_DIR = PROJECT_DIR / "docs" / "manuscript"
 OUTPUT_DIR = PROJECT_DIR / "output"
 CONFIG_PATH = MANUSCRIPT_DIR / "config.yaml"
+
+# Authoring-status metadata lives beside the manuscript but is not prose.
+# Excluded so it cannot skew manuscript-wide word counts or readability.
+_LOCAL_META_FILES = ("MANUSCRIPT_STATUS.md",)
 
 
 def _display_path(path: Path, project_dir: Path) -> str:
@@ -228,7 +233,10 @@ def run_pipeline(
     print("=" * 60)
 
     # ── 1. Prose analysis ────────────────────────────────────────────
-    report: ManuscriptReport = analyze_manuscript(manuscript_dir)
+    files = read_manuscript_dir(manuscript_dir)
+    for meta_name in _LOCAL_META_FILES:
+        files.pop(meta_name, None)
+    report: ManuscriptReport = analyze_files(files)
     manuscript_snapshot = output_dir / "manuscript_report.json"
     manuscript_snapshot.write_text(report.to_json() + "\n", encoding="utf-8")
 
