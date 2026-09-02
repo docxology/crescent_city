@@ -8,6 +8,26 @@ The format follows [Keep a Changelog](https://keepachangelog.com/);
 the manuscript itself is versioned by the `paper.version` field in
 `docs/manuscript/config.yaml`.
 
+## [Unreleased] — 2026-09-02
+
+### Fixed
+
+- 2026-09-02 improvement lane (cc-city): `MANUSCRIPT_STATUS.md` no longer leaks
+  into prose analysis — it was counted as a manuscript section by
+  `analyze_manuscript`, inflating `files_analyzed` (60 → 59) and skewing
+  manuscript-wide word counts (61,030 → 60,989; the 41-word status file carried
+  FKGL 17.4 into aggregates). The pipeline and the variables script now drop it
+  via `src.pipeline._LOCAL_META_FILES`, the metric-figure plotters exclude it,
+  and the stale word-count guard covers both previous totals. Full suite green:
+  175 passed (`PYTHONPATH=. uv run pytest tests/ -q`, 2026-09-02), including
+  the two script-invocation tests that had been timing out under load.
+- Residual pre-migration launcher names fixed in `docs/quickstart.md`,
+  `docs/rendering_and_outputs.md`, and `docs/manuscript/73_reproducibility.md`
+  (`scripts/03_render_pdf.py`, `scripts/04_validate_output.py`,
+  `05_copy_outputs.py` → canonical `scripts/pipeline/stage_NN_*.py`).
+- `docs/manuscript/README.md` roster corrected: 64 `*.md` files (five meta
+  files including `MANUSCRIPT_STATUS.md`), 59 renderable sections.
+
 ## [Unreleased] — 2026-09-01
 
 ### Verified

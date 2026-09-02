@@ -86,7 +86,7 @@ Primary outputs land under `projects/crescent_city/output/`.
 | `data/manuscript_variables.json` | Renderer-facing manuscript variables |
 | `pdf/crescent_city_combined.pdf` | Project-local combined PDF |
 | `web/index.html` | Combined HTML manuscript |
-| `reports/validation_report.md` | Validation summary after `04_validate_output.py` |
+| `reports/validation_report.md` | Validation summary after `scripts/pipeline/stage_04_validate.py` |
 | `CITATION.cff`, `zenodo_metadata.json`, `self_citation.bib` | Publication metadata |
 
 ## Which Command Should I Run?

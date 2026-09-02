@@ -101,8 +101,8 @@ ls projects/crescent_city/output/
 ls projects/crescent_city/output/figures/
 
 # Render and validate the combined PDF
-PYTHONPATH=. uv run python scripts/03_render_pdf.py --project crescent_city
-PYTHONPATH=. uv run python scripts/04_validate_output.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```
 
 To verify byte-identical reproduction, run the pipeline twice and

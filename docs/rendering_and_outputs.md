@@ -52,7 +52,7 @@ preamble as appropriate.
 | `projects/crescent_city/output/web/*.html` | Per-section HTML |
 | `projects/crescent_city/output/slides/*_slides.pdf` | Per-section Beamer slides |
 | `projects/crescent_city/output/reports/validation_report.md` | Validation summary |
-| `output/crescent_city/crescent_city_combined.pdf` | Repository-level release copy after `05_copy_outputs.py` |
+| `output/crescent_city/crescent_city_combined.pdf` | Repository-level release copy after `scripts/pipeline/stage_05_copy.py` |
 
 The current rendered PDF path is intentionally repeated in quickstart docs
 because it is the file most readers need.
