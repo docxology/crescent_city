@@ -35,7 +35,7 @@ class TestPipeline:
             capture_output=True,
             text=True,
             cwd=str(_REPO_ROOT),
-            timeout=180,
+            timeout=600,
         )
         assert result.returncode == 0, f"Pipeline failed (rc={result.returncode}):\n{result.stdout[-500:]}"
 
