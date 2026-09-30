@@ -78,7 +78,7 @@ BibTeX entry, manuscript prose, figure output, and pipeline report.
 
 | Trigger date or event | What to re-check | Expected edit path | Verification |
 |---|---|---|---|
-| 1 June 2026 water/sewer hearing | City Council minutes, protest count, adopted ordinances, effective date, and any revised rate schedule | Update the water/sewer row, `manuscript/35_currents.md`, and `manuscript/71_timeline.md`; keep wording as proposed if the action is delayed | `PYTHONPATH=. uv run pytest tests/test_data.py tests/test_manuscript.py -q` |
+| 1 June 2026 water/sewer hearing | City Council minutes, protest count, adopted ordinances, effective date, and any revised rate schedule | Update the water/sewer row, `docs/manuscript/35_currents.md`, and `docs/manuscript/71_timeline.md`; keep wording as proposed if the action is delayed | `PYTHONPATH=. uv run pytest tests/test_data.py tests/test_manuscript.py -q` |
 | 2 June 2026 primary election | County and California Secretary of State results, certification status, and candidate/outcome language | Replace scheduled language only after official results or certification; refresh source keys if county/state pages move | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` |
 | 5 June 2026 fire-chief application deadline | Recruitment closing status, city/fire-agency update, appointment, or reposting | Keep the row as recruitment status until an appointment or official next step is public | `PYTHONPATH=. uv run pytest tests/test_data.py -q` |
 | Court, sheriff, district-attorney, or CDCR update | Maiden Lane and Pelican Bay homicide investigation status, charges, hearings, disposition, or corrected details | Replace local-journalism-only language with official-record language when available | `PYTHONPATH=. uv run pytest tests/test_data.py tests/test_citations.py -q` |
@@ -105,7 +105,7 @@ Use this sequence when a claim changes in prose, data, or a figure.
 1. Identify the claim type and source tier.
 2. Update the source data first when a figure or timeline depends on the
    claim.
-3. Update or add the BibTeX key in `manuscript/references.bib`.
+3. Update or add the BibTeX key in `docs/manuscript/references.bib`.
 4. Update manuscript prose and captions using evidence-class language.
 5. Update this ledger if the claim is volatile, modeled, sensitive, or
    reserve-source related.

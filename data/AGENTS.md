@@ -13,7 +13,7 @@ the manuscript figures or support source-backed claims.
   publishable public-event locations; redact both fields for Indigenous,
   archaeology-adjacent, massacre, cultural-landscape, or protected-resource
   rows.
-- Keep every data-source citation resolvable in `../manuscript/references.bib`.
+- Keep every data-source citation resolvable in `../docs/manuscript/references.bib`.
 - Preserve schemas used by `../src/_figures/` and `../tests/test_data.py`.
 - Keep `figure_provenance.csv` as the machine-readable source for figure
   source freshness, reader risk, and long descriptions; update it with

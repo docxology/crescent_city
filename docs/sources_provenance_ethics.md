@@ -52,7 +52,7 @@ trace it without reverse-engineering the figure code.
 
 | Field or record | Required use |
 |---|---|
-| `source_keys` | BibTeX keys in `manuscript/references.bib`; use a list in JSON and semicolon-delimited keys in CSV. |
+| `source_keys` | BibTeX keys in `docs/manuscript/references.bib`; use a list in JSON and semicolon-delimited keys in CSV. |
 | `evidence_type` / `evidence_class` | State whether the row is measured, projected, modeled, schematic, estimated, scheduled, or current public status. |
 | `checked_as_of` | Use ISO dates for recent public-status rows and any source whose status can change. |
 | `refresh_trigger` | Name the event or source change that requires another audit. |
@@ -62,7 +62,7 @@ trace it without reverse-engineering the figure code.
 
 Generated files under `../output/` may show the current result, but they
 are not provenance records. The source record lives in `../data/`,
-`../manuscript/references.bib`, the manuscript text, or a checked-in doc.
+`../docs/manuscript/references.bib`, the manuscript text, or a checked-in doc.
 
 ## Sensitive Material Boundaries
 
@@ -83,7 +83,7 @@ the public aggregate, or leave it out.
 ## Reuse And Licensing
 
 The manuscript and rendered scholarly artifacts use the license declared
-in `../manuscript/config.yaml`. Code and data have separate licensing
+in `../docs/manuscript/config.yaml`. Code and data have separate licensing
 realities described in the root [README.md](../README.md).
 
 Reuse rules:

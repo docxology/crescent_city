@@ -73,7 +73,7 @@ Plus appendices: **A1 Figure Catalog**, **A2 Glossary**.
 
 Every figure is generated deterministically by a Python plotter
 registered in `src/figures.py`. The complete catalog lives in the
-[manuscript appendix](manuscript/A1_figure_catalogue.md); the
+[manuscript appendix](docs/manuscript/A1_figure_catalogue.md); the
 following table is the operational reference:
 
 | # | Function | Topic |
@@ -108,7 +108,7 @@ following table is the operational reference:
 
 ```
 projects/crescent_city/
-|-- manuscript/              # Numbered Markdown sources + appendices + references.bib
+|-- docs/manuscript/              # Numbered Markdown sources + appendices + references.bib
 |   |-- 00_abstract.md ... 73_reproducibility.md
 |   |-- A1_figure_catalogue.md     # Per-figure catalog
 |   |-- A2_glossary.md             # Technical-term glossary
@@ -169,7 +169,7 @@ agent-facing `AGENTS.md` contract.
 |---|---|---|
 | `data/` | [data/README.md](data/README.md) | [data/AGENTS.md](data/AGENTS.md) |
 | `docs/` | [docs/README.md](docs/README.md) | [docs/AGENTS.md](docs/AGENTS.md) |
-| `manuscript/` | [manuscript/README.md](manuscript/README.md) | [manuscript/AGENTS.md](manuscript/AGENTS.md) |
+| `docs/manuscript/` | [docs/manuscript/README.md](docs/manuscript/README.md) | [docs/manuscript/AGENTS.md](docs/manuscript/AGENTS.md) |
 | `scripts/` | [scripts/README.md](scripts/README.md) | [scripts/AGENTS.md](scripts/AGENTS.md) |
 | `src/` | [src/README.md](src/README.md) | [src/AGENTS.md](src/AGENTS.md) |
 | `src/_figures/` | [src/_figures/README.md](src/_figures/README.md) | [src/_figures/AGENTS.md](src/_figures/AGENTS.md) |
@@ -177,7 +177,7 @@ agent-facing `AGENTS.md` contract.
 
 ## Configuration
 
-Every editorial-policy knob lives in `manuscript/config.yaml`:
+Every editorial-policy knob lives in `docs/manuscript/config.yaml`:
 
 | Section | Key | Default | Meaning |
 |---|---|---|---|
@@ -186,7 +186,7 @@ Every editorial-policy knob lives in `manuscript/config.yaml`:
 | `prose` | `citation_density_min_per_1000` | `3.0` | Minimum citations per 1000 words |
 | `prose` | `require_h1_per_section` | `false` | Part files use H1 and chapter files use H2; cross-reference tests enforce anchors |
 | `prose` | `forbid_skipped_levels` | `true` | Heading levels must be contiguous |
-| `bibliography` | `references_path` | `manuscript/references.bib` | Path to BibTeX file |
+| `bibliography` | `references_path` | `docs/manuscript/references.bib` | Path to BibTeX file |
 | `bibliography` | `fail_on_missing` | `true` | Fail if a cited `[@key]` is not in the bib |
 | `bibliography` | `fail_on_unused` | `false` | Uncited entries must either be cited or listed as audited `reserve_keys` |
 
@@ -234,7 +234,7 @@ independently reverified; high-risk and current-status claims still need
 the [claim-ledger and source-refresh workflow](docs/claim_ledger.md)
 before publication. That ledger also records the reserve-source audit:
 future uncited BibTeX entries should be cited, explicitly reserved in
-`manuscript/config.yaml`, or removed.
+`docs/manuscript/config.yaml`, or removed.
 
 For source-tier definitions, sensitive-material boundaries, environment
 reproduction, release versioning, audit limits, accessibility checks, and
@@ -267,9 +267,9 @@ into temporary directories.
 * [`docs/accessibility_reader_experience.md`](docs/accessibility_reader_experience.md) — reader-facing format and figure accessibility checks
 * [`docs/release_archival_versioning.md`](docs/release_archival_versioning.md) — release artifacts, versioning, DOI flow, and corrections
 * [`CHANGELOG.md`](CHANGELOG.md) — editorial revision history
-* [`manuscript/SYNTAX.md`](manuscript/SYNTAX.md) — Pandoc citation conventions
-* [`manuscript/A1_figure_catalogue.md`](manuscript/A1_figure_catalogue.md) — per-figure catalog
-* [`manuscript/A2_glossary.md`](manuscript/A2_glossary.md) — technical-term glossary
+* [`docs/manuscript/SYNTAX.md`](docs/manuscript/SYNTAX.md) — Pandoc citation conventions
+* [`docs/manuscript/A1_figure_catalogue.md`](docs/manuscript/A1_figure_catalogue.md) — per-figure catalog
+* [`docs/manuscript/A2_glossary.md`](docs/manuscript/A2_glossary.md) — technical-term glossary
 * [`docs/architecture.md`](docs/architecture.md) — module dependency graph
 * [`infrastructure/prose/SKILL.md`](../../infrastructure/prose/SKILL.md) — prose-analysis API
 * [`infrastructure/reference/SKILL.md`](../../infrastructure/reference/SKILL.md) — bibliography validation API

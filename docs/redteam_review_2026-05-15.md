@@ -46,7 +46,7 @@ That is the central red-team finding.
 
 | Surface | Strength | Risk | Control |
 |---|---|---|---|
-| Manuscript structure | Stable 58-file organization with section anchors | Broad synthesis can hide semantic dependencies | `tests/test_manuscript.py`, `manuscript/SYNTAX.md` |
+| Manuscript structure | Stable 58-file organization with section anchors | Broad synthesis can hide semantic dependencies | `tests/test_manuscript.py`, `docs/manuscript/SYNTAX.md` |
 | Bibliography | 370 cited keys and explicit reserve-key policy | Citation presence does not prove source-to-claim fit | `tests/test_citations.py`, `docs/claim_ledger.md` |
 | Figures | 24 registered figures with PNG and SVG outputs | Mixed evidence classes can look visually equivalent | `src/figures.py`, figure captions, `tests/test_figures.py` |
 | Current events | Recent rows carry audit metadata | Public records can change after `checked_as_of` | `docs/source_refresh_workflow.md` |

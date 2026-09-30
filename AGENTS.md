@@ -38,7 +38,7 @@ flowchart TB
 |---|---|
 | `data/` | [`data/README.md`](data/README.md), [`data/AGENTS.md`](data/AGENTS.md) |
 | `docs/` | [`docs/README.md`](docs/README.md), [`docs/AGENTS.md`](docs/AGENTS.md) |
-| `manuscript/` | [`manuscript/README.md`](manuscript/README.md), [`manuscript/AGENTS.md`](manuscript/AGENTS.md), [`manuscript/SYNTAX.md`](manuscript/SYNTAX.md) |
+| `docs/manuscript/` | [`docs/manuscript/README.md`](docs/manuscript/README.md), [`docs/manuscript/AGENTS.md`](docs/manuscript/AGENTS.md), [`docs/manuscript/SYNTAX.md`](docs/manuscript/SYNTAX.md) |
 | `scripts/` | [`scripts/README.md`](scripts/README.md), [`scripts/AGENTS.md`](scripts/AGENTS.md) |
 | `src/` | [`src/README.md`](src/README.md), [`src/AGENTS.md`](src/AGENTS.md) |
 | `src/_figures/` | [`src/_figures/README.md`](src/_figures/README.md), [`src/_figures/AGENTS.md`](src/_figures/AGENTS.md) |
@@ -73,7 +73,7 @@ flowchart TB
 
 | Command | Behavior |
 |---|---|
-| `python scripts/run_history_pipeline.py` | Default config; reads `manuscript/`, writes everything. |
+| `python scripts/run_history_pipeline.py` | Default config; reads `docs/manuscript/`, writes everything. |
 | `… --strict` | Exit non-zero if any check fails. |
 | `… --figures-only` | Generate the 25 PNG/SVG figure pairs only. |
 | `… --config other.yaml` | Use an alternative config file. |
@@ -94,7 +94,7 @@ mocks.
 * `template_code_project` — has its own algorithm (`src/optimizer.py`)
   and generates figures from numerical experiments.
 * `template_search_project` — runs literature search and *populates*
-  `manuscript/references.bib` from a query.
+  `docs/manuscript/references.bib` from a query.
 * `crescent_city` — carries a hand-curated scholarly narrative whose
   cited-key and bibliography counts are measured by each pipeline run.
   The "experiment" is the editorial-review pipeline applied to a dense
@@ -118,7 +118,7 @@ To add a new figure:
 2. Re-export it from `src/figures.py`.
 3. Add a `FigureSpec` to `FIGURE_REGISTRY`, including `data_inputs` when
    the plotter reads `data/`.
-4. Update `manuscript/A1_figure_catalogue.md` and any chapter that embeds
+4. Update `docs/manuscript/A1_figure_catalogue.md` and any chapter that embeds
    the output PNG.
 5. Update `README.md`, `docs/project_overview.md`, and relevant tests when
    the figure count or registry order changes.

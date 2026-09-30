@@ -1,4 +1,4 @@
-# manuscript/ Agent Guide
+# docs/manuscript/ Agent Guide
 
 ## Purpose
 

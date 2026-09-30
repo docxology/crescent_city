@@ -93,7 +93,7 @@ The reproducibility contract is structural and source-linked.
 | SVG figures | Used for bit-for-bit determinism checks. |
 | PNG figures | Visually deterministic; embedded metadata can vary across `matplotlib` or `libpng` versions. |
 | `output/pipeline_report.json` | Deterministic for the same source tree and dependency set. |
-| `output/CITATION.cff`, `output/zenodo_metadata.json`, `output/self_citation.bib` | Derived from `manuscript/config.yaml`. |
+| `output/CITATION.cff`, `output/zenodo_metadata.json`, `output/self_citation.bib` | Derived from `docs/manuscript/config.yaml`. |
 | PDF | Should render consistently, but exact bytes can vary with TeX, fonts, timestamps, and platform packages. |
 
 When bit-for-bit reproduction matters, compare source files, JSON
@@ -113,7 +113,7 @@ reports, and SVG outputs before comparing PDF bytes.
 | `../../output/crescent_city/crescent_city_combined.pdf` | Repository-level release copy |
 
 Do not edit any file in `output/` as source. Rebuild it from
-`manuscript/`, `data/`, `src/`, and `scripts/`.
+`docs/manuscript/`, `data/`, `src/`, and `scripts/`.
 
 ## Troubleshooting
 

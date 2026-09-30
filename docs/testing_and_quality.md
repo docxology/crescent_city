@@ -102,7 +102,7 @@ Use `visual_pdf_qa.md` for manual figure-scale and caption-flow review.
 
 | Failure | First action |
 |---|---|
-| Missing citation key | Check `../manuscript/references.bib` and citation spelling |
+| Missing citation key | Check `../docs/manuscript/references.bib` and citation spelling |
 | Unused non-reserve source | Cite it, remove it, or document it in `bibliography.reserve_keys` plus `claim_ledger.md` |
 | Figure count mismatch | Check `../src/figures.py`, output files, and `../manuscript/A1_figure_catalogue.md` |
 | Current-event metadata failure | Follow `source_refresh_workflow.md` |

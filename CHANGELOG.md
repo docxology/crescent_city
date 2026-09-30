@@ -6,7 +6,7 @@ document; this changelog records the editorial milestones.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/);
 the manuscript itself is versioned by the `paper.version` field in
-`manuscript/config.yaml`.
+`docs/manuscript/config.yaml`.
 
 ## [Unreleased] — 2026-08-28
 
@@ -116,11 +116,11 @@ approximately 115 typeset pages.
   `src/_figures/_style.py`; centralized PNG+SVG persistence in
   `src/_figures/_io.py`
 - All hyperlinks render in red (`linkred = RGB(180,0,30)`) via
-  customized `hypersetup` in `manuscript/preamble.md`
+  customized `hypersetup` in `docs/manuscript/preamble.md`
 - Margins tightened from 1.0in to 0.85in; added `fancyhdr`
   page-header / page-number infrastructure
 - Cover page and Table of Contents auto-generated from
-  `manuscript/config.yaml` metadata
+  `docs/manuscript/config.yaml` metadata
 
 #### Fixed
 

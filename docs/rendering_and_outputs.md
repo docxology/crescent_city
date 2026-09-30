@@ -40,7 +40,7 @@ PYTHONPATH=. uv run python scripts/05_copy_outputs.py --project crescent_city
 7. Renders the combined HTML manuscript.
 
 Do not edit `output/manuscript/` to fix render issues. Edit the source
-file in `manuscript/`, the variables generator, data, figures, or
+file in `docs/manuscript/`, the variables generator, data, figures, or
 preamble as appropriate.
 
 ## Main Outputs
@@ -88,7 +88,7 @@ folder while developing.
 |---|---|---|
 | Renderer reports a missing figure | Project pipeline or figure-only generation has not been run | Run the strict pipeline or `--figures-only` |
 | PDF build fails after variable hydration | Hydrated Markdown exposed a LaTeX or Pandoc issue | Inspect the source Markdown and `output/pdf/_combined_manuscript.tex` for context, then edit source |
-| Citations render incorrectly | Missing or malformed BibTeX key | Run citation tests and inspect `manuscript/references.bib` |
+| Citations render incorrectly | Missing or malformed BibTeX key | Run citation tests and inspect `docs/manuscript/references.bib` |
 | Combined PDF exists but release folder does not | Copy stage has not been run | Run `scripts/05_copy_outputs.py --project crescent_city` |
 | Validation passes but a current claim is stale | Validation checks artifact structure, not fresh public records | Follow `source_refresh_workflow.md` |
 

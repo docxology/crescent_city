@@ -47,9 +47,9 @@ Use Pandoc citation syntax:
 ```
 
 Before prose depends on a source, add the key to
-`../manuscript/references.bib`. If a source is intentionally kept uncited
+`../docs/manuscript/references.bib`. If a source is intentionally kept uncited
 as a background or update-trail source, list it in `bibliography.reserve_keys`
-in `../manuscript/config.yaml` and document the reason in
+in `../docs/manuscript/config.yaml` and document the reason in
 `claim_ledger.md`.
 
 ## Evidence Language
@@ -72,7 +72,7 @@ grant, election, fishery, or agency rows:
 
 1. Follow `source_refresh_workflow.md`.
 2. Update `../data/historical_events.json`.
-3. Update source keys in `../manuscript/references.bib`.
+3. Update source keys in `../docs/manuscript/references.bib`.
 4. Update `35_currents.md`, `71_timeline.md`, and captions if needed.
 5. Regenerate figures if dates, categories, or labels changed.
 

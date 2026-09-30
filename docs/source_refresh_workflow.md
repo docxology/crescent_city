@@ -34,10 +34,10 @@ Related guides:
 
 1. Identify the claim and its current source keys.
 2. Recheck the highest-authority source available.
-3. Update or add `manuscript/references.bib` entries before changing prose.
+3. Update or add `docs/manuscript/references.bib` entries before changing prose.
 4. Update source data in `data/` when the claim drives a figure or
    timeline.
-5. Update manuscript prose, captions, and `manuscript/71_timeline.md`
+5. Update manuscript prose, captions, and `docs/manuscript/71_timeline.md`
    if the timeline language changes.
 6. Update `docs/claim_ledger.md` when the claim remains volatile or needs
    a new refresh trigger.

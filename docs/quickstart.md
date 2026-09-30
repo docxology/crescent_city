@@ -69,7 +69,7 @@ Use this when testing a copied project tree.
 ```bash
 PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py \
   --project-root /tmp/crescent_city_copy \
-  --config manuscript/config.yaml \
+  --config docs/manuscript/config.yaml \
   --strict
 ```
 
@@ -104,7 +104,7 @@ Primary outputs land under `projects/crescent_city/output/`.
 | Symptom | First check |
 |---|---|
 | Missing figure during render | Run the strict project pipeline or the figure-only command. |
-| Citation failure | Check the cited key in `manuscript/references.bib` and `manuscript/SYNTAX.md`. |
+| Citation failure | Check the cited key in `docs/manuscript/references.bib` and `docs/manuscript/SYNTAX.md`. |
 | Documentation link failure | Run `tests/test_documentation.py` and fix the relative link target. |
 | Stale current-event claim | Follow `source_refresh_workflow.md`, `sources_provenance_ethics.md`, and `claim_ledger.md`. |
 | PDF compiles but release folder is missing | Run `scripts/05_copy_outputs.py --project crescent_city`. |

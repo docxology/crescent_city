@@ -28,7 +28,7 @@ The [`citation_density_above_floor`](../src/pipeline.py) check enforces >= `pros
 Each renderable manuscript file starts with a heading that defines a
 `{#sec:*}` anchor. Part files and appendices use `#`; chapter files
 inside each part use `##`. Do not hand-maintain a separate section
-roster in prose; the current roster is the sorted `manuscript/*.md`
+roster in prose; the current roster is the sorted `docs/manuscript/*.md`
 tree and is validated by `tests/test_manuscript.py`.
 
 To inspect the live roster:
@@ -50,7 +50,7 @@ The Pandoc renderer uses `--number-sections`, so never write manual numbers like
 
 ## `{{TOKEN}}` substitution
 
-`scripts/z_generate_manuscript_variables.py` computes token values via `src/manuscript_variables.py::compute_variables()` and writes substituted copies of `manuscript/*.md` to `output/manuscript/` via `src.manuscript_variables.write_variables()`. This file (`SYNTAX.md`), `AGENTS.md`, and `README.md` are excluded from `output/manuscript/` so their literal `{{TOKEN}}` examples are never substituted.
+`scripts/z_generate_manuscript_variables.py` computes token values via `src/manuscript_variables.py::compute_variables()` and writes substituted copies of `docs/manuscript/*.md` to `output/manuscript/` via `src.manuscript_variables.write_variables()`. This file (`SYNTAX.md`), `AGENTS.md`, and `README.md` are excluded from `output/manuscript/` so their literal `{{TOKEN}}` examples are never substituted.
 
 | Token | Source |
 |---|---|

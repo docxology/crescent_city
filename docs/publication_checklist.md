@@ -57,7 +57,7 @@ output/crescent_city/crescent_city_combined.pdf
 
 ## 4. Metadata
 
-Check the publication metadata generated from `manuscript/config.yaml`:
+Check the publication metadata generated from `docs/manuscript/config.yaml`:
 
 ```text
 projects/crescent_city/output/CITATION.cff
@@ -66,7 +66,7 @@ projects/crescent_city/output/self_citation.bib
 ```
 
 If title, authors, license, keywords, DOI, or publication year changes,
-edit `manuscript/config.yaml`, rerun the strict project pipeline, then
+edit `docs/manuscript/config.yaml`, rerun the strict project pipeline, then
 render again.
 
 ## 5. Reader-Facing Spot Checks

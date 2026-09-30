@@ -28,7 +28,7 @@ def main(argv: list[str] | None = None) -> int:
 
     manuscript_dir = _project_root / "manuscript"
     if not manuscript_dir.is_dir():
-        print("❌  manuscript/ not found beside scripts/.", file=sys.stderr)
+        print("❌  docs/manuscript/ not found beside scripts/.", file=sys.stderr)
         return 1
 
     figures = generate_all_figures(

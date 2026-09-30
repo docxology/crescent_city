@@ -61,8 +61,8 @@ analytical choices, twenty-four registry-backed figures (data-backed,
 schematic, and manuscript-metric), and the complete reproduction narrative in
 [@sec:figure_catalogue] are versioned alongside supporting inputs and plotters in
 `data/`, `src/`, and `scripts/`, with citations resolved against
-`manuscript/references.bib`. Manuscript text is licensed CC-BY-4.0 and repository
-source code under the Apache License 2.0 as declared in `manuscript/config.yaml`;
+`docs/manuscript/references.bib`. Manuscript text is licensed CC-BY-4.0 and repository
+source code under the Apache License 2.0 as declared in `docs/manuscript/config.yaml`;
 the archived scholarly artifact is cited by DOI 10.5281/zenodo.20286171. The
 history remains epistemic work in progress: automated checks verify manuscript
 structure, citation resolution, and reproducible figures, not independent
