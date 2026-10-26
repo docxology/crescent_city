@@ -1,7 +1,8 @@
 # Quickstart
 
-Run commands from the template repository root unless a command says
-otherwise.
+Run project commands from this repository root. The renderer commands in
+[Render The Paper](#render-the-paper) run from the template repository
+root, which provides `infrastructure/` and `scripts/pipeline/`.
 
 For system tool assumptions and project-root versus repository-root
 details, see [environment_reproducibility.md](environment_reproducibility.md).
@@ -13,26 +14,26 @@ uv sync
 
 # Project quality pipeline: prose checks, bibliography consistency,
 # 25 PNG/SVG figure pairs, review report, and publication metadata.
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 
 # Project tests only.
-PYTHONPATH=. uv run pytest projects/crescent_city/tests/ -q
+PYTHONPATH=. uv run pytest tests/ -q
 ```
 
 ## Common Commands
 
 ```bash
 # Inspect project pipeline stages.
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --list
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --list
 
 # Figure-only path. This writes 25 PNG files and 25 SVG siblings.
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --figures-only
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --figures-only
 
-# Hydrate manuscript variables into projects/crescent_city/output/manuscript/.
-PYTHONPATH=. uv run python projects/crescent_city/scripts/z_generate_manuscript_variables.py
+# Hydrate manuscript variables into output/manuscript/.
+PYTHONPATH=. uv run python scripts/z_generate_manuscript_variables.py
 
 # Regenerate figures through the dedicated thin orchestrator.
-PYTHONPATH=. uv run python projects/crescent_city/scripts/y_generate_history_figures.py
+PYTHONPATH=. uv run python scripts/y_generate_history_figures.py
 ```
 
 ## Render The Paper
@@ -51,7 +52,7 @@ PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_
 The main rendered PDF is:
 
 ```text
-projects/crescent_city/output/pdf/crescent_city_combined.pdf
+output/pdf/crescent_city_combined.pdf
 ```
 
 After the copy stage, the release-facing copy is:
@@ -67,7 +68,7 @@ See `rendering_and_outputs.md` for the full renderer/output runbook.
 Use this when testing a copied project tree.
 
 ```bash
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py \
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py \
   --project-root /tmp/crescent_city_copy \
   --config docs/manuscript/config.yaml \
   --strict
@@ -75,7 +76,7 @@ PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.p
 
 ## Output Cheat Sheet
 
-Primary outputs land under `projects/crescent_city/output/`.
+Primary outputs land under `output/`.
 
 | Output | Purpose |
 |---|---|
@@ -93,9 +94,9 @@ Primary outputs land under `projects/crescent_city/output/`.
 
 | Situation | Command |
 |---|---|
-| I changed prose, citations, data, or figures | `projects/crescent_city/scripts/run_history_pipeline.py --strict` |
-| I changed only plotting code or figure data | `projects/crescent_city/scripts/run_history_pipeline.py --figures-only`, then targeted tests |
-| I changed docs only | `uv run pytest projects/crescent_city/tests/test_documentation.py projects/crescent_city/tests/test_american_english.py -q` |
+| I changed prose, citations, data, or figures | `scripts/run_history_pipeline.py --strict` |
+| I changed only plotting code or figure data | `scripts/run_history_pipeline.py --figures-only`, then targeted tests |
+| I changed docs only | `uv run pytest tests/test_documentation.py tests/test_american_english.py -q` |
 | I need a PDF for reading | `scripts/pipeline/stage_03_render.py --project crescent_city` |
 | I need a release handoff folder | render, validate, then `scripts/pipeline/stage_05_copy.py --project crescent_city` |
 

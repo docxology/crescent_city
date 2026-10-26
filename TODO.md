@@ -2,8 +2,9 @@
 
 Single authoritative backlog. New findings land here as one-line entries with
 file paths. Completed items get moved to the done section with a date. Status
-surface: `docs/manuscript/MANUSCRIPT_STATUS.md`. Revision log:
-`REVIEW_LOG_2026-08-31.md`.
+surface: `docs/manuscript/MANUSCRIPT_STATUS.md`. Revision history:
+`CHANGELOG.md` (dated `REVIEW_LOG_*.md` scratch reports were removed
+2026-09-01; their content is in git history).
 
 ## Major
 
@@ -49,6 +50,11 @@ surface: `docs/manuscript/MANUSCRIPT_STATUS.md`. Revision log:
   rendering_and_outputs.md, and the drift gate pin (2026-08-31).
 - [x] Orientation/status/next-action pointer block added to README.md and
   AGENTS.md; TODO.md created (2026-08-31).
+- [x] `pipeline.yaml` was missed by the launcher-rename sweep: its stages now
+  name `scripts/pipeline/stage_NN_*.py` and carry the `key:` fields the
+  executor branches on; `projects/crescent_city/` prefixes and the
+  `REVIEW_LOG_*.md` pointers are gone from the docs (2026-10-25 maintenance
+  pass).
 
 ## Done
 

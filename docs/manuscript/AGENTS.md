@@ -18,19 +18,19 @@ PDF, HTML, review report, and manuscript metrics.
 
 ## Section roster (signposts)
 
-Renderable markdown sections (58 files): abstract and introduction; four Part
+Renderable markdown sections (59 files): abstract and introduction; four Part
 openers (`02_space`, `20_time`, `40_people`, `60_ideas`) plus **46** topical
 chapters in bands `03`–`11`, `21`–`35`, `41`–`52`, `61`–`69`, and `70_conclusion`;
 then `71_timeline`, `72_methodology`, `73_reproducibility`; `99_references`;
-`A1_figure_catalogue`, `A2_glossary`.
+`A1_figure_catalogue`, `A2_glossary`, `A3_quadruplicate`.
 
 Meta-only in this folder (not counted as narrative sections): `AGENTS.md`,
-`README.md`, `SYNTAX.md`, `preamble.md` (LaTeX wrapper).
+`README.md`, `MANUSCRIPT_STATUS.md`, `SYNTAX.md`, `preamble.md` (LaTeX wrapper).
 
 Inspect live anchors:
 
 ```bash
-rg -n '^#{1,2} .*\{#sec:' projects/crescent_city/manuscript -g '*.md'
+rg -n '^#{1,2} .*\{#sec:' docs/manuscript -g '*.md'
 ```
 
 ## Contracts
@@ -64,7 +64,7 @@ Embedded figures use `[@fig:…]` and must align with the registry in
 
 ## Checks
 
-From `projects/crescent_city/`:
+From the repository root:
 
 ```bash
 PYTHONPATH=. uv run pytest tests/test_manuscript.py tests/test_citations.py tests/test_american_english.py -q

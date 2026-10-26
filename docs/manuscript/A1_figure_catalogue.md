@@ -19,7 +19,7 @@ single scholarly claim [@sandve2013reproducible].
 
 ## How the Suite Is Organized
 
-The figure suite lives in the [`src._figures`](../src/_figures/)
+The figure suite lives in the [`src._figures`](../../src/_figures/)
 subpackage, organized by topic:
 
 ```
@@ -48,7 +48,7 @@ Adding a new figure requires a small, auditable chain of changes:
 
 1. Add a plotting function named `plot_<name>()` in the appropriate
    `src/_figures/<topic>.py` module — or create a new topic module.
-2. Re-export the function from [`src/figures.py`](../src/figures.py).
+2. Re-export the function from [`src/figures.py`](../../src/figures.py).
 3. Add a `FigureSpec` entry to the `FIGURE_REGISTRY` tuple in
    `src/figures.py`. The registry order drives the
    `generate_all_figures()` iteration and the catalog order below.
@@ -87,7 +87,7 @@ The contract every plotter must honor:
 ```bash
 # From the repository root
 uv sync
-PYTHONPATH=. python projects/crescent_city/scripts/y_generate_history_figures.py
+PYTHONPATH=. python scripts/y_generate_history_figures.py
 ```
 
 `y_generate_history_figures.py` is a thin orchestrator (<= 40 lines) that
@@ -105,7 +105,7 @@ from pathlib import Path
 from src.figures import plot_tsunami_inundation_diagram
 
 png = plot_tsunami_inundation_diagram(
-    output_dir=Path("projects/crescent_city/output/figures")
+    output_dir=Path("output/figures")
 )
 print(png)
 ```
@@ -754,7 +754,7 @@ the shared `rcParams`.
 ## Testing Contract for Figure Reproducibility
 
 The figure suite is validated by
-[`tests/test_figures.py`](../tests/test_figures.py). Tests enforce:
+[`tests/test_figures.py`](../../tests/test_figures.py). Tests enforce:
 
 * the registry contains the expected twenty-five figures and has no
   duplicates;
@@ -766,7 +766,7 @@ The figure suite is validated by
 * manuscript-metric figures exclude folder-level documentation files;
 * selected SVG outputs preserve searchable text nodes for accessibility;
 * crowded figures render at expected dimensions with safe outer margins;
-* the pipeline JSON report records `figures_generated >= 24`.
+* the pipeline JSON report records `figures_generated >= 25`.
 
 Adding a new figure therefore requires updating the test's `EXPECTED`
 list, `FIGURE_REGISTRY`, and this appendix.

@@ -7,10 +7,12 @@ new dependency source.
 
 ## Supported Working Paths
 
-Most project-local commands run from:
+Most project-local commands run from this repository root (the project is
+the checkout root; in the template monorepo it lives under
+`projects/crescent_city/`):
 
 ```bash
-cd projects/crescent_city
+cd /path/to/crescent_city
 ```
 
 Renderer and copy-out commands run from the template repository root:
@@ -26,7 +28,7 @@ resolved exactly as the repository scripts expect.
 
 | Tool | Why it is needed | Source of truth |
 |---|---|---|
-| Python 3.10 or newer | Project package and tests | `pyproject.toml` and `../../pyproject.toml` |
+| Python 3.10 or newer | Project package and tests | `pyproject.toml` |
 | `uv` | Dependency sync and command runner | Repository workflow |
 | Pandoc | Markdown-to-PDF/HTML assembly | Shared renderer |
 | XeLaTeX and BibTeX | PDF typesetting and bibliography pass | Shared renderer |
@@ -39,16 +41,15 @@ metadata generation, or rendering.
 
 ## Initial Setup
 
-From the template repository root:
+From this repository root:
 
 ```bash
-uv sync
+uv sync --extra dev
 ```
 
 Then run a project-local smoke check:
 
 ```bash
-cd projects/crescent_city
 PYTHONPATH=. uv run pytest tests/test_documentation.py tests/test_american_english.py -q
 ```
 

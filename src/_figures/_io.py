@@ -16,7 +16,7 @@ def save_figure(fig: plt.Figure, name: str, output_dir: Path) -> Path:
     """Persist *fig* as ``{name}.png`` and ``{name}.svg`` under ``output_dir``.
 
     Creates ``output_dir`` if it does not exist. Closes ``fig`` after saving
-    so that long-running figure-generation passes (e.g. the full 24-figure
+    so that long-running figure-generation passes (e.g. the full 25-figure
     suite) do not accumulate matplotlib state and exhaust process memory.
 
     Args:

@@ -82,7 +82,7 @@ as completed history.
 
 ## Verification
 
-Run from `projects/crescent_city/`:
+Run from the repository root:
 
 ```bash
 PYTHONPATH=. uv run pytest tests/test_data.py tests/test_figures.py -q
@@ -92,7 +92,7 @@ PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 Run from the template repository root when preparing render outputs:
 
 ```bash
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
 PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```

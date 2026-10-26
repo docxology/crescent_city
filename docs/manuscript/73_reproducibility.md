@@ -90,15 +90,15 @@ uv sync
 
 # Run the full Crescent City pipeline
 PYTHONPATH=. uv run python \
-    projects/crescent_city/scripts/run_history_pipeline.py
+    scripts/run_history_pipeline.py
 
 # Or just regenerate figures (does not run prose validation)
 PYTHONPATH=. uv run python \
-    projects/crescent_city/scripts/y_generate_history_figures.py
+    scripts/y_generate_history_figures.py
 
 # Verify outputs
-ls projects/crescent_city/output/
-ls projects/crescent_city/output/figures/
+ls output/
+ls output/figures/
 
 # Render and validate the combined PDF
 PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
@@ -110,13 +110,13 @@ compare outputs:
 
 ```bash
 PYTHONPATH=. uv run python \
-    projects/crescent_city/scripts/run_history_pipeline.py
-cp -r projects/crescent_city/output output_first
+    scripts/run_history_pipeline.py
+cp -r output output_first
 PYTHONPATH=. uv run python \
-    projects/crescent_city/scripts/run_history_pipeline.py
+    scripts/run_history_pipeline.py
 diff -ru output_first/manuscript_report.json \
-         projects/crescent_city/output/manuscript_report.json
-diff -ru output_first/figures projects/crescent_city/output/figures
+         output/manuscript_report.json
+diff -ru output_first/figures output/figures
 ```
 
 To regenerate a single figure (e.g. the Cascadia paleoseismology
@@ -127,7 +127,7 @@ from pathlib import Path
 from src.figures import plot_cascadia_paleoseismology
 
 png = plot_cascadia_paleoseismology(
-    output_dir=Path("projects/crescent_city/output/figures")
+    output_dir=Path("output/figures")
 )
 print(png)
 ```

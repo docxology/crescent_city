@@ -81,10 +81,10 @@ Run from the project directory for project-local tests:
 PYTHONPATH=. uv run pytest tests/test_data.py tests/test_citations.py tests/test_manuscript.py -q
 ```
 
-Run from the template repository root for the strict project pipeline:
+Run from the repository root for the strict project pipeline:
 
 ```bash
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 ```
 
 If the refresh changes figures, also run:
@@ -92,13 +92,6 @@ If the refresh changes figures, also run:
 ```bash
 PYTHONPATH=. uv run pytest tests/test_figures.py -q
 PYTHONPATH=. uv run python scripts/run_history_pipeline.py --figures-only
-```
-
-The second command above is project-local; run it from
-`projects/crescent_city/`. From the repository root, use:
-
-```bash
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --figures-only
 ```
 
 ## Render After Refresh

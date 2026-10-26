@@ -30,7 +30,7 @@ A green build proves that:
 - Citation keys resolve against the local BibTeX file.
 - Reserve bibliography keys are explicit.
 - Data files match current schemas and current-event metadata rules.
-- The 24 registered figures regenerate through the project API.
+- The 25 registered figures regenerate through the project API.
 - Documentation links and guarded facts still resolve.
 - The shared renderer can build and validate output artifacts when run.
 

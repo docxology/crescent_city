@@ -27,14 +27,14 @@ root unless noted otherwise.
 ## 2. Project Checks
 
 ```bash
-PYTHONPATH=. uv run pytest projects/crescent_city/tests/ -q
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
+PYTHONPATH=. uv run pytest tests/ -q
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 ```
 
-Confirm `projects/crescent_city/output/pipeline_report.json` reports:
+Confirm `output/pipeline_report.json` reports:
 
 - `checks_passed` equals `checks_total`.
-- `figures_generated` is 24.
+- `figures_generated` is 25.
 - `figures_ok` is true.
 - `bibliography_consistency` is true.
 
@@ -49,9 +49,9 @@ PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_
 Confirm these files exist:
 
 ```text
-projects/crescent_city/output/pdf/crescent_city_combined.pdf
-projects/crescent_city/output/web/index.html
-projects/crescent_city/output/reports/validation_report.md
+output/pdf/crescent_city_combined.pdf
+output/web/index.html
+output/reports/validation_report.md
 output/crescent_city/crescent_city_combined.pdf
 ```
 
@@ -60,9 +60,9 @@ output/crescent_city/crescent_city_combined.pdf
 Check the publication metadata generated from `docs/manuscript/config.yaml`:
 
 ```text
-projects/crescent_city/output/CITATION.cff
-projects/crescent_city/output/zenodo_metadata.json
-projects/crescent_city/output/self_citation.bib
+output/CITATION.cff
+output/zenodo_metadata.json
+output/self_citation.bib
 ```
 
 If title, authors, license, keywords, DOI, or publication year changes,
@@ -75,7 +75,7 @@ render again.
   first figure, bibliography, and appendices.
 - Open `output/crescent_city/crescent_city_combined.pdf` after copy-out,
   not only the project-local copy.
-- Open `projects/crescent_city/output/web/index.html` if an HTML handoff
+- Open `output/web/index.html` if an HTML handoff
   is needed.
 - Confirm links and cross-references do not show unresolved raw tokens in
   the PDF.

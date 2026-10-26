@@ -8,6 +8,38 @@ The format follows [Keep a Changelog](https://keepachangelog.com/);
 the manuscript itself is versioned by the `paper.version` field in
 `docs/manuscript/config.yaml`.
 
+## [Unreleased] — 2026-10-25
+
+### Fixed
+
+- Maintenance pass on stale commands, paths, and counts:
+  `projects/crescent_city/` prefixes in `README.md`, `AGENTS.md`, `docs/*.md`,
+  and the manuscript appendices now read project-root-relative, matching
+  `data/README.md` and `scripts/README.md` (this repository is the checkout
+  root in the relocated sidecar layout); renderer blocks that need the
+  template checkout say so.
+- Removed `REVIEW_LOG_*.md` pointers from `README.md`/`AGENTS.md` (the dated
+  scratch reports were deleted 2026-09-01) and corrected
+  `docs/manuscript/MANUSCRIPT_STATUS.md`, which still described the
+  pre-migration `manuscript/` directory as its own canonical location.
+- `pipeline.yaml` stage launchers renamed from the pre-rename
+  `0N_*.py` names to `scripts/pipeline/stage_NN_*.py`, and the stage `key:`
+  fields the executor branches on restored; the `executor.py` line-number
+  citation replaced with the real symbol.
+- Figure-count drift fixed at four ungated sites (`docs/figure_maintenance.md`,
+  `docs/audit_trail_limitations.md`, `docs/project_overview.md`,
+  `docs/manuscript/A1_figure_catalogue.md`) plus comments in `src/figures.py`
+  and `src/_figures/_io.py`; the `figure_maintenance.md` and
+  `project_overview.md` inventories were also missing the
+  `extraction_decline` row. `tests/test_pipeline_integration.py` now pins
+  `figures_generated >= 25` to match the documented contract.
+- Manuscript roster corrected where it was wrong: three appendices (A1, A2,
+  A3) named in `README.md`, `docs/project_overview.md`,
+  `docs/manuscript/AGENTS.md`; `config.yaml` and `config.yaml.example`
+  Part-opener lists fixed (`02_space`, `20_time`, `40_people`, `60_ideas`),
+  and the example's `bibliography.references_path` no longer points at the
+  retired `manuscript/` directory.
+
 ## [Unreleased] — 2026-09-02
 
 ### Fixed

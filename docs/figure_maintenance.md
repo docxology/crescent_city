@@ -1,6 +1,6 @@
 # Figure Maintenance
 
-The Crescent City manuscript has 24 registered figures. Each figure should
+The Crescent City manuscript has 25 registered figures. Each figure should
 be reproducible from checked-in manuscript text, checked-in data, or
 explicit schematic geometry.
 
@@ -48,6 +48,7 @@ tests, documentation, and manuscript image references.
 | `nested_systems_map` | `plot_nested_systems_map` | Conceptual synthesis |
 | `population_trend` | `plot_population_trend` | `population_data.csv` |
 | `economic_sectors` | `plot_economic_sectors` | `economic_sectors.csv` |
+| `extraction_decline` | `plot_extraction_decline` | `economic_history.csv` |
 | `tsunami_timeline` | `plot_tsunami_timeline` | `tsunami_events.csv` |
 | `disaster_impact` | `plot_disaster_impact` | `tsunami_events.csv` |
 | `tsunami_inundation_diagram` | `plot_tsunami_inundation_diagram` | `tsunami_1964_wave_sequence.csv` plus schematic geometry |
@@ -121,7 +122,7 @@ outcome.
 
 ## Verification
 
-Run from `projects/crescent_city/`:
+Run from the repository root:
 
 ```bash
 PYTHONPATH=. uv run python scripts/run_history_pipeline.py --figures-only
@@ -132,7 +133,7 @@ Before public release, run the strict pipeline and renderer from the
 repository root:
 
 ```bash
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
 PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```

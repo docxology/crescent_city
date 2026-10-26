@@ -64,14 +64,14 @@ and `../docs/manuscript/SYNTAX.md`.
 
 Before sharing a public artifact:
 
-1. Open `projects/crescent_city/output/pdf/crescent_city_combined.pdf`.
+1. Open `output/pdf/crescent_city_combined.pdf`.
 2. Check the title page, table of contents, one text-heavy chapter, one
    table, the first figure, a current-event figure, and the appendices.
 3. Confirm no figure label overlaps or becomes unreadable.
 4. Confirm citation and cross-reference tokens are rendered, not raw.
 5. Use [visual_pdf_qa.md](visual_pdf_qa.md) for the figure-heavy pages
    and appendix checks.
-6. Open `projects/crescent_city/output/web/index.html` when HTML is part
+6. Open `output/web/index.html` when HTML is part
    of the handoff.
 7. Confirm generated artifacts match the paths in
    [rendering_and_outputs.md](rendering_and_outputs.md).

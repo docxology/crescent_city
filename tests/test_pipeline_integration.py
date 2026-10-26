@@ -44,7 +44,7 @@ class TestPipeline:
         assert p.exists()
         data = json.loads(p.read_text())
         assert data["checks_passed"] >= 5
-        assert data["figures_generated"] >= 24
+        assert data["figures_generated"] >= 25
 
     def test_manuscript_report_json_snapshot(self, pipeline_artifacts, output_dir: Path) -> None:
         p = output_dir / "manuscript_report.json"

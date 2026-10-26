@@ -43,7 +43,7 @@ For a data-focused view of these checks, see
 
 ## Command Matrix
 
-Run from `projects/crescent_city/`.
+Run from the repository root.
 
 | Change | Minimum command |
 |---|---|
@@ -57,12 +57,12 @@ Run from `projects/crescent_city/`.
 | Pipeline logic | `PYTHONPATH=. uv run pytest tests/test_pipeline.py tests/test_pipeline_integration.py -q` |
 | Release candidate | `PYTHONPATH=. uv run pytest tests/ -q` |
 
-Run from the template repository root when testing the project through the
-same path used by repository-level scripts:
+Project commands run from this repository root; renderer stages run from
+the template repository root:
 
 ```bash
-PYTHONPATH=. uv run pytest projects/crescent_city/tests/ -q
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
+PYTHONPATH=. uv run pytest tests/ -q
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
 PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```

@@ -7,7 +7,7 @@
 | What is this? | This README + [AGENTS.md](AGENTS.md) (agent contract) | read both first |
 | Current state? | [docs/manuscript/MANUSCRIPT_STATUS.md](docs/manuscript/MANUSCRIPT_STATUS.md) — the single status surface | read it, don't assume |
 | What's next? | [TODO.md](TODO.md) — the single backlog; do not scan git log for intent | read its Major section |
-| Revision history? | [CHANGELOG.md](CHANGELOG.md) + dated `REVIEW_LOG_*.md` files | read newest entries |
+| Revision history? | [CHANGELOG.md](CHANGELOG.md) — newest entries first | read newest entries |
 | Primary verification? | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` (project quality) and `PYTHONPATH=. uv run pytest tests/ -q` (suite) | run them |
 
 Migration note (2026-08-31): the `manuscript/` → `docs/manuscript/` move is
@@ -24,11 +24,11 @@ local citation checks, and reproducible PDF rendering.
 
 ```mermaid
 flowchart TB
-    P[/projects/crescent_city/]
+    P[/&lt;repository root&gt;/]
     P --> SRC[/src<br/>domain orchestration/]
     P --> T[/tests<br/>real-data tests · no mocks/]
     P --> SC[/scripts<br/>thin orchestrators/]
-    P --> M[/manuscript/]
+    P --> M[/docs/manuscript/]
     P --> DOCS[/docs/]
     P --> OUT[/output<br/>regeneratable/]
     P --> META[pyproject.toml · README.md ·<br/>AGENTS.md · .gitignore]
@@ -95,7 +95,7 @@ flowchart TB
 ## Testing
 
 ```bash
-uv run pytest projects/crescent_city/tests/ -v
+uv run pytest tests/ -v
 ```
 
 All tests run offline. Real prose inputs, real BibTeX files, real
@@ -104,8 +104,8 @@ mocks.
 
 ## How this project differs from its siblings
 
-* `template_code_project` — has its own algorithm (`src/optimizer.py`)
-  and generates figures from numerical experiments.
+* `template_code_project` — a code-research project with its own
+  algorithm module and figures generated from numerical experiments.
 * `template_search_project` — runs literature search and *populates*
   `docs/manuscript/references.bib` from a query.
 * `crescent_city` — carries a hand-curated scholarly narrative whose

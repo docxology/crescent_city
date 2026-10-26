@@ -49,7 +49,7 @@ prose:
   target_grade_level_max: 20.0
   long_sentence_threshold: 35
   citation_density_min_per_1000: 3.0
-  # This manuscript is a continuous book: Part files (02, 08, 15, …)
+  # This manuscript is a continuous book: Part files (02_space, 20_time, 40_people, 60_ideas)
   # use `#` H1, and chapter files under each part use `##` H2. We
   # therefore disable the per-file H1 requirement; the equivalent
   # invariant — every chapter has a top-level heading anchor — is

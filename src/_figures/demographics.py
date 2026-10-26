@@ -1,6 +1,6 @@
 """Population and employment figures drawn from project CSV data.
 
-Both figures read from ``projects/crescent_city/data/``; callers can
+Both figures read from ``data/``; callers can
 override the CSV path for tests and isolated reproductions.
 """
 

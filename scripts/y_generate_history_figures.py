@@ -9,7 +9,7 @@ arguments. Behavior is governed entirely by the registry inside
 
 Usage::
 
-    PYTHONPATH=. uv run python projects/crescent_city/scripts/y_generate_history_figures.py
+    PYTHONPATH=. uv run python scripts/y_generate_history_figures.py
 """
 
 from __future__ import annotations
@@ -17,8 +17,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-_project_root = Path(__file__).resolve().parent.parent  # projects/crescent_city
-_repo_root = _project_root.parent.parent                # repository root
+_project_root = Path(__file__).resolve().parent.parent  # repository root
+_repo_root = _project_root.parent.parent                # monorepo root (in-monorepo layout)
 sys.path.insert(0, str(_project_root))
 sys.path.insert(0, str(_repo_root))
 

@@ -11,7 +11,7 @@ southern segment of the **Cascadia subduction zone**.
 
 The manuscript spans **49 topical chapters** (as of 2026-08-31; verified by `ls docs/manuscript/[0-9][0-9]_*.md | wc -l` = 56, minus 4 Part openers, abstract, introduction, and references) inside four nested-systems
 Parts — **Space, Time, People, and Ideas** — plus abstract,
-introduction, timeline, methods, reproducibility, references, and two
+introduction, references, and three
 appendices. It includes **25 reproducible figures** (count = `len(FIGURE_REGISTRY)` in `src/figures.py`), a curated
 BibTeX bibliography validated during each build, and a typeset PDF
 rendered via Pandoc + XeLaTeX + pandoc-crossref.
@@ -33,7 +33,7 @@ the archival DOI is `10.5281/zenodo.20286171`.
 | What is this? | This README + [AGENTS.md](AGENTS.md) (agent contract) | read both first |
 | Current state? | [docs/manuscript/MANUSCRIPT_STATUS.md](docs/manuscript/MANUSCRIPT_STATUS.md) — the single status surface | read it, don't assume |
 | What's next? | [TODO.md](TODO.md) — the single backlog; do not scan git log for intent | read its Major section |
-| Revision history? | [CHANGELOG.md](CHANGELOG.md) + dated `REVIEW_LOG_*.md` files | read newest entries |
+| Revision history? | [CHANGELOG.md](CHANGELOG.md) — newest entries first | read newest entries |
 | Primary verification? | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` (project quality) and `PYTHONPATH=. uv run pytest tests/ -q` (suite) | run them |
 
 Migration completed (2026-08-31): `manuscript/` → `docs/manuscript/` is done
@@ -43,23 +43,23 @@ in code, docs, and tests; suite green (175 passed).
 
 ```bash
 # From the repository root
-uv sync
+uv sync --extra dev   # dev extra provides pytest / pytest-cov
 
 # Run the full prose-review pipeline (offline, no Ollama)
 PYTHONPATH=. uv run python \
-    projects/crescent_city/scripts/run_history_pipeline.py
+    scripts/run_history_pipeline.py
 
 # Strict mode: exit non-zero if any check fails
 PYTHONPATH=. uv run python \
-    projects/crescent_city/scripts/run_history_pipeline.py --strict
+    scripts/run_history_pipeline.py --strict
 
 # Regenerate all 25 figures
 PYTHONPATH=. uv run python \
-    projects/crescent_city/scripts/y_generate_history_figures.py
+    scripts/y_generate_history_figures.py
 
 # Hydrate manuscript variables for the abstract
 PYTHONPATH=. uv run python \
-    projects/crescent_city/scripts/z_generate_manuscript_variables.py
+    scripts/z_generate_manuscript_variables.py
 
 # Render and validate the full PDF through the shared infrastructure
 PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
@@ -80,7 +80,7 @@ outward to the other Parts where the systems interact.
 | Part III — People | Tolowa Dee-ni'; Nee-dash; neighboring tribal nations; immigrant communities; governance; county institutions; military; World War II; education; religion; demographics; healthcare and social services | Communities, institutions, sovereignty, migration, and public life |
 | Part IV — Ideas | Zoning; resilience; Klamath dam removal; Jefferson; modern economy; culture; arts; tourism; Klamath Knot; conclusion; timeline; methodology; reproducibility | Rules, meanings, restoration, memory, political imagination, and evidence |
 
-Plus appendices: **A1 Figure Catalog**, **A2 Glossary**.
+Plus appendices: **A1 Figure Catalog**, **A2 Glossary**, **A3 Quadruplicate companion**.
 
 ## Figures (25)
 
@@ -120,7 +120,7 @@ following table is the operational reference:
 ## Architecture
 
 ```
-projects/crescent_city/
+crescent_city/                   # Repository root
 |-- docs/manuscript/              # Numbered Markdown sources + appendices + references.bib
 |   |-- 00_abstract.md ... 73_reproducibility.md
 |   |-- A1_figure_catalogue.md     # Per-figure catalog
@@ -256,7 +256,7 @@ data-QA scope, use the expanded documentation set under `docs/`.
 ## Testing
 
 ```bash
-PYTHONPATH=. uv run pytest projects/crescent_city/tests/ -v
+PYTHONPATH=. uv run pytest tests/ -v
 ```
 
 All tests are offline; no mocks. The test suite uses real prose,

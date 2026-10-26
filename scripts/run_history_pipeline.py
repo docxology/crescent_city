@@ -28,7 +28,7 @@ from pathlib import Path
 
 # ── Resolve project and repo roots ──────────────────────────────────────
 _SCRIPT_DIR = Path(__file__).resolve().parent
-_PROJECT_DIR = _SCRIPT_DIR.parent  # projects/crescent_city
+_PROJECT_DIR = _SCRIPT_DIR.parent  # repository root
 import importlib.util
 
 _repo_paths_spec = importlib.util.spec_from_file_location(

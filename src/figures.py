@@ -601,7 +601,7 @@ def generate_all_figures(
         # baseline before every plotter so no preceding figure's rcParam or
         # pyplot-state mutation can perturb a later figure's text layout.
         # (Sub-pixel inter-figure leakage is observable only in the full
-        # 24-figure pass, not in the per-plotter isolation tests; this is
+        # 25-figure pass, not in the per-plotter isolation tests; this is
         # the choke-point fix. Semantics-preserving: it only re-asserts the
         # same baseline _style already establishes at import.)
         plt.close("all")

@@ -41,7 +41,7 @@ guard suite.
   do not hoist them above the bootstrap.
 - **Two invocation spellings name the same scripts.** From this project
   root: `scripts/...`. From the template repository root:
-  `projects/crescent_city/scripts/...`. Both appear in `../docs/`; neither
+  `scripts/...`. Both appear in `../docs/`; neither
   is stale.
 - **Outputs are regenerable.** Everything lands under `output/`; never
   hand-edit those artifacts, rerun the owning script instead.

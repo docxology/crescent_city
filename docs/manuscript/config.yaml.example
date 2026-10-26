@@ -1,6 +1,6 @@
 # Fork template — copy to config.yaml and replace TODO-OWNER values.
-# Derived from this repository's own manuscript/config.yaml; structural
-# fields mirror the live config. See manuscript/AGENTS.md for the token protocol.
+# Derived from this repository's own docs/manuscript/config.yaml; structural
+# fields mirror the live config. See docs/manuscript/AGENTS.md for the token protocol.
 
 # crescent_city — configuration
 
@@ -53,7 +53,7 @@ prose:
   target_grade_level_max: 20.0
   long_sentence_threshold: 35
   citation_density_min_per_1000: 3.0
-  # This manuscript is a continuous book: Part files (02, 08, 15, …)
+  # This manuscript is a continuous book: Part files (02_space, 20_time, 40_people, 60_ideas)
   # use `#` H1, and chapter files under each part use `##` H2. We
   # therefore disable the per-file H1 requirement; the equivalent
   # invariant — every chapter has a top-level heading anchor — is
@@ -62,7 +62,7 @@ prose:
   forbid_skipped_levels: true
 
 bibliography:
-  references_path: "manuscript/references.bib"
+  references_path: "docs/manuscript/references.bib"
   fail_on_missing: true
   # Tightened to true on 2026-08-28 after the orphan list was audited:
   # every non-cited entry is now covered by the explicit ``reserve_keys``

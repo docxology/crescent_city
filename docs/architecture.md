@@ -12,7 +12,7 @@ The core rule is simple: source truth lives in `docs/manuscript/`, `data/`,
 
 ```mermaid
 flowchart TB
-    P["projects/crescent_city"]
+    P["<repository root>"]
     P --> M["docs/manuscript/<br/>Markdown, config, preamble, BibTeX"]
     P --> D["data/<br/>CSV, JSON, YAML inputs"]
     P --> S["src/<br/>project package"]
@@ -67,8 +67,8 @@ serve different purposes and should both be used before publication.
 
 | Pipeline | Command | Purpose | Primary outputs |
 |---|---|---|---|
-| Project quality pipeline | `PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict` | Analyze prose, check citations and headings, generate figures, write review and publication metadata | `projects/crescent_city/output/pipeline_report.json`, `review_report.md`, `figures/`, `CITATION.cff` |
-| Shared renderer | `PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city` | Hydrate manuscript variables and render combined PDF, combined HTML, per-section HTML, and slides | `projects/crescent_city/output/pdf/crescent_city_combined.pdf`, `web/index.html`, `slides/` |
+| Project quality pipeline | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` | Analyze prose, check citations and headings, generate figures, write review and publication metadata | `output/pipeline_report.json`, `review_report.md`, `figures/`, `CITATION.cff` |
+| Shared renderer | `PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city` | Hydrate manuscript variables and render combined PDF, combined HTML, per-section HTML, and slides | `output/pdf/crescent_city_combined.pdf`, `web/index.html`, `slides/` |
 
 Validation and copy-out are separate repository-level stages:
 
@@ -152,11 +152,11 @@ operator guides behind these extension points.
 
 | Failure | Likely subsystem | Start here |
 |---|---|---|
-| Missing or stale figure | `data/`, `src/_figures/`, `src/figures.py` | `PYTHONPATH=. uv run pytest projects/crescent_city/tests/test_figures.py -q` |
-| Broken citation | `docs/manuscript/*.md`, `docs/manuscript/references.bib` | `PYTHONPATH=. uv run pytest projects/crescent_city/tests/test_citations.py -q` |
+| Missing or stale figure | `data/`, `src/_figures/`, `src/figures.py` | `PYTHONPATH=. uv run pytest tests/test_figures.py -q` |
+| Broken citation | `docs/manuscript/*.md`, `docs/manuscript/references.bib` | `PYTHONPATH=. uv run pytest tests/test_citations.py -q` |
 | Render-only PDF problem | Hydrated manuscript, LaTeX preamble, shared renderer | `docs/rendering_and_outputs.md` |
 | Stale current-event claim | `data/historical_events.json`, manuscript current chapters | `docs/source_refresh_workflow.md` |
-| Documentation drift | `docs/`, root README/AGENTS, folder guides | `PYTHONPATH=. uv run pytest projects/crescent_city/tests/test_documentation.py -q` |
+| Documentation drift | `docs/`, root README/AGENTS, folder guides | `PYTHONPATH=. uv run pytest tests/test_documentation.py -q` |
 
 ## Green Build Semantics
 

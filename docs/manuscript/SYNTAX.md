@@ -34,7 +34,7 @@ tree and is validated by `tests/test_manuscript.py`.
 To inspect the live roster:
 
 ```bash
-rg -n '^#{1,2} .*\\{#sec:' projects/crescent_city/manuscript -g '*.md'
+rg -n '^#{1,2} .*\\{#sec:' docs/manuscript -g '*.md'
 ```
 
 Cross-section references in prose use the `[@sec:<anchor>]` pattern, never markdown filename links.

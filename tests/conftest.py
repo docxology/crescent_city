@@ -26,7 +26,7 @@ _mod = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_mod)
 find_repo_root = _mod.find_repo_root
 
-_PROJECT_DIR = Path(__file__).resolve().parent.parent  # projects/crescent_city
+_PROJECT_DIR = Path(__file__).resolve().parent.parent  # repository root
 _REPO_ROOT = find_repo_root(_PROJECT_DIR)  # template monorepo root
 
 sys.path.insert(0, str(_REPO_ROOT))

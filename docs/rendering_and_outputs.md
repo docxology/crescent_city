@@ -9,11 +9,12 @@ For the quality checks that should precede a public render, see
 
 ## Render Sequence
 
-Run from the template repository root.
+Renderer stages run from the template repository root; step 1, the project
+pipeline, runs from this repository root.
 
 ```bash
 # 1. Make sure project analysis and figures are current.
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 
 # 2. Render the combined PDF, combined HTML, per-section HTML, and slides.
 PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
@@ -30,9 +31,9 @@ PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_
 `scripts/pipeline/stage_03_render.py --project crescent_city` performs these steps:
 
 1. Hydrates manuscript variables by running
-   `projects/crescent_city/scripts/z_generate_manuscript_variables.py`.
+   `scripts/z_generate_manuscript_variables.py`.
 2. Writes substituted manuscript copies to
-   `projects/crescent_city/output/manuscript/`.
+   `output/manuscript/`.
 3. Checks required LaTeX packages and available figure files.
 4. Renders per-section slides and HTML.
 5. Combines the 56 numbered manuscript source files into the main PDF.
@@ -47,11 +48,11 @@ preamble as appropriate.
 
 | Path | Meaning |
 |---|---|
-| `projects/crescent_city/output/pdf/crescent_city_combined.pdf` | Project-local combined PDF |
-| `projects/crescent_city/output/web/index.html` | Combined HTML manuscript |
-| `projects/crescent_city/output/web/*.html` | Per-section HTML |
-| `projects/crescent_city/output/slides/*_slides.pdf` | Per-section Beamer slides |
-| `projects/crescent_city/output/reports/validation_report.md` | Validation summary |
+| `output/pdf/crescent_city_combined.pdf` | Project-local combined PDF |
+| `output/web/index.html` | Combined HTML manuscript |
+| `output/web/*.html` | Per-section HTML |
+| `output/slides/*_slides.pdf` | Per-section Beamer slides |
+| `output/reports/validation_report.md` | Validation summary |
 | `output/crescent_city/crescent_city_combined.pdf` | Repository-level release copy after `scripts/pipeline/stage_05_copy.py` |
 
 The current rendered PDF path is intentionally repeated in quickstart docs

@@ -44,5 +44,5 @@ that every prose citation resolves:
 
 ```bash
 uv run python -m infrastructure.reference.citation.cli validate \
-    projects/crescent_city/docs/manuscript/references.bib --strict
+    docs/manuscript/references.bib --strict
 ```

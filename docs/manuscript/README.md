@@ -68,7 +68,7 @@ new public-history claims.
 
 ## Checks
 
-Run from `projects/crescent_city/` with `PYTHONPATH=.` (repository root on path):
+Run from the repository root with `PYTHONPATH=.`:
 
 ```bash
 PYTHONPATH=. uv run pytest tests/test_manuscript.py tests/test_citations.py tests/test_american_english.py -q

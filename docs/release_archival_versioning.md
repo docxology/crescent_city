@@ -54,16 +54,16 @@ rebuild the release.
 
 | Artifact | Path |
 |---|---|
-| Project-local PDF | `projects/crescent_city/output/pdf/crescent_city_combined.pdf` |
+| Project-local PDF | `output/pdf/crescent_city_combined.pdf` |
 | Repository-level PDF copy | `output/crescent_city/crescent_city_combined.pdf` |
-| Combined HTML | `projects/crescent_city/output/web/index.html` |
-| Validation report | `projects/crescent_city/output/reports/validation_report.md` |
-| Project pipeline report | `projects/crescent_city/output/pipeline_report.json` |
-| Review report | `projects/crescent_city/output/review_report.md` |
-| Figure outputs | `projects/crescent_city/output/figures/` |
-| Citation metadata | `projects/crescent_city/output/CITATION.cff` |
-| Deposit metadata | `projects/crescent_city/output/zenodo_metadata.json` |
-| Self-citation | `projects/crescent_city/output/self_citation.bib` |
+| Combined HTML | `output/web/index.html` |
+| Validation report | `output/reports/validation_report.md` |
+| Project pipeline report | `output/pipeline_report.json` |
+| Review report | `output/review_report.md` |
+| Figure outputs | `output/figures/` |
+| Citation metadata | `output/CITATION.cff` |
+| Deposit metadata | `output/zenodo_metadata.json` |
+| Self-citation | `output/self_citation.bib` |
 
 Generated artifacts are archived for readers, but source truth remains in
 the checked-in manuscript, data, code, tests, and documentation.
@@ -93,11 +93,11 @@ For an archival handoff, compute checksums after validation and copy-out:
 
 ```bash
 shasum -a 256 \
-  projects/crescent_city/output/pdf/crescent_city_combined.pdf \
+  output/pdf/crescent_city_combined.pdf \
   output/crescent_city/crescent_city_combined.pdf \
-  projects/crescent_city/output/CITATION.cff \
-  projects/crescent_city/output/zenodo_metadata.json \
-  projects/crescent_city/output/self_citation.bib
+  output/CITATION.cff \
+  output/zenodo_metadata.json \
+  output/self_citation.bib
 ```
 
 Store checksums in release notes or the deposit record. Do not edit

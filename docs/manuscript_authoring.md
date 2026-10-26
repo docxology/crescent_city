@@ -92,12 +92,12 @@ PYTHONPATH=. uv run python scripts/z_generate_manuscript_variables.py
 From the repository root:
 
 ```bash
-PYTHONPATH=. uv run python projects/crescent_city/scripts/z_generate_manuscript_variables.py
+PYTHONPATH=. uv run python scripts/z_generate_manuscript_variables.py
 ```
 
 ## Review Before Render
 
-Run from `projects/crescent_city/`:
+Run from the repository root:
 
 ```bash
 PYTHONPATH=. uv run pytest tests/test_manuscript.py tests/test_citations.py -q
@@ -107,7 +107,7 @@ PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 Run from the repository root when preparing the final artifact:
 
 ```bash
-PYTHONPATH=. uv run python projects/crescent_city/scripts/run_history_pipeline.py --strict
+PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
 PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
 ```
