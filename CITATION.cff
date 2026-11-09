@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "crescent_city"
+authors:
+  - family-names: Friedman
+    given-names: Daniel Ari
+    orcid: "https://orcid.org/0000-0001-6232-9096"
+repository-code: "https://github.com/docxology/crescent_city"
+abstract: "Reproducible scholarly history of Crescent City, California — from Tolowa Dee-ni' settlement through the 1964 tsunami to today, with deterministically generated matplotlib figures, BibTeX validation, and PDF build via Pandoc + XeLaTeX + pandoc-crossref (Python, uv, pytest)."
