@@ -59,3 +59,7 @@ surface: `docs/manuscript/MANUSCRIPT_STATUS.md`. Revision history:
 ## Done
 
 - (entries above were completed in the 2026-08-31 agent-ergonomics pass)
+
+## Workflowz review — 2026-11-10
+
+No concrete, independently closable improvement survived this bounded review. Coverage included the supplied AGENTS.md, README.md, TODO.md, pyproject.toml, .python-version, pipeline and CLI excerpts, figure modules (climate, currents, manuscript metrics), checks, and tests/test_config.py. The visible fallback and exception-handling excerpts were reviewed in context; no silent production substitute or unsupported dependency/runtime upgrade was established. Re-review the affected area on a concrete failure or source change.
