@@ -1,5 +1,11 @@
 # crescent_city
 
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.20286171"><img alt="Digital Object Identifier (DOI), archival record: 10.5281/zenodo.20286171" src="https://zenodo.org/badge/DOI/10.5281/zenodo.20286171.svg"></a>
+  <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue"></a>
+  <img alt="Requires Python 3.11 or newer" src="https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white">
+</p>
+
 A comprehensive, reproducible scholarly history of **Crescent City,
 California** — from twelve generations of Tolowa Dee-ni' habitation
 through the genocidal settlement era, the 130-year industrial timber
@@ -171,6 +177,29 @@ crescent_city/                   # Repository root
     |-- figures/             # 25 x {PNG, SVG}
     |-- pdf/                 # crescent_city_combined.pdf
     `-- *.json, *.md
+```
+
+### Package map
+
+Generated on 2026-11-12 from the `import` statements under `src/`. An arrow from A to B means code in A imports B; arrows already implied by a longer path are left out, so the picture shows layering rather than every edge. It shows 7 of the package's 9 top-level parts: the largest ones that import or are imported by others.
+
+```mermaid
+flowchart LR
+    accTitle: Internal dependency map of the src package in crescent_city
+    accDescr: Generated from import statements in src. Each box is a subpackage or module of the package; an arrow from A to B means code in A imports B; arrows already implied by a longer path are omitted. Most-imported: checks, config, figures.
+    n__figures["_figures/"]
+    n_figures["figures.py"]
+    n_pipeline["pipeline.py"]
+    n_publishing["publishing.py"]
+    n_report["report.py"]
+    n_config["config.py"]
+    n_checks["checks.py"]
+    n_figures --> n__figures
+    n_pipeline --> n_config
+    n_pipeline --> n_figures
+    n_pipeline --> n_report
+    n_pipeline --> n_publishing
+    n_report --> n_checks
 ```
 
 ## Directory-Level Documentation
