@@ -313,9 +313,9 @@ into temporary directories.
 * [`docs/manuscript/A1_figure_catalogue.md`](docs/manuscript/A1_figure_catalogue.md) — per-figure catalog
 * [`docs/manuscript/A2_glossary.md`](docs/manuscript/A2_glossary.md) — technical-term glossary
 * [`docs/architecture.md`](docs/architecture.md) — module dependency graph
-* [`infrastructure/prose/SKILL.md`](../../infrastructure/prose/SKILL.md) — prose-analysis API
-* [`infrastructure/reference/SKILL.md`](../../infrastructure/reference/SKILL.md) — bibliography validation API
-* [`infrastructure/rendering/SKILL.md`](../../infrastructure/rendering/SKILL.md) — PDF rendering API
+* [`infrastructure/prose/SKILL.md`](https://github.com/docxology/template/blob/main/infrastructure/prose/SKILL.md) — prose-analysis API
+* [`infrastructure/reference/SKILL.md`](https://github.com/docxology/template/blob/main/infrastructure/reference/SKILL.md) — bibliography validation API
+* [`infrastructure/rendering/SKILL.md`](https://github.com/docxology/template/blob/main/infrastructure/rendering/SKILL.md) — PDF rendering API
 
 ## License
 
