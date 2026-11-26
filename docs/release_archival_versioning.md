@@ -14,9 +14,9 @@ A public release candidate is ready only when all of these are true:
 | Source freshness | [claim_ledger.md](claim_ledger.md) and [source_refresh_workflow.md](source_refresh_workflow.md) have been checked for volatile claims. |
 | Project tests | The project test suite or targeted release subset passes. |
 | Strict pipeline | `scripts/run_history_pipeline.py --strict` passes and writes current reports. |
-| Render | `scripts/pipeline/stage_03_render.py --project crescent_city` succeeds from the template root. |
-| Validation | `scripts/pipeline/stage_04_validate.py --project crescent_city` passes. |
-| Copy-out | `scripts/pipeline/stage_05_copy.py --project crescent_city` creates the repository-level release folder. |
+| Render | `scripts/pipeline/stage_03_render.py --project working/crescent_city` succeeds from the template root. |
+| Validation | `scripts/pipeline/stage_04_validate.py --project working/crescent_city` passes. |
+| Copy-out | `scripts/pipeline/stage_05_copy.py --project working/crescent_city` creates the repository-level release folder. |
 | Metadata | `CITATION.cff`, `zenodo_metadata.json`, and `self_citation.bib` are regenerated from `docs/manuscript/config.yaml`. |
 
 Do not treat a green test run as a release by itself. Current public

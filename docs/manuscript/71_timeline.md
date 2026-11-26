@@ -54,7 +54,7 @@ oral-historical memory [@atwater2005orphan; @goldfinger2012;
 
 | Year | Event | Category |
 |------|-------|----------|
-| c. 1000 BCE | Tolowa Dee-ni' establish seasonal villages around Smith River estuary | Indigenous |
+| c. 1000 BCE | Tolowa Dee-ni' establish seasonal villages around Smith River estuary [@tolowa_culture; @bommelyn1997; @gould1978] | Indigenous |
 | 26 Jan 1700 | Mw 8.7–9.2 Cascadia full-margin earthquake; orphan tsunami reaches Japan | Disaster |
 
 ### Contact, Conquest, and County Formation
@@ -69,19 +69,19 @@ an administrative founding story alone.
 | Year | Event | Category |
 |------|-------|----------|
 | 9 Jun 1775 | Spanish Heceta-Quadra expedition anchors at Trinidad Bay | Exploration |
-| 8 Jun 1828 | Jedediah Smith reaches Pacific at Smith River mouth | Exploration |
-| Autumn 1853 | Yontocket Massacre: source traditions record hundreds of Tolowa killed during Nee-dash | Conflict |
-| 1853 | Townsite of Crescent City laid out | Settlement |
-| 1854 | Crescent City incorporated; United Methodist Church built | Governance |
-| 10 Jun 1854 | *Crescent City Herald* begins publication (first NW California paper) | Media |
-| 1854–1855 | Achulet and Howonquet Massacres | Conflict |
-| 1855 | Battery Point Massacre at Crescent City | Conflict |
+| 8 Jun 1828 | Jedediah Smith reaches Pacific at Smith River mouth [@smith_expedition] | Exploration |
+| Autumn 1853 | Yontocket Massacre: source traditions record hundreds of Tolowa killed during Nee-dash [@madley2016genocide; @cook1976; @tolowa_culture] | Conflict |
+| 1853 | Townsite of Crescent City laid out [@del_norte_history; @crescentcityherald_loc] | Settlement |
+| 1854 | Crescent City incorporated [@del_norte_history; @cook1976] | Governance |
+| 10 Jun 1854 | *Crescent City Herald* begins publication [@crescentcityherald_loc] | Media |
+| 1853–1854 | Howonquet and Achulet Massacres [@madley2016genocide; @cook1976; @tolowa_culture] | Conflict |
+| 1855 | Battery Point Massacre at Crescent City [@madley2016genocide; @cook1976] | Conflict |
 | 10 Dec 1856 | Battery Point Lighthouse first lit | Infrastructure |
-| 2 Mar 1857 | Del Norte County formally carved from Klamath County | Governance |
+| 2 Mar 1857 | Del Norte County formally carved from Klamath County [@del_norte_history; @cook1976] | Governance |
 | 1860 | Federal census records approximately 2,500 residents | Economy |
-| 13 Jun 1862 | Camp Lincoln established near Smith River Reservation | Military |
-| 1862 | Smith River Reservation established for Tolowa Dee-ni' | Governance |
-| 28 Jul 1868 | Smith River Reservation administratively dissolved | Governance |
+| 13 Jun 1862 | Camp Lincoln established near Smith River Reservation [@cook1976; @madley2016genocide] | Military |
+| 1862 | Smith River Reservation established for Tolowa Dee-ni' [@cook1976; @madley2016genocide] | Governance |
+| 28 Jul 1868 | Smith River Reservation administratively dissolved [@smith_river_rancheria_history; @cook1976] | Governance |
 
 ### Harbor and Lumber Buildout
 
@@ -93,10 +93,10 @@ cut, hauled, milled, financed, defended, and shipped.
 
 | Year | Event | Category |
 |------|-------|----------|
-| 1871 | Hobbs, Wall & Co. founded; Elk Valley mill begins operation | Industry |
-| 1878 | Crescent City & Smith River Railroad construction begins | Infrastructure |
-| Aug 1881 | John Dolbeer invents steam donkey logging engine (US Patent 256,553) | Industry |
-| 6 May 1882 | Chinese Exclusion Act signed; Crescent City's Chinatown dispersed | Policy |
+| 1871 | Hobbs, Wall & Company founded [@nps_redwood_history; @vaden_logging] | Industry |
+| Late 1870s | Crescent City & Smith River Railroad construction begins [@nps_redwood_history; @vaden_logging] | Infrastructure |
+| Aug 1881 | John Dolbeer invents steam donkey logging engine (US Patent 256,553) [@dolbeer1882patent; @carranco1975logging] | Industry |
+| 6 May 1882 | Chinese Exclusion Act signed, contributing to later dispersal of the local community [@national_archives_chinese_exclusion; @crescent_city] | Policy |
 | 1900 | Del Norte County produces 30 million+ board feet of lumber annually | Economy |
 | 1908 | Smith River Rancheria established (160 acres, largest in CA) | Governance |
 | 1911 | First harbor jetty completed | Infrastructure |
@@ -157,7 +157,7 @@ adaptation.
 | 1 Sep 2015 | *Ashker v. Brown* SHU settlement at Pelican Bay | Policy |
 | 2018 | City General Plan update incorporates sea-level-rise projections | Policy |
 | 2020 | Decennial census records Crescent City population of 6,673 | Demographics |
-| 8 Sep 2020 | Slater Fire ignites; 157,270 acres burned across CA/OR | Disaster |
+| 8 Sep 2020 | Slater Fire ignites and eventually burns 157,270 acres across California and Oregon [@inciweb_slater_devil_2020; @slater_fire] | Disaster |
 | 15 Aug 2023 | Smith River Complex fires begin on Gasquet Ranger District | Disaster |
 | Sep 2023 | Yurok–Tolowa Dee-ni' Indigenous Marine Stewardship Area declared | Governance |
 
@@ -182,7 +182,7 @@ announcements. They should be refreshed when official records change
 | 20 Apr 2026 | Tolowa Dee-ni' Nation receives federal funding for Roosevelt elk habitat restoration | Conservation |
 | 5 May 2026 | Crescent City Fire & Rescue opens fire-chief recruitment | Governance |
 | 7 May 2026 | Battery Point Apartments construction remobilizes after additional HOME funding | Infrastructure |
-| 9 May 2026 | Mw 4.8 offshore Gorda-plate earthquake west-southwest of Crescent City | Disaster |
+| 9 May 2026 | Mw 4.8 offshore Gorda-plate earthquake west-southwest of Crescent City [@usgs2026may_quake] | Disaster |
 | 2 Jun 2026 | Del Norte County and California statewide direct primary election scheduled | Governance |
 
 For the complete event dataset (now expanded to more than 80
@@ -195,4 +195,4 @@ full impact and damage records of the tsunami events, see
 `data/tsunami_events.csv`. For demographic and employment data,
 see `data/economic_history.csv` and `data/economic_sectors.csv`.
 
-![Two-century historical timeline of Crescent City events grouped by thematic category, plotted from the source-indexed event ledger in `data/historical_events.json`. Each marker encodes a dated row; downward red "X" markers denote disasters, and oversized markers denote tsunami or earthquake events. Light background bands identify the three densest interpretive windows: contact and conquest in the 1850s, the 1964-1978 tsunami-and-redwood-parks interval, and the 2020s current-events cluster. The evidence class is curated chronology: statutory acts, disaster dates, archaeological anchors, cultural events, and provisional current-status claims are plotted together for navigation, but the figure does not encode magnitude, completeness, or probability. The interpretive claim is clustering: these windows mark where the manuscript's causal argument turns most sharply.](output/figures/historical_timeline.png){#fig:historical_timeline width=100%}
+![Two-century historical timeline of Crescent City events grouped by thematic category, plotted from the source-indexed event ledger in `data/historical_events.json`. Each marker encodes a dated row; downward red "X" markers denote disasters, and oversized markers denote tsunami or earthquake events. Light background bands identify the three densest interpretive windows: contact and conquest in the 1850s, the 1964-1978 tsunami-and-redwood-parks interval, and the 2020s current-events cluster. The evidence class is curated chronology: statutory acts, disaster dates, archaeological anchors, cultural events, and provisional current-status claims are plotted together for navigation, but the figure does not encode magnitude, completeness, or probability. The interpretive claim is clustering: these windows mark where the manuscript's causal argument turns most sharply.](../../output/figures/historical_timeline.png){#fig:historical_timeline width=100%}

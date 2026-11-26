@@ -17,18 +17,18 @@ pipeline, runs from this repository root.
 PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
 
 # 2. Render the combined PDF, combined HTML, per-section HTML, and slides.
-PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+uv run --no-sync python scripts/pipeline/stage_03_render.py --project working/crescent_city --skip-manuscript-hydration
 
 # 3. Validate outputs.
-PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
+uv run --no-sync python scripts/pipeline/stage_04_validate.py --project working/crescent_city
 
 # 4. Copy outputs to the repository-level release folder.
-PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
+uv run --no-sync python scripts/pipeline/stage_05_copy.py --project working/crescent_city
 ```
 
 ## What The Renderer Does
 
-`scripts/pipeline/stage_03_render.py --project crescent_city` performs these steps:
+`scripts/pipeline/stage_03_render.py --project working/crescent_city` performs these steps:
 
 1. Hydrates manuscript variables by running
    `scripts/z_generate_manuscript_variables.py`.
@@ -60,7 +60,7 @@ because it is the file most readers need.
 
 ## Validation Meaning
 
-`scripts/pipeline/stage_04_validate.py --project crescent_city` checks:
+`scripts/pipeline/stage_04_validate.py --project working/crescent_city` checks:
 
 - PDF files are readable.
 - Markdown validation passes.
@@ -72,7 +72,7 @@ review for volatile claims.
 
 ## Copy-Out Meaning
 
-`scripts/pipeline/stage_05_copy.py --project crescent_city` copies the project
+`scripts/pipeline/stage_05_copy.py --project working/crescent_city` copies the project
 output tree into `output/crescent_city/` at the repository root and places
 the combined PDF at:
 
@@ -90,7 +90,7 @@ folder while developing.
 | Renderer reports a missing figure | Project pipeline or figure-only generation has not been run | Run the strict pipeline or `--figures-only` |
 | PDF build fails after variable hydration | Hydrated Markdown exposed a LaTeX or Pandoc issue | Inspect the source Markdown and `output/pdf/_combined_manuscript.tex` for context, then edit source |
 | Citations render incorrectly | Missing or malformed BibTeX key | Run citation tests and inspect `docs/manuscript/references.bib` |
-| Combined PDF exists but release folder does not | Copy stage has not been run | Run `scripts/pipeline/stage_05_copy.py --project crescent_city` |
+| Combined PDF exists but release folder does not | Copy stage has not been run | Run `scripts/pipeline/stage_05_copy.py --project working/crescent_city` |
 | Validation passes but a current claim is stale | Validation checks artifact structure, not fresh public records | Follow `source_refresh_workflow.md` |
 
 ## Minimal PDF-Only Path
@@ -98,7 +98,7 @@ folder while developing.
 When you only need to check whether the paper compiles:
 
 ```bash
-PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
+uv run --no-sync python scripts/pipeline/stage_03_render.py --project working/crescent_city --skip-manuscript-hydration
 ```
 
 Before sharing the artifact, run validation and copy-out as well.

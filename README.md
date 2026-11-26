@@ -40,37 +40,14 @@ the archival DOI is `10.5281/zenodo.20286171`.
 | Current state? | [docs/manuscript/MANUSCRIPT_STATUS.md](docs/manuscript/MANUSCRIPT_STATUS.md) — the single status surface | read it, don't assume |
 | What's next? | [TODO.md](TODO.md) — the single backlog; do not scan git log for intent | read its Major section |
 | Revision history? | [CHANGELOG.md](CHANGELOG.md) — newest entries first | read newest entries |
-| Primary verification? | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` (project quality) and `PYTHONPATH=. uv run pytest tests/ -q` (suite) | run them |
-
-Migration completed (2026-08-31): `manuscript/` → `docs/manuscript/` is done
-in code, docs, and tests; suite green (175 passed).
+| Primary verification? | `TEMPLATE_REPO_ROOT=/path/to/template uv run --locked python scripts/run_history_pipeline.py --strict` (project quality) and `TEMPLATE_REPO_ROOT=/path/to/template uv run --locked pytest tests/ -q` (suite) | run them |
 
 ## Quick Start
 
-```bash
-# From the repository root
-uv sync --extra dev   # dev extra provides pytest / pytest-cov
-
-# Run the full prose-review pipeline (offline, no Ollama)
-PYTHONPATH=. uv run python \
-    scripts/run_history_pipeline.py
-
-# Strict mode: exit non-zero if any check fails
-PYTHONPATH=. uv run python \
-    scripts/run_history_pipeline.py --strict
-
-# Regenerate all 25 figures
-PYTHONPATH=. uv run python \
-    scripts/y_generate_history_figures.py
-
-# Hydrate manuscript variables for the abstract
-PYTHONPATH=. uv run python \
-    scripts/z_generate_manuscript_variables.py
-
-# Render and validate the full PDF through the shared infrastructure
-PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
-PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
-```
+Follow the [pinned clean-checkout build](docs/quickstart.md) for the
+source tests, figures, manuscript hydration and renderer. The
+[documentation index](docs/README.md) covers sources, evidence and
+release validation.
 
 ## Manuscript Scope
 

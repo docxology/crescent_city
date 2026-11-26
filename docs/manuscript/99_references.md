@@ -1,7 +1,7 @@
 # References {#sec:references}
 
 The complete bibliography for this manuscript is maintained in
-[`docs/manuscript/references.bib`](references.bib) and is read by
+[`docs/manuscript/references.bib`](https://github.com/docxology/crescent_city/blob/main/docs/manuscript/references.bib) and is read by
 Pandoc during PDF render. The build pipeline invokes Pandoc with
 `--natbib`, so every Pandoc-style citation token in the manuscript is
 rewritten to the appropriate LaTeX citation command and resolved
@@ -13,9 +13,9 @@ anchor for the rendered references that follow.
 This project does not auto-generate the bibliography content
 itself. Instead, it validates that every cited key in the prose
 has a matching entry in the BibTeX database,
-via [`infrastructure.reference.citation.parse_bibfile`](../../../infrastructure/reference/citation/SKILL.md).
+via [`infrastructure.reference.citation.parse_bibfile`](https://github.com/docxology/template/blob/87704feae0a4490ef7dad9c931d268e8c30273c2/infrastructure/reference/citation/SKILL.md).
 The validation policy is configured under `bibliography:` in
-[`config.yaml`](config.yaml): `fail_on_missing: true` (missing
+[`config.yaml`](https://github.com/docxology/crescent_city/blob/main/docs/manuscript/config.yaml): `fail_on_missing: true` (missing
 keys block the build); `fail_on_unused: false` (unused entries
 produce warnings only).
 

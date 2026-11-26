@@ -9,12 +9,14 @@ Use the root `README.md` for the public overview and the root `AGENTS.md`
 for repository-wide assistant rules. Use this folder when you need the
 working instructions for this specific project.
 
+[Read the manuscript source](manuscript/README.md) · [Build it from a clean checkout](quickstart.md)
+
 ## Document Map
 
 | File | Use |
 |---|---|
 | [index.md](index.md) | Task-oriented map for readers, maintainers, and reviewers |
-| [quickstart.md](quickstart.md) | Short commands for setup, tests, figures, PDF rendering, and copy-out |
+| [quickstart.md](quickstart.md) | Locked source tests, figures, and the pinned Template render |
 | [architecture.md](architecture.md) | Source boundaries, pipeline flow, data flow, and extension points |
 | [project_overview.md](project_overview.md) | Current manuscript shape, data/figure inventory, checks, and artifact map |
 | [data_dictionary.md](data_dictionary.md) | Data file roles, schemas, provenance fields, and update risk |
