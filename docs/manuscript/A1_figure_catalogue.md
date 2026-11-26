@@ -19,7 +19,7 @@ single scholarly claim [@sandve2013reproducible].
 
 ## How the Suite Is Organized
 
-The figure suite lives in the [`src._figures`](../../src/_figures/)
+The figure suite lives in the [`src._figures`](https://github.com/docxology/crescent_city/tree/main/src/_figures)
 subpackage, organized by topic:
 
 ```
@@ -48,7 +48,7 @@ Adding a new figure requires a small, auditable chain of changes:
 
 1. Add a plotting function named `plot_<name>()` in the appropriate
    `src/_figures/<topic>.py` module — or create a new topic module.
-2. Re-export the function from [`src/figures.py`](../../src/figures.py).
+2. Re-export the function from [`src/figures.py`](https://github.com/docxology/crescent_city/blob/main/src/figures.py).
 3. Add a `FigureSpec` entry to the `FIGURE_REGISTRY` tuple in
    `src/figures.py`. The registry order drives the
    `generate_all_figures()` iteration and the catalog order below.
@@ -754,7 +754,7 @@ the shared `rcParams`.
 ## Testing Contract for Figure Reproducibility
 
 The figure suite is validated by
-[`tests/test_figures.py`](../../tests/test_figures.py). Tests enforce:
+[`tests/test_figures.py`](https://github.com/docxology/crescent_city/blob/main/tests/test_figures.py). Tests enforce:
 
 * the registry contains the expected twenty-five figures and has no
   duplicates;

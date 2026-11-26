@@ -78,42 +78,22 @@ research object.
    preserves peer-reviewed primary literature, federal-agency reports,
    archival material, court cases, and tribal primary documents.
 
-### How to Reproduce the Manuscript and Figures
+### Build the manuscript and figures
 
-```bash
-# Clone the repository
-git clone https://github.com/docxology/crescent_city.git
-cd crescent_city
-
-# Create virtual environment and install dependencies
-uv sync
-
-# Run the full Crescent City pipeline
-PYTHONPATH=. uv run python \
-    scripts/run_history_pipeline.py
-
-# Or just regenerate figures (does not run prose validation)
-PYTHONPATH=. uv run python \
-    scripts/y_generate_history_figures.py
-
-# Verify outputs
-ls output/
-ls output/figures/
-
-# Render and validate the combined PDF
-PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
-PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
-```
+The repository's `docs/quickstart.md` gives the pinned Template revision,
+locked environments, pronunciation dictionary, and clean detached
+checkout commands. The native pipeline generates the figures and project
+report. Hydration writes the build inputs to `output/manuscript/`.
+The shared Template checkout renders and validates the registered
+`working/crescent_city` project.
 
 To verify byte-identical reproduction, run the pipeline twice and
 compare outputs:
 
 ```bash
-PYTHONPATH=. uv run python \
-    scripts/run_history_pipeline.py
+.venv/bin/python scripts/run_history_pipeline.py --strict
 cp -r output output_first
-PYTHONPATH=. uv run python \
-    scripts/run_history_pipeline.py
+.venv/bin/python scripts/run_history_pipeline.py --strict
 diff -ru output_first/manuscript_report.json \
          output/manuscript_report.json
 diff -ru output_first/figures output/figures

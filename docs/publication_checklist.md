@@ -41,9 +41,9 @@ Confirm `output/pipeline_report.json` reports:
 ## 3. Render And Validate
 
 ```bash
-PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
-PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
-PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
+uv run --no-sync python scripts/pipeline/stage_03_render.py --project working/crescent_city --skip-manuscript-hydration
+uv run --no-sync python scripts/pipeline/stage_04_validate.py --project working/crescent_city
+uv run --no-sync python scripts/pipeline/stage_05_copy.py --project working/crescent_city
 ```
 
 Confirm these files exist:

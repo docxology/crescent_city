@@ -8,10 +8,7 @@
 | Current state? | [docs/manuscript/MANUSCRIPT_STATUS.md](docs/manuscript/MANUSCRIPT_STATUS.md) — the single status surface | read it, don't assume |
 | What's next? | [TODO.md](TODO.md) — the single backlog; do not scan git log for intent | read its Major section |
 | Revision history? | [CHANGELOG.md](CHANGELOG.md) — newest entries first | read newest entries |
-| Primary verification? | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` (project quality) and `PYTHONPATH=. uv run pytest tests/ -q` (suite) | run them |
-
-Migration note (2026-08-31): the `manuscript/` → `docs/manuscript/` move is
-complete in code and docs; the full suite is green (175 passed).
+| Primary verification? | `TEMPLATE_REPO_ROOT=/path/to/template uv run --locked python scripts/run_history_pipeline.py --strict` (project quality) and `TEMPLATE_REPO_ROOT=/path/to/template uv run --locked pytest tests/ -q` (suite) | run them |
 
 ## Purpose
 

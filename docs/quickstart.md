@@ -1,111 +1,53 @@
-# Quickstart
+# Build the Crescent City manuscript
 
-Run project commands from this repository root. The renderer commands in
-[Render The Paper](#render-the-paper) run from the template repository
-root, which provides `infrastructure/` and `scripts/pipeline/`.
+Prepare a clean checkout of this repository and install uv, Pandoc 3.14,
+pandoc-crossref built for that Pandoc version, and XeLaTeX with Template's
+LaTeX packages. The project and Template use independent locked environments.
 
-For system tool assumptions and project-root versus repository-root
-details, see [environment_reproducibility.md](environment_reproducibility.md).
+```sh
+crescent_source="$(pwd -P)"
+git clone https://github.com/docxology/template.git ../crescent-template
+git -C ../crescent-template checkout --detach 87704feae0a4490ef7dad9c931d268e8c30273c2
+cd ../crescent-template
+crescent_template="$(pwd -P)"
+uv sync --locked --no-dev
+mkdir -p projects/working
+git -C "$crescent_source" worktree add --detach "$PWD/projects/working/crescent_city" HEAD
 
-## First Run
-
-```bash
-uv sync
-
-# Project quality pipeline: prose checks, bibliography consistency,
-# 25 PNG/SVG figure pairs, review report, and publication metadata.
-PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
-
-# Project tests only.
-PYTHONPATH=. uv run pytest tests/ -q
+(
+  cd projects/working/crescent_city
+  uv sync --locked --extra dev --python 3.14
+  mkdir -p .venv/share/nltk_data/corpora
+  curl -fsSLo .venv/share/nltk_data/corpora/cmudict.zip \
+    https://raw.githubusercontent.com/nltk/nltk_data/550b6625bcef1f2abff2ff770a5a0d272c9c6b2a/packages/corpora/cmudict.zip
+  .venv/bin/python -m zipfile -e .venv/share/nltk_data/corpora/cmudict.zip \
+    .venv/share/nltk_data/corpora
+  export TEMPLATE_REPO_ROOT="$crescent_template" MPLBACKEND=Agg
+  .venv/bin/python -m pytest tests/ -q
+  .venv/bin/python scripts/run_history_pipeline.py --strict
+  .venv/bin/python scripts/z_generate_manuscript_variables.py
+)
+uv run --no-sync python scripts/pipeline/stage_03_render.py \
+  --project working/crescent_city --skip-manuscript-hydration
+uv run --no-sync python scripts/pipeline/stage_04_validate.py \
+  --project working/crescent_city
 ```
 
-## Common Commands
+The pronunciation dictionary supports the prose metrics. Its pinned archive
+has SHA-256 `d07cca47fd72ad32ea9d8ad1219f85301eeaf4568f8b6b73747506a71fb5afd6`.
+Source tests, analysis, figure generation and manuscript rendering can run
+offline after the environments and dictionary are present.
 
-```bash
-# Inspect project pipeline stages.
-PYTHONPATH=. uv run python scripts/run_history_pipeline.py --list
+Find the manuscript and HTML in the render worktree's
+`output/pdf/crescent_city_combined.pdf` and `output/web/index.html`.
+The build writes the figure provenance manifest and accessibility registry
+under `output/figures/`, and the validation and provenance receipts under
+`output/reports/`.
 
-# Figure-only path. This writes 25 PNG files and 25 SVG siblings.
-PYTHONPATH=. uv run python scripts/run_history_pipeline.py --figures-only
+Inside the render worktree, use
+`.venv/bin/python scripts/run_history_pipeline.py --list` to inspect project
+steps and `.venv/bin/python scripts/run_history_pipeline.py --figures-only`
+to regenerate the figure set. For alternate source inputs use the runner's
+`--project-root` and `--config` options.
 
-# Hydrate manuscript variables into output/manuscript/.
-PYTHONPATH=. uv run python scripts/z_generate_manuscript_variables.py
-
-# Regenerate figures through the dedicated thin orchestrator.
-PYTHONPATH=. uv run python scripts/y_generate_history_figures.py
-```
-
-## Render The Paper
-
-```bash
-# Render combined PDF, combined HTML, per-section HTML, and per-section slides.
-PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
-
-# Validate rendered artifacts, Markdown, output structure, and figure registry.
-PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
-
-# Copy project outputs to output/crescent_city/ at the repository root.
-PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
-```
-
-The main rendered PDF is:
-
-```text
-output/pdf/crescent_city_combined.pdf
-```
-
-After the copy stage, the release-facing copy is:
-
-```text
-output/crescent_city/crescent_city_combined.pdf
-```
-
-See `rendering_and_outputs.md` for the full renderer/output runbook.
-
-## Alternate Project Root
-
-Use this when testing a copied project tree.
-
-```bash
-PYTHONPATH=. uv run python scripts/run_history_pipeline.py \
-  --project-root /tmp/crescent_city_copy \
-  --config docs/manuscript/config.yaml \
-  --strict
-```
-
-## Output Cheat Sheet
-
-Primary outputs land under `output/`.
-
-| Output | Purpose |
-|---|---|
-| `pipeline_report.json` | Machine-readable quality-gate summary |
-| `manuscript_report.json` | Prose metrics snapshot |
-| `review_report.md` | Human-readable editorial review |
-| `figures/*.png` and `figures/*.svg` | 25 deterministic figure pairs |
-| `data/manuscript_variables.json` | Renderer-facing manuscript variables |
-| `pdf/crescent_city_combined.pdf` | Project-local combined PDF |
-| `web/index.html` | Combined HTML manuscript |
-| `reports/validation_report.md` | Validation summary after `scripts/pipeline/stage_04_validate.py` |
-| `CITATION.cff`, `zenodo_metadata.json`, `self_citation.bib` | Publication metadata |
-
-## Which Command Should I Run?
-
-| Situation | Command |
-|---|---|
-| I changed prose, citations, data, or figures | `scripts/run_history_pipeline.py --strict` |
-| I changed only plotting code or figure data | `scripts/run_history_pipeline.py --figures-only`, then targeted tests |
-| I changed docs only | `uv run pytest tests/test_documentation.py tests/test_american_english.py -q` |
-| I need a PDF for reading | `scripts/pipeline/stage_03_render.py --project crescent_city` |
-| I need a release handoff folder | render, validate, then `scripts/pipeline/stage_05_copy.py --project crescent_city` |
-
-## Fast Troubleshooting
-
-| Symptom | First check |
-|---|---|
-| Missing figure during render | Run the strict project pipeline or the figure-only command. |
-| Citation failure | Check the cited key in `docs/manuscript/references.bib` and `docs/manuscript/SYNTAX.md`. |
-| Documentation link failure | Run `tests/test_documentation.py` and fix the relative link target. |
-| Stale current-event claim | Follow `source_refresh_workflow.md`, `sources_provenance_ethics.md`, and `claim_ledger.md`. |
-| PDF compiles but release folder is missing | Run `scripts/pipeline/stage_05_copy.py --project crescent_city`. |
+[Documentation index](README.md) · [Manuscript](manuscript/README.md) · [Artifact guide](rendering_and_outputs.md)

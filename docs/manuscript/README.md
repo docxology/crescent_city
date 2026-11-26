@@ -8,7 +8,7 @@ City history project.
 Authoritative title, subtitle, DOI, and licenses live in [`config.yaml`](config.yaml).
 Current scholarly artifact:
 [Crescent City history Zenodo DOI](https://doi.org/10.5281/zenodo.20286171)
-(`publication.doi`). Manuscript text is CC-BY-4.0; project code is Apache-2.0 (`../LICENSE`); data
+(`publication.doi`). Manuscript text is CC-BY-4.0; project code is Apache-2.0 ([license](../../LICENSE)); data
 licensing is described under `metadata.data_license` in `config.yaml`.
 
 ## Structure and roster

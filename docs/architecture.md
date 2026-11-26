@@ -68,13 +68,13 @@ serve different purposes and should both be used before publication.
 | Pipeline | Command | Purpose | Primary outputs |
 |---|---|---|---|
 | Project quality pipeline | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` | Analyze prose, check citations and headings, generate figures, write review and publication metadata | `output/pipeline_report.json`, `review_report.md`, `figures/`, `CITATION.cff` |
-| Shared renderer | `PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city` | Hydrate manuscript variables and render combined PDF, combined HTML, per-section HTML, and slides | `output/pdf/crescent_city_combined.pdf`, `web/index.html`, `slides/` |
+| Shared renderer | `uv run --no-sync python scripts/pipeline/stage_03_render.py --project working/crescent_city --skip-manuscript-hydration` | Hydrate manuscript variables and render combined PDF, combined HTML, per-section HTML, and slides | `output/pdf/crescent_city_combined.pdf`, `web/index.html`, `slides/` |
 
 Validation and copy-out are separate repository-level stages:
 
 ```bash
-PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
-PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
+uv run --no-sync python scripts/pipeline/stage_04_validate.py --project working/crescent_city
+uv run --no-sync python scripts/pipeline/stage_05_copy.py --project working/crescent_city
 ```
 
 ## Project Pipeline Flow

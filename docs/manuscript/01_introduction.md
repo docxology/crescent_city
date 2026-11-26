@@ -116,7 +116,7 @@ synthesis rather than measured data, and the limitation is that arrows show
 argument structure rather than measured causal weights. The interpretive
 claim is the bottom feedback loop that recurs throughout the book: hazard
 becomes rebuilding; rebuilding becomes governance; governance becomes memory;
-memory becomes adaptation.](output/figures/nested_systems_map.png){#fig:nested_systems_map width=100%}
+memory becomes adaptation.](../../output/figures/nested_systems_map.png){#fig:nested_systems_map width=100%}
 
 ## Research Questions Guiding the Four-Part Structure
 

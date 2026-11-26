@@ -85,6 +85,12 @@ FIGURE_MANIFEST_NAME = "figure_manifest.json"
 FIGURE_PROVENANCE_NAME = "figure_provenance.csv"
 """Checked-in figure provenance and accessibility metadata table."""
 
+MANUSCRIPT_FIGURE_LABELS = {
+    "tsunami_inundation_diagram": "tsunami_inundation",
+    "tolowa_villages_map": "tolowa_villages",
+    "redwood_decline_chart": "redwood_decline",
+}
+
 
 # ── Figure type and registry ───────────────────────────────────────────
 FigurePlotter = Callable[..., Path]
@@ -560,6 +566,18 @@ def write_figure_manifest(
     }
     out = output_dir / manifest_name
     out.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    figure_registry = {
+        "fig:" + MANUSCRIPT_FIGURE_LABELS.get(spec.name, spec.name): {
+            "filename": Path(png_path).name,
+            "caption": spec.description,
+            "alt_text": spec.long_description or spec.description,
+            "generated_by": "src.figures.generate_all_figures",
+        }
+        for spec, png_path in zip(FIGURE_REGISTRY, generated_pngs, strict=True)
+    }
+    (output_dir / "figure_registry.json").write_text(
+        json.dumps(figure_registry, indent=2) + "\n", encoding="utf-8"
+    )
     return out
 
 

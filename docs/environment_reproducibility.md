@@ -5,30 +5,19 @@ City checks, figures, metadata, PDF, and copied release artifacts. It
 documents the current path; it does not introduce a container, CI job, or
 new dependency source.
 
-## Supported Working Paths
+## Supported working paths
 
-Most project-local commands run from this repository root (the project is
-the checkout root; in the template monorepo it lives under
-`projects/crescent_city/`):
-
-```bash
-cd /path/to/crescent_city
-```
-
-Renderer and copy-out commands run from the template repository root:
-
-```bash
-cd /path/to/template
-```
-
-Use `PYTHONPATH=.` in root commands so shared infrastructure imports are
-resolved exactly as the repository scripts expect.
+The [pinned quickstart](quickstart.md) registers a detached Crescent City
+worktree as `working/crescent_city` in the Template checkout. Native
+source tests and the analysis runner use the project environment and
+`TEMPLATE_REPO_ROOT`. Render and validation stages run from the Template
+checkout and use its own environment.
 
 ## Toolchain
 
 | Tool | Why it is needed | Source of truth |
 |---|---|---|
-| Python 3.10 or newer | Project package and tests | `pyproject.toml` |
+| Python 3.11 or newer | Project package and tests | `pyproject.toml` |
 | `uv` | Dependency sync and command runner | Repository workflow |
 | Pandoc | Markdown-to-PDF/HTML assembly | Shared renderer |
 | XeLaTeX and BibTeX | PDF typesetting and bibliography pass | Shared renderer |
@@ -44,46 +33,24 @@ metadata generation, or rendering.
 From this repository root:
 
 ```bash
-uv sync --extra dev
+uv sync --locked --extra dev --python 3.14
 ```
 
 Then run a project-local smoke check:
 
 ```bash
-PYTHONPATH=. uv run pytest tests/test_documentation.py tests/test_american_english.py -q
+.venv/bin/python -m pytest tests/test_documentation.py tests/test_american_english.py -q
 ```
 
 If the renderer fails later because Pandoc or LaTeX tools are missing,
 install those system tools outside `uv`; they are not Python
 dependencies.
 
-## Reproduction Commands
+## Reproduction commands
 
-Run the strict project pipeline from the project directory:
-
-```bash
-PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
-```
-
-Regenerate figures only:
-
-```bash
-PYTHONPATH=. uv run python scripts/run_history_pipeline.py --figures-only
-```
-
-Hydrate manuscript variables:
-
-```bash
-PYTHONPATH=. uv run python scripts/z_generate_manuscript_variables.py
-```
-
-Render, validate, and copy from the template repository root:
-
-```bash
-PYTHONPATH=. uv run python scripts/pipeline/stage_03_render.py --project crescent_city
-PYTHONPATH=. uv run python scripts/pipeline/stage_04_validate.py --project crescent_city
-PYTHONPATH=. uv run python scripts/pipeline/stage_05_copy.py --project crescent_city
-```
+Use the [clean-checkout procedure](quickstart.md) to prepare dependencies,
+including the pronunciation dictionary, and run source tests, analysis,
+hydration, rendering and validation.
 
 ## Determinism Boundary
 
