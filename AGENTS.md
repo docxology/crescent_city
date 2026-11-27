@@ -149,7 +149,7 @@ To add a new figure:
 * [`docs/audit_trail_limitations.md`](docs/audit_trail_limitations.md) — audit trail and known limits.
 * [`docs/accessibility_reader_experience.md`](docs/accessibility_reader_experience.md) — reader-facing accessibility and spot checks.
 * [`docs/release_archival_versioning.md`](docs/release_archival_versioning.md) — release, archival, and correction policy.
-* [`infrastructure/prose/AGENTS.md`](../../infrastructure/prose/AGENTS.md) —
+* [`infrastructure/prose/AGENTS.md`](https://github.com/docxology/template/blob/87704feae0a4490ef7dad9c931d268e8c30273c2/infrastructure/prose/AGENTS.md) —
   underlying prose-analysis API.
-* [`infrastructure/reference/AGENTS.md`](../../infrastructure/reference/AGENTS.md) —
+* [`infrastructure/reference/AGENTS.md`](https://github.com/docxology/template/blob/87704feae0a4490ef7dad9c931d268e8c30273c2/infrastructure/reference/AGENTS.md) —
   bibliography validation API.
