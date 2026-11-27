@@ -14,6 +14,8 @@ cross-reference mistakes before rendering.
 - Update documentation-drift tests when adding stable counts or folder docs.
 - Keep figure-provenance tests aligned with `data/figure_provenance.csv`,
   `src/figures.py`, and `docs/manuscript/A1_figure_catalogue.md`.
+- Check direct `#sec:` links and `[@sec:...]` citations against the same set of
+  authored section anchors in `test_manuscript.py`.
 - Include new authored directories in the American-English guard when they
   become source truth.
 
