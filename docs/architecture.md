@@ -68,9 +68,9 @@ serve different purposes and should both be used before publication.
 | Pipeline | Command | Purpose | Primary outputs |
 |---|---|---|---|
 | Project quality pipeline | `PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict` | Analyze prose, check citations and headings, generate figures, write review and publication metadata | `output/pipeline_report.json`, `review_report.md`, `figures/`, `CITATION.cff` |
-| Shared renderer | `uv run --no-sync python scripts/pipeline/stage_03_render.py --project working/crescent_city --skip-manuscript-hydration` | Hydrate manuscript variables and render combined PDF, combined HTML, per-section HTML, and slides | `output/pdf/crescent_city_combined.pdf`, `web/index.html`, `slides/` |
+| Shared renderer | `uv run --no-sync python scripts/pipeline/stage_03_render.py --project working/crescent_city --skip-manuscript-hydration` | Render from prepared manuscript variables and produce combined PDF, combined HTML, per-section HTML, and slides | `output/pdf/crescent_city_combined.pdf`, `web/index.html`, `slides/` |
 
-Validation and copy-out are separate repository-level stages:
+Run the shared renderer, validation and copy-out commands from the Template checkout root:
 
 ```bash
 uv run --no-sync python scripts/pipeline/stage_04_validate.py --project working/crescent_city
@@ -95,10 +95,10 @@ bibliography, review, and publishing stages.
 
 ## Rendering Flow
 
-The shared renderer does not treat `docs/manuscript/` as already publication
-ready. It first runs manuscript-variable hydration and writes substituted
-copies under `output/manuscript/`. It then renders from that hydrated
-directory.
+The project-local hydration command writes substituted files under
+`output/manuscript/`. The shared renderer then reads those files when invoked
+with `--skip-manuscript-hydration`. See the [render runbook](rendering_and_outputs.md)
+for the working directory of each command.
 
 ```mermaid
 flowchart LR

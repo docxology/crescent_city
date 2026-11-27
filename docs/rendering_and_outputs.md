@@ -9,40 +9,35 @@ For the quality checks that should precede a public render, see
 
 ## Render Sequence
 
-Renderer stages run from the template repository root; step 1, the project
-pipeline, runs from this repository root.
+Use the [quickstart](quickstart.md) to set up and register the project in the
+pinned Template checkout. From the registered project root, prepare its
+figures and manuscript variables in the configured project environment. Set
+`TEMPLATE_REPO_ROOT` to the pinned Template checkout.
 
 ```bash
-# 1. Make sure project analysis and figures are current.
+export TEMPLATE_REPO_ROOT=/absolute/path/to/pinned/template
 PYTHONPATH=. uv run python scripts/run_history_pipeline.py --strict
+uv run python scripts/z_generate_manuscript_variables.py
+```
 
-# 2. Render the combined PDF, combined HTML, per-section HTML, and slides.
+From the Template checkout root, render from those prepared inputs, validate,
+and copy the deliverables.
+
+```bash
 uv run --no-sync python scripts/pipeline/stage_03_render.py --project working/crescent_city --skip-manuscript-hydration
-
-# 3. Validate outputs.
 uv run --no-sync python scripts/pipeline/stage_04_validate.py --project working/crescent_city
-
-# 4. Copy outputs to the repository-level release folder.
 uv run --no-sync python scripts/pipeline/stage_05_copy.py --project working/crescent_city
 ```
 
 ## What The Renderer Does
 
-`scripts/pipeline/stage_03_render.py --project working/crescent_city` performs these steps:
+The project’s variable generator writes substituted files to
+`output/manuscript/`. Stage 03 uses those files because the command above
+skips its hydration hook. It checks the figure paths and renders the
+configured PDF, HTML, and slides using the manuscript bibliography.
 
-1. Hydrates manuscript variables by running
-   `scripts/z_generate_manuscript_variables.py`.
-2. Writes substituted manuscript copies to
-   `output/manuscript/`.
-3. Checks required LaTeX packages and available figure files.
-4. Renders per-section slides and HTML.
-5. Combines the 56 numbered sections and three appendices into the main PDF.
-6. Processes `references.bib` with BibTeX.
-7. Renders the combined HTML manuscript.
-
-Do not edit `output/manuscript/` to fix render issues. Edit the source
-file in `docs/manuscript/`, the variables generator, data, figures, or
-preamble as appropriate.
+Edit the source in `docs/manuscript/` or the relevant generator or input when
+correcting a render defect.
 
 ## Main Outputs
 
@@ -53,7 +48,7 @@ preamble as appropriate.
 | `output/web/*.html` | Per-section HTML |
 | `output/slides/*_slides.pdf` | Per-section Beamer slides |
 | `output/reports/validation_report.md` | Validation summary |
-| `output/crescent_city/crescent_city_combined.pdf` | Repository-level release copy after `scripts/pipeline/stage_05_copy.py` |
+| `output/working/crescent_city/crescent_city_combined.pdf` | Template-root release copy after `scripts/pipeline/stage_05_copy.py` |
 
 The current rendered PDF path is intentionally repeated in quickstart docs
 because it is the file most readers need.
@@ -76,11 +71,11 @@ release.
 ## Copy-Out Meaning
 
 `scripts/pipeline/stage_05_copy.py --project working/crescent_city` copies the project
-output tree into `output/crescent_city/` at the repository root and places
+output tree into `output/working/crescent_city/` under the Template checkout and places
 the combined PDF at:
 
 ```text
-output/crescent_city/crescent_city_combined.pdf
+output/working/crescent_city/crescent_city_combined.pdf
 ```
 
 Use the copy-out folder for handoff. Use the project-local `output/`
@@ -96,9 +91,10 @@ folder while developing.
 | Combined PDF exists but release folder does not | Copy stage has not been run | Run `scripts/pipeline/stage_05_copy.py --project working/crescent_city` |
 | Validation passes but a current claim is stale | Validation checks artifact structure, not fresh public records | Follow `source_refresh_workflow.md` |
 
-## Minimal PDF-Only Path
+## Render From Prepared Inputs
 
-When you only need to check whether the paper compiles:
+With hydrated project inputs already prepared, run Stage 03 from the
+Template checkout root:
 
 ```bash
 uv run --no-sync python scripts/pipeline/stage_03_render.py --project working/crescent_city --skip-manuscript-hydration
