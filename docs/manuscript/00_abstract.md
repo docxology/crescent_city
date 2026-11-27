@@ -33,8 +33,8 @@ kinship actors, and the meanings and rules that organize memory, resources, and
 governance [@tuan1977space_place; @massey2005for_space; @ostrom2009ses]. Part I
 (Space) moves from Cascadia and sea-level framing through Smith River ecology,
 coast-redwood parks, harbor oil-spill exposure and seawall engineering, housing,
-and Highway 101 lifelines. Part II (Time) runs archaeology through agriculture,
-railroad ambitions and county-wide economic cycles, documented tsunami sequences
+and the coastal highway lifeline. Part II (Time) runs archaeology through
+agriculture, railroad ambitions and county-wide economic cycles, documented tsunami sequences
 and Pacific-wide warning policy after 1964, the 2011 Tōhoku event, wildfire, and
 recent civic currents. Part III (People) centers Tolowa Dee-ni' sovereignty and
 Nee-dash beside neighboring tribal nations, immigrant communities, governance,

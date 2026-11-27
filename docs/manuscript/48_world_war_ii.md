@@ -51,9 +51,8 @@ The lumber industry, already in decline through the Depression
 decade, experienced a substantial wartime production boom as the
 federal government purchased Del Norte timber for military
 construction, packing crates, and the Pacific theater logistical
-build-out. Annual harvest jumped from approximately 53 million board
-feet in 1946 to a regional peak above 124 million board feet by the
-early 1950s [@nps_redwood_history; @vaden_logging]. The labor
+build-out. The county's annual timber harvest rose from 53 million board
+feet in 1946 to 300 million in 1953 [@nps_redwood_history]. The labor
 shortage caused by enlistment was partially filled by women entering
 mill and service work, older workers staying longer in the labor
 force, and men moving between woods, mill, airport, and maritime work
