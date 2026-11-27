@@ -55,7 +55,7 @@ oral-historical memory [@atwater2005orphan; @goldfinger2012;
 | Year | Event | Category |
 |------|-------|----------|
 | c. 1000 BCE | Tolowa Dee-ni' establish seasonal villages around Smith River estuary [@tolowa_culture; @bommelyn1997; @gould1978] | Indigenous |
-| 26 Jan 1700 | Mw 8.7–9.2 Cascadia full-margin earthquake; orphan tsunami reaches Japan | Disaster |
+| 26 Jan 1700 | A full-margin Cascadia earthquake (Mw 8.7–9.2) sends a tsunami to Japan [@satake2003fault; @atwater2005orphan] | Disaster |
 
 ### Contact, Conquest, and County Formation
 
@@ -98,7 +98,7 @@ cut, hauled, milled, financed, defended, and shipped.
 | Aug 1881 | John Dolbeer invents steam donkey logging engine (US Patent 256,553) [@dolbeer1882patent; @carranco1975logging] | Industry |
 | 6 May 1882 | Chinese Exclusion Act signed, contributing to later dispersal of the local community [@national_archives_chinese_exclusion; @crescent_city] | Policy |
 | 1900 | Del Norte County produces 30 million+ board feet of lumber annually | Economy |
-| 1908 | Smith River Rancheria established (160 acres, largest in CA) | Governance |
+| 1908 | Smith River Rancheria established. The Tolowa Dee-ni' Nation records 160 acres and describes it as California's largest rancheria at the time [@smith_river_rancheria_history] | Governance |
 | 1911 | First harbor jetty completed | Infrastructure |
 | 1918 | Save the Redwoods League founded | Environment |
 | 1929 | Jedediah Smith / Del Norte Coast / Prairie Creek state parks created | Environment |
@@ -109,7 +109,7 @@ cut, hauled, milled, financed, defended, and shipped.
 | 7 Dec 1941 | Pearl Harbor attack ends State of Jefferson movement | Disaster |
 | 1942–1946 | Japanese American residents interned at Tule Lake Segregation Center | Policy |
 | Aug 1943 | Naval Outlying Field, Crescent City established | Military |
-| 1949–1953 | Peak lumber production: 124 million board feet/year, 55 mills | Economy |
+| By 1951 | Del Norte County's 55 mills produce 124 million board feet of lumber per year [@del_norte_economic_history] | Economy |
 | 1950s–1960s | County-seat trading-area population series crests near 5,600–5,700 during peak lumber | Economy |
 | 1956 | Modest "State of Shasta" revival caravan | Political |
 | 1958 | Jerry Crew finds enormous footprints near Bluff Creek; "Bigfoot" coined | Culture |
@@ -152,7 +152,7 @@ adaptation.
 | 2003 | Cascadia subduction zone paleoseismology confirms 1700 event | Science |
 | 2003 | Crescent City becomes first California TsunamiReady community | Policy |
 | 11 Mar 2011 | Tōhoku earthquake sends tsunami currents into harbor; 16 vessels sunk | Disaster |
-| 22 Mar 2014 | Tsunami-resistant Inner Boat Basin dedicated | Infrastructure |
+| 22 Mar 2014 | Crescent City Harbor dedicates its rebuilt, tsunami-resistant Inner Boat Basin [@ccharbor_about2026] | Infrastructure |
 | 3 Jun 2014 | Crescent City voters defeat State of Jefferson Measure A | Political |
 | 1 Sep 2015 | *Ashker v. Brown* SHU settlement at Pelican Bay | Policy |
 | 2018 | City General Plan update incorporates sea-level-rise projections | Policy |
@@ -172,13 +172,13 @@ announcements. They should be refreshed when official records change
 
 | Year | Event | Category |
 |------|-------|----------|
-| 13 Jun 2024 | Caltrans selects Alternative F tunnel for Last Chance Grade | Infrastructure |
+| 13 Jun 2024 | Caltrans selects the Alternative F tunnel for Last Chance Grade [@caltrans_lcg2024_selection] | Infrastructure |
 | 2 Oct 2024 | Klamath River dam-removal completion ceremony marks reconnection of the lower river | Environment |
-| 22 Nov 2024 | Inter-Tribal Treaty formalizing IMSA signed | Governance |
+| 22 Nov 2024 | Three Tribal Nations sign a treaty to jointly manage the Indigenous Marine Stewardship Area [@nativenewsonline_imsa_treaty2024] | Governance |
 | Sep 2025 | *Del Norte Triplicate* closes under Country Media and is purchased for local relaunch | Media |
 | Mar 2026 | Crescent City named *America's Favorite Small Towns* finalist | Culture |
 | 16 Mar 2026 | Maiden Lane fatal altercation later produces three murder accusations | Conflict |
-| 6 Apr 2026 | City Council opens Proposition 218 water/sewer rate process with June 1 public hearing | Governance |
+| 6 Apr 2026 | City Council opens the Proposition 218 water and sewer rate process and sets a June 1 public hearing [@crescentcity_2026_rate_agenda] | Governance |
 | 20 Apr 2026 | Tolowa Dee-ni' Nation receives federal funding for Roosevelt elk habitat restoration | Conservation |
 | 5 May 2026 | Crescent City Fire & Rescue opens fire-chief recruitment | Governance |
 | 7 May 2026 | Battery Point Apartments construction remobilizes after additional HOME funding | Infrastructure |

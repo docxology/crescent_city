@@ -36,7 +36,7 @@ uv run --no-sync python scripts/pipeline/stage_05_copy.py --project working/cres
    `output/manuscript/`.
 3. Checks required LaTeX packages and available figure files.
 4. Renders per-section slides and HTML.
-5. Combines the 56 numbered manuscript source files into the main PDF.
+5. Combines the 56 numbered sections and three appendices into the main PDF.
 6. Processes `references.bib` with BibTeX.
 7. Renders the combined HTML manuscript.
 
@@ -66,9 +66,12 @@ because it is the file most readers need.
 - Markdown validation passes.
 - Output directories exist and have expected structure.
 - The figure registry matches generated outputs.
+- The evidence registry checks citations and support for numbers in the manuscript.
+- The output manifest checks the generated artifact inventory.
 
-Validation is an artifact check. It does not replace source freshness
-review for volatile claims.
+Check numerical claims against the cited source and its units, date range,
+and scope. Review volatile claims against current public records before
+release.
 
 ## Copy-Out Meaning
 

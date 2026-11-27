@@ -41,14 +41,13 @@ tractors and trucks in the 1940s. The transition to truck logging in
 turn opened previously inaccessible up-slope drainages and dramatically
 accelerated the pace of harvest.
 
-By the late 1940s and early 1950s the industry reached its absolute peak.
-Crescent City and Del Norte County produced approximately 124 million
-board feet per year between 1949 and 1951 from fifty-five mills;
-annual harvest leaped from 53 million board feet in 1946 to 300 million
-board feet in 1953 [@nps_redwood_history; @vaden_logging]. The lumber
-workforce reached 2,800 of a county labor force of 4,500 in 1954,
-and the six largest operators paid more than 40 percent of all county
-property taxes.
+The Del Norte County Historical Society counts 33 mills in the county in
+1949 and 55 two years later. Those 55 mills produced 124 million board
+feet of lumber per year [@del_norte_economic_history]. The National Park
+Service records the county's annual timber harvest rising from 53 million
+board feet in 1946 to 300 million in 1953. By 1954, the lumber workforce
+reached 2,800 of a county labor force of 4,500. The six largest operators
+paid more than 40 percent of county taxes in 1953 [@nps_redwood_history].
 
 The Pacific Lumber Company, the Hobbs Wall successor firms, the
 Simpson Timber Company (which by mid-century held 770,000 acres of

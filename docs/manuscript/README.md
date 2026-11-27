@@ -19,15 +19,15 @@ appendices. **Five** are authoring meta only (this file, `AGENTS.md`,
 `MANUSCRIPT_STATUS.md`, `SYNTAX.md`, and LaTeX-only
 [`preamble.md`](preamble.md) — not prose chapters).
 
-Countable layout:
+Chapter layout
 
 | Block | Pattern | Role |
 | --- | --- | --- |
 | Front matter | `00_abstract`, `01_introduction` | Summary and framing |
-| Part I — Space | `02_space` + `03`–`11` | Part opener + 9 chapters |
-| Part II — Time | `20_time` + `21`–`35` | Part opener + 15 chapters |
-| Part III — People | `40_people` + `41`–`52` | Part opener + 12 chapters |
-| Part IV — Ideas | `60_ideas` + `61`–`73` | Part opener + 13 chapters |
+| Part I — Space | `02_space` + `03`–`11` | Opener and topical chapters |
+| Part II — Time | `20_time` + `21`–`35` | Opener and topical chapters |
+| Part III — People | `40_people` + `41`–`52` | Opener and topical chapters |
+| Part IV — Ideas | `60_ideas` + `61`–`73` | Opener, topical chapters, conclusion, timeline, methodology, and reproducibility |
 | Back matter | `99_references`, `A1_figure_catalogue`, `A2_glossary`, `A3_quadruplicate` | Bibliography anchor, figure catalog, glossary, quadruplicate companion |
 
 The manuscript describes **46 topical chapters** (Part chapter files `03`–`11`,
