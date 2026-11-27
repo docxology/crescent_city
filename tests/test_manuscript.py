@@ -109,12 +109,13 @@ class TestSectionAnchors:
     """Verify section anchors and cross-references are uniformly named."""
 
     def test_section_cross_references_resolve(self, manuscript_dir: Path) -> None:
-        """Every `[@sec:X]` reference must match a `{#sec:X}` anchor."""
+        """Citation and direct section links must match authored anchors."""
         cited: set[str] = set()
         defined: set[str] = set()
         for f in sorted(manuscript_dir.glob("*.md")):
             text = f.read_text(encoding="utf-8")
             cited.update(re.findall(r"\[@sec:([\w-]+)\]", text))
+            cited.update(re.findall(r"\]\(#sec:([\w-]+)\)", text))
             defined.update(re.findall(r"\{#sec:([\w-]+)\}", text))
         missing = cited - defined
         assert not missing, f"Undefined section anchors: {sorted(missing)}"
