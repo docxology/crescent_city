@@ -44,6 +44,8 @@ the archival DOI is `10.5281/zenodo.20286171`.
 
 ## Quick Start
 
+For reading, start with the [manuscript index](docs/manuscript/README.md) and the [source and provenance guide](docs/sources_provenance_ethics.md). The build guide below is for reproducing the local edition.
+
 Follow the [pinned clean-checkout build](docs/quickstart.md) for the
 source tests, figures, manuscript hydration and renderer. The
 [documentation index](docs/README.md) covers sources, evidence and
